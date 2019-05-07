@@ -332,7 +332,7 @@ html#contactPage {
 }
 
 #services .boxContainer .box .content .title {
-        width: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -881,6 +881,60 @@ html#contactPage {
     transform: rotate(-90deg);
 }
 
+@media (max-width:1440px) {
+    #contactPage .title {
+        width: 42%;
+    }
+
+    #contactPage .slide.slide3 .content {
+        width: 42%;
+    }
+}
+
+@media (max-width:1366px) {
+    #contactPage .title {
+        width: 45%;
+    }
+
+    #contactPage .slide.slide3 .content {
+        width: 45%;
+    }
+
+    #contactPage .title {
+        font-size: 40px;
+    }
+
+    #contactPage .slide .content {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    #contactPage .slide p.select-box__input-text {
+        font-size: 20px;
+    }
+
+    #contactPage input {
+        font-size: 20px;
+    }
+
+    #contactPage .button-link {
+        padding: 16px 26px;
+        width: 168px;
+    }
+
+    #contactPage .extrude-right {
+        height: 72%;
+    }
+
+    #contactPage .select-box__option {
+        padding: 10px;
+    }
+
+    #contactPage .select-box {
+        font-size: 16px;
+    }
+}
+
 @media (device-height:1024px) and (device-width:768px) {
     .nav-logo {
         padding: 0;
@@ -910,7 +964,8 @@ html#contactPage {
     }
 
     #workPage #fullpage .section {
-        padding: 60px 0 0;
+        padding: 0;
+        width: 100%;
     }
 
     .number {
@@ -934,5 +989,111 @@ html#contactPage {
         padding: 0;
     }
 
+    body {
+        padding: 6%;
+    }
 
+    #contactPage .title,
+    #contactPage .slide.slide3 .content {
+        width: 100%;
+    }
+
+    #contactPage .title {
+        font-size: 26px;
+    }
+
+    #contactPage .slide .content {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    #contactPage .slide p.select-box__input-text {
+        font-size: 16px;
+    }
+
+    #contactPage input {
+        font-size: 16px;
+    }
+
+    #contactPage .select-box {
+        font-size: 16px;
+    }
+
+    #contactPage .button-link {
+        padding: 12px 16px;
+        width: 138px;
+        font-size: 16px;
+    }
+
+    #contactPage .extrude-right {
+        height: 58%;
+    }
+
+    .hero-title,
+    #services .hero-title {
+        font-size: 40px;
+    }
+
+    .work-hero-desc {
+        font-size: 14px;
+    }
+
+    .album-row {
+        flex-direction: column;
+    }
+
+    .album-row .column-art {
+        width: 100%;
+    }
+
+    .album-row .column-details {
+        padding: 0;
+        width: 100%;
+    }
+
+    .album-title {
+        font-size: 30px;
+        text-align: center;
+        line-height: 1.8;
+        margin: 20px 0 0;
+        width: 100%;
+    }
+
+    .album-row .column-details span {
+        font-size: 16px;
+    }
+
+    #services .boxContainer {
+        margin: 0 0 0 -10%;
+        overflow: scroll;
+        padding: 0 0 50px;
+        width: 120%;
+    }
+
+    #services .boxContainer .box {
+        width: 80%;
+        flex-basis: 80%;
+        margin: 0 10%;
+    }
+
+    #services .boxContainer .box .content {
+        margin: 0 10%;
+    }
+
+    #services .boxContainer .box .content:before {
+        left: 1px;
+    }
+
+    #services .boxContainer .box .content:after {
+        left: 15px;
+    }
+
+    #services .boxContainer .box .content .title {
+        font-size: 20px;
+    }
+
+    #services .boxContainer .box .content ul {
+        font-size: 14px;
+        padding: 15px;
+    }
 }
