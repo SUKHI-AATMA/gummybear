@@ -1,280 +1,118 @@
-<!DOCTYPE html>
-<!-- saved from url=(0023)/ -->
-<html /favicon.png data-wf-page="5b13df51d0d5fe2b38f203db" data-wf-site="5b13df51d0d5fe8211f203da" class=" w-mod-js">
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Candy</title>
-    <meta content="" name="description">
-    <meta content="" property="og:title">
-    <meta content="" property="og:description">
-    <meta content="" property="og:image">
-    <!-- https://i.imgur.com/PRPLkGk.jpg -->
-    <meta content="summary" name="twitter:card">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <!-- <link href="css/webflow.css" rel="stylesheet" type="text/css"> -->
-    <!-- <link href="Project%20Candy_files/project-candy.css" rel="stylesheet" type="text/css"> -->
-    <link href="css/navigation.css" rel="stylesheet" type="text/css">
-    <link href="css/custom.css" rel="stylesheet" type="text/css">
-    <!-- styles needed by jScrollPane -->
-    <link type="text/css" href="css/vendor/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,900 ');
+    	body {
+    		font-family: 'Open Sans', sans-serif;
+    	}
+        .section:first-child {
+			background: url(images/about/bg1.png) no-repeat 80% center;
+		    background-size: 40%;
+		}
+		.title {
+		    display: flex;
+		    font-size: 120px;
+		    font-weight: 900;
+		    padding: 0 0 0 100px;
+		}
+		.sec {
+		    display: flex;
+		    height: 100%;
+		    justify-content: center;
+		    align-items: center;
+		    width: 66.3%;
+		}
+		.alt .sec { margin: 0 0 0 33.7%; }
+		.sec h2 {
+			color: #fff;
+		    font-size: 40px;
+		    line-height: 1.3;
+		    margin: 0;
+		    padding: 0;
+		    opacity: 0;
+		    transform: translateY(40px);
+		    transition: opacity 0.5s 0.5s, transform 0.5s 0.5s;
+		}
+
+		.sec p {
+			color: #fff;
+		    font-size: 20px;
+		    line-height: 1;
+		    margin: 10px 0 0;
+		    opacity: 0;
+		    transform: translateY(20px);
+		    transition: opacity 0.5s 0.7s, transform 0.5s 0.7s;
+		}
+		.active .sec h2,.active .sec p {
+			opacity: 1;
+			transform: translateY(0);
+		}
+    </style>
 </head>
 
-<body id="workPage">
-    <nav>
-        <div class="logo"></div>
-        <ul>
-            <li class="slideDown"><a href="about.html" class="customNavLink" data-page="home">About</a></li>
-            <li class="slideDown"><a href="work_new.html" class="customNavLink active" data-page="work">Work</a></li>
-            <li class="slideDown"><a href="contact-new-v1.html" class="customNavLink" data-page="contact">Contact</a></li>
-        </ul>
-        <span></span>
-    </nav>
-    <div id="container">
-        <div id="fullpage">
-            <section id="top" class="album-section section hero" data-bg="#fff">
-                <div class="wrapper">
-                    <h1 class="hero-title slideUp">About Us.</h1>
-                    <p class="work-hero-desc slideUp">Aye! Gidday!
-We strive to grow together with our clients. At Gummy Bear, we have a simple goal: to create WOW service for you, be the most-loved Digital Creative Agency in the South Island and to do so at your Service, Aye!
-So, we opened a Dictionary at a few random pages and started choosing various whacky names for our company. The names didn't have to make much sense really. E.g., Paper Boat, Paper Planes, Mason Jar, Lonely Kiwi etc. Finally, since the creative juices of us MBAs didn't seem to flow, we looked towards the best, original, unbiased and purest source for consultation and advise like every professional would. So, we spoke with Montessori kids as to what name would they consider for their company that is relatable, has a strong story to tell and is an emotional-cultural expression! Guess what, ‘Gummy Bear’ is a real company now.
-Then we thought of a strapline which basically tells our clients nothing about what we do, but in short: ‘We make you presentable on the Internet.’ We also thought of ‘We make Dope-Shit!’ but dropped the idea for obvious reasons.
-We have created a whacky ‘Team Bear’ page and included useless facts about our people, some paid-to-shoot-studio edited photos, basically anything that will make you our clients not want to actually meet our team. Smart, aye?
-Now we will talk incessantly about ‘Our brand’, ‘Our work’, ‘Storytelling’ and blah.
-We work from a slightly run-down, open-plan office in an up-and-coming part of town and have purchased some really colourful, abstract and uncomfortable furniture. We also have hung a bike on the wall (against exposed brick, yes). 
-We have breakout room and a piece of novelty sporting equipment such as a pinball machine. And a mini fridge too. We have MacBooks with stickers on them from some free events. We do not have artists or developers but ‘Design Rockstar’ and ‘Code Ninjas’ etc.
-We have more Directors than the actual working staff. All our team members wear thick, black-rimmed designer glasses, brown-shoes with blue-jeans. We always have loads of fun ideas and have scattered toys and Legos around at the office. We have an actual Cat as a team member, just to look cool.
-We follow every single design, social and marketing trend just like every other creative-agency in the world and we love to brag about industry thought leadership on our social media to our total 37 followers.
-It doesn’t matter if it’s good, It only matters if it ROCKS.
-People don't buy products or services — they buy results, benefits and solutions.   our website is a Lie. But we are real people, solving real digital problems of our clients. Please talk to us!</p>
-                </div>
-            </section>
-            <div id="8" class="album-section section" data-bg="#1b255b">
-                <div class="album-row w-row">
-                    <div class="column-art"><img src="./projects_files/5cb760fd296d5844dfbce274_Screen-Shot-2019-04-12-at-8.57.27-PM.png" data-ix="fade-9-8" srcset="https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760fd296d5844dfbce274_Screen-Shot-2019-04-12-at-8.57.27-PM-p-500.png 500w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760fd296d5844dfbce274_Screen-Shot-2019-04-12-at-8.57.27-PM-p-800.png 800w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760fd296d5844dfbce274_Screen-Shot-2019-04-12-at-8.57.27-PM-p-1080.png 1080w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760fd296d5844dfbce274_Screen-Shot-2019-04-12-at-8.57.27-PM.png 1347w" sizes="(max-width: 479px) 90vw, (max-width: 991px) 80vw, 40vw" alt="" class="album-art _8">
-                        <div data-ix="slide-right-x" class="numbers small" style="opacity: 0; "></div>
-                    </div>
-                    <div class="column-details">
-                        <div class="spacer"></div>
-                        <div data-ix="slide-right-x" class="number rufus slideUp" style="">8</div>
-                        <div data-ix="slide-right-x" class="album-title white slideUp" style="">Nissan Micra<br><span class="text-span-4">Launch Website</span></div>
-                    </div>
-                </div>
-            </div>
-            <div id="7" class="album-section section" data-bg="#dee1ca">
-                <div class="album-row w-row">
-                    <div class="column-art"><img src="./projects_files/5cb76ba027e7781fa2aed948_Screen-Shot-2019-04-12-at-8.58.24-PM.png" data-ix="fade-8-7" srcset="https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb76ba027e7781fa2aed948_Screen-Shot-2019-04-12-at-8.58.24-PM-p-500.png 500w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb76ba027e7781fa2aed948_Screen-Shot-2019-04-12-at-8.58.24-PM-p-800.png 800w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb76ba027e7781fa2aed948_Screen-Shot-2019-04-12-at-8.58.24-PM-p-1080.png 1080w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb76ba027e7781fa2aed948_Screen-Shot-2019-04-12-at-8.58.24-PM.png 1347w" sizes="(max-width: 479px) 90vw, (max-width: 991px) 80vw, 40vw" alt="" class="album-art _7">
-                        <div class="numbers small"></div>
-                    </div>
-                    <div class="column-details">
-                        <div class="spacer"></div>
-                        <div data-ix="slide-right-x" class="number andy slideUp" style=" ">7</div>
-                        <div data-ix="slide-right-x" class="album-title slideUp" style=" ">Nissan<br><span class="text-span-4">Brand-Model Website</span></div>
-                    </div>
-                </div>
-            </div>
-            <div id="6" class="album-section section" data-bg="#2cfcfe">
-                <div class="album-row w-row">
-                    <div class="column-art"><img src="./projects_files/5cb76a159e80457feebdb8fd_Screen-Shot-2019-04-12-at-8.58.43-PM.png" data-ix="fade-7-6" srcset="https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb76a159e80457feebdb8fd_Screen-Shot-2019-04-12-at-8.58.43-PM-p-500.png 500w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb76a159e80457feebdb8fd_Screen-Shot-2019-04-12-at-8.58.43-PM-p-800.png 800w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb76a159e80457feebdb8fd_Screen-Shot-2019-04-12-at-8.58.43-PM-p-1080.png 1080w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb76a159e80457feebdb8fd_Screen-Shot-2019-04-12-at-8.58.43-PM.png 1347w" sizes="(max-width: 479px) 90vw, (max-width: 991px) 80vw, 40vw" alt="" class="album-art _6">
-                        <div class="numbers small"></div>
-                    </div>
-                    <div class="column-details">
-                        <div class="spacer"></div>
-                        <div data-ix="slide-right-x" class="number kay slideUp" style="">6</div>
-                        <div data-ix="slide-right-x" class="album-title white slideUp" style="">Foot Balance<br><span class="text-span-4">Corporate Website</span></div>
-                    </div>
-                </div>
-            </div>
-            <div id="5" class="album-section section" data-bg="#f8eb4f">
-                <div class="album-row w-row">
-                    <div class="column-art"><img src="./projects_files/5cb760a2296d58026ebce1ae_Screen-Shot-2019-04-12-at-8.59.05-PM.png" data-ix="fade-6-5" srcset="https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760a2296d58026ebce1ae_Screen-Shot-2019-04-12-at-8.59.05-PM-p-500.png 500w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760a2296d58026ebce1ae_Screen-Shot-2019-04-12-at-8.59.05-PM-p-800.png 800w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760a2296d58026ebce1ae_Screen-Shot-2019-04-12-at-8.59.05-PM-p-1080.png 1080w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760a2296d58026ebce1ae_Screen-Shot-2019-04-12-at-8.59.05-PM.png 1347w" sizes="(max-width: 479px) 90vw, (max-width: 991px) 80vw, 40vw" alt="" class="album-art _5">
-                        <div data-ix="slide-right-x" class="numbers small" style="opacity: 0; "></div>
-                    </div>
-                    <div class="column-details">
-                        <div class="spacer"></div>
-                        <div data-ix="slide-right-x" class="number car-seat slideUp" style=" ">5</div>
-                        <div data-ix="slide-right-x" class="album-title slideUp" style=" ">NOKIA<br><span class="text-span-3">Corporate Blogs</span></div>
-                    </div>
-                </div>
-            </div>
-            <div id="4" class="album-section section" data-bg="#34ccf7">
-                <div class="album-row w-row">
-                    <div class="column-art"><img src="./projects_files/5cb7608a296d587d6abce15b_Screen-Shot-2019-04-12-at-8.59.42-PM.png" data-ix="fade-5-4" srcset="https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb7608a296d587d6abce15b_Screen-Shot-2019-04-12-at-8.59.42-PM-p-500.png 500w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb7608a296d587d6abce15b_Screen-Shot-2019-04-12-at-8.59.42-PM-p-800.png 800w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb7608a296d587d6abce15b_Screen-Shot-2019-04-12-at-8.59.42-PM-p-1080.png 1080w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb7608a296d587d6abce15b_Screen-Shot-2019-04-12-at-8.59.42-PM.png 1347w" sizes="(max-width: 479px) 90vw, (max-width: 991px) 80vw, 40vw" alt="" class="album-art _4">
-                        <div data-ix="slide-right-x" class="numbers small" style="opacity: 0; "></div>
-                    </div>
-                    <div class="column-details">
-                        <div class="spacer"></div>
-                        <div data-ix="slide-right-x" class="number animal slideUp" style="">4</div>
-                        <div data-ix="slide-right-x" class="album-title slideUp" style="">NOKIA<br><span class="text-span-2">UK Partner Portal</span></div>
-                    </div>
-                </div>
-            </div>
-            <div id="3" class="album-section section" data-bg="#fc2a1c">
-                <div class="album-row w-row">
-                    <div class="column-art"><img src="./projects_files/5cb760633bac4630df06f912_Screen-Shot-2019-04-12-at-8.59.58-PM.png" data-ix="fade-4-3" srcset="https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760633bac4630df06f912_Screen-Shot-2019-04-12-at-8.59.58-PM-p-500.png 500w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760633bac4630df06f912_Screen-Shot-2019-04-12-at-8.59.58-PM-p-800.png 800w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760633bac4630df06f912_Screen-Shot-2019-04-12-at-8.59.58-PM-p-1080.png 1080w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760633bac4630df06f912_Screen-Shot-2019-04-12-at-8.59.58-PM.png 1347w" sizes="(max-width: 479px) 90vw, (max-width: 991px) 80vw, 40vw" alt="" class="album-art _3">
-                        <div data-ix="slide-right-x" class="numbers small" style="opacity: 0; "></div>
-                    </div>
-                    <div class="column-details">
-                        <div class="spacer"></div>
-                        <div data-ix="slide-right-x" class="number diiv slideUp" style="">3</div>
-                        <div data-ix="slide-right-x" class="album-title white slideUp" style="">NOKIA<br><span class="text-span">Global Website</span></div>
-                    </div>
-                </div>
-            </div>
-            <div id="2" class="album-section section" data-bg="#fff">
-                <div class="album-row w-row">
-                    <div class="column-art"><img src="./projects_files/5cb7602c27e77801b2ae7aed_Screen-Shot-2019-04-12-at-9.00.21-PM.png" data-ix="fade-3-2" srcset="https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb7602c27e77801b2ae7aed_Screen-Shot-2019-04-12-at-9.00.21-PM-p-500.png 500w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb7602c27e77801b2ae7aed_Screen-Shot-2019-04-12-at-9.00.21-PM-p-800.png 800w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb7602c27e77801b2ae7aed_Screen-Shot-2019-04-12-at-9.00.21-PM-p-1080.png 1080w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb7602c27e77801b2ae7aed_Screen-Shot-2019-04-12-at-9.00.21-PM.png 1347w" sizes="(max-width: 479px) 90vw, (max-width: 767px) 80vw, 40vw" alt="" class="album-art _2"></div>
-                    <div class="column-details">
-                        <div class="spacer"></div>
-                        <div data-ix="slide-right-x" class="number pinegrove slideUp" style=" ">2</div>
-                        <div data-ix="slide-right-x" class="album-title slideUp" style=" ">Fujitsu<br><span class="text-span-3">Campaign Site</span></div>
-                    </div>
-                </div>
-            </div>
-            <div id="1" class="album-section section" data-bg="#80f2d7">
-                <div class="album-row w-row">
-                    <div class="column-art"><img src="./projects_files/5cb760099e8045d7b3bd85d2_Screen-Shot-2019-04-12-at-9.00.33-PM.png" data-ix="fade-2-1" width="1600" srcset="https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760099e8045d7b3bd85d2_Screen-Shot-2019-04-12-at-9.00.33-PM-p-500.png 500w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760099e8045d7b3bd85d2_Screen-Shot-2019-04-12-at-9.00.33-PM-p-800.png 800w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760099e8045d7b3bd85d2_Screen-Shot-2019-04-12-at-9.00.33-PM-p-1080.png 1080w, https://uploads-ssl.webflow.com/5cb611663adbf93a55db459d/5cb760099e8045d7b3bd85d2_Screen-Shot-2019-04-12-at-9.00.33-PM.png 1347w" sizes="(max-width: 479px) 90vw, (max-width: 767px) 80vw, 40vw" alt="" class="album-art"></div>
-                    <div class="column-details">
-                        <div class="spacer"></div>
-                        <div data-ix="slide-right-x" class="number slideUp" style="">1</div>
-                        <div data-ix="slide-right-x" class="album-title slideUp" style="">Nordic Culture Point<br><span class="text-span-3">Corporate Website</span></div>
-                    </div>
-                </div>
-            </div>
-            <section id="services" class="album-section section" data-bg="#fff">
-                <div class="wrapper">
-                    <h1 class="hero-title slideUp">We offer.</h1>
-                    <div class="scroll-pane">
-                        <div class="boxContainer">
-                            <div class="box slideUp">
-                                <div class="content">
-                                    <div class="title">User Expereince</div>
-                                    <ul>
-                                        <li><i class="icon-right-dir"></i>Website Feature Roadmap</li>
-                                        <li><i class="icon-right-dir"></i>Site-Mapping</li>
-                                        <li><i class="icon-right-dir"></i>Wireframes</li>
-                                        <li><i class="icon-right-dir"></i>UX Testing & Reporting</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="box slideUp">
-                                <div class="content">
-                                    <div class="title">Strategy</div>
-                                    <ul>
-                                        <li><i class="icon-right-dir"></i>Concept & Product Ideation</li>
-                                        <li><i class="icon-right-dir"></i>Defining MVP</li>
-                                        <li><i class="icon-right-dir"></i>UX & UI Consultation</li>
-                                        <li><i class="icon-right-dir"></i>Brand Positioning</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="box slideUp">
-                                <div class="content">
-                                    <div class="title">Websites</div>
-                                    <ul>
-                                        <li><i class="icon-right-dir"></i>Fully Responsive Web Design</li>
-                                        <li><i class="icon-right-dir"></i>Secure Websites</li>
-                                        <li><i class="icon-right-dir"></i>Open-Source Platforms</li>
-                                        <li><i class="icon-right-dir"></i>Mobile Sites</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- </div>
-                            <div class="boxContainer"> -->
-                            <div class="box slideUp">
-                                <div class="content">
-                                    <div class="title">Branding</div>
-                                    <ul>
-                                        <li><i class="icon-right-dir"></i>Brand Identity Design</li>
-                                        <li><i class="icon-right-dir"></i>Brand Logo Creation</li>
-                                        <li><i class="icon-right-dir"></i>Brand Guidelines</li>
-                                        <li><i class="icon-right-dir"></i>Marketing Collateral</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="box slideUp">
-                                <div class="content">
-                                    <div class="title">Interface/UI Design</div>
-                                    <ul>
-                                        <li><i class="icon-right-dir"></i>Interface & Visual Design</li>
-                                        <li><i class="icon-right-dir"></i>Responsive Web Design</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="box slideUp">
-                                <div class="content">
-                                    <div class="title">Content Production</div>
-                                    <ul>
-                                        <li><i class="icon-right-dir"></i>Brand Videos & Films</li>
-                                        <li><i class="icon-right-dir"></i>Photography</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+<body>
+    <div class="wrapper">
+        <div class="section">
+            <div class="title">Team BEAR!</div>
         </div>
+        <div class="section" style="background: url('images/about/pearl.jpg') no-repeat right top #000; background-size: contain; ">
+            <div class="sec">
+                <div class="text">
+                    <h2>Pearl Robyn O’Callaghan Hall</h2>
+                    <p>Financial Controller</p>
+                </div>
+                <!-- <div class="img"><img src="" alt=""></div> -->
+            </div>
+        </div>
+        <div class="section alt" style="background: url('images/about/jlp.jpg') no-repeat left top #000; background-size: contain; ">
+            <div class="sec">
+                <!-- <div class="img"><img src="images/about/jlp.JPG" alt=""></div> -->
+                <div class="text">
+                    <h2>Jeremy Mark Hall</h2>
+                    <p>Managing Partner</p>
+                </div>
+            </div>
+        </div>
+        <div class="section" style="background: url('images/about/siddharth.jpg') no-repeat right top #000; background-size: contain; ">
+            <div class="sec">
+                <div class="text">
+                    <h2>Sid Vinchurkar</h2>
+                    <p>Marketing Lead</p>
+                </div>
+                <!-- <div class="img"><img src="images/about/siddharth.jpg" alt=""></div> -->
+            </div>
+        </div>
+        
     </div>
-    <script src="js/vendor/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js/vendor/jquery.fullpage.min.js" type="text/javascript"></script>
-    <!-- the jScrollPane script -->
-    <script type="text/javascript" src="js/vendor/jquery.jscrollpane.min.js"></script>
-    <script src="js/custom.js" type="text/javascript"></script>
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.fullpage.min.js"></script>
     <script>
-    $(document).ready(function() {
-        $('#fullpage').fullpage({
-            //options here
-            autoScrolling: true,
-            scrollHorizontally: true,
-            onLeave: function(origin, destination, direction) {
-                $('body').css({ background: $('.section').eq(destination - 1).attr('data-bg') });
-                console.log(destination);
-                if (destination.index != 0) {
-                    $('nav').addClass('scroll');
-                } else { $('nav').removeClass('scroll'); }
-            },
-            afterLoad: function(origin, destination, direction) {
-                // var eleId  = '#'+ destination;
-                // console.log(eleId);
-                // $('.section.active').find('.number').animate({ opacity: 1 }, 800).siblings('.album-title').delay(300).animate({ opacity: 1 }, 800);
+    $('.wrapper').fullpage({
+        anchors: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16.0", "16", "17", "18", "18.1", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"],
+        normalScrollElements: '.scroll',
+        onLeave: function(index, nextIndex, direction) {
+            // $('.text').each(function(){
+            // 	var wid = $(this).siblings('.img').find('img').outerWidth(true);
+            // 	$(this).css({width: $(window).width() - wid, height: $(window).height()})
+            // })
+            // $('.img').each(function(){
+            // 	var wid = $(this).find('img').outerWidth(true);
+            // 	$(this).css({width: wid, height: $(window).height()})
+            // });
+        },
+        afterLoad: function(anchorLink, index) {
 
-                setTimeout(function() { $('nav span').css({ left: $('nav li .active').offset().left, top: ($('nav li .active').offset().top + $('nav li .active').outerHeight()) }); }, 1000);
-                $('.section.active .slideUp').each(function(index) {
-                    if ($(window).width() > 768) {
-                        $(this).css({ opacity: 1, transform: 'translate(0,0)', 'transition-delay': ((index / 10) + 's') });
-                    } else {
-                        $(this).css({ opacity: 1, transform: 'translate(0,0)' });
-                    }
-                })
-                $('.slideDown').each(function(index) {
-                    if ($(window).width() > 768) {
-                        $(this).css({ opacity: 1, transform: 'translate(0,0)', 'transition-delay': ((index / 10) + 's') });
-                    } else {
-                        $(this).css({ opacity: 1, transform: 'translate(0,0)' });
-                    }
-                })
-                setTimeout(function() { $('nav span').css({ width: $('nav li .active').outerWidth(), transition: 'all ease 0.5s' }); }, 1200);
-
-            },
-        });
-
-        $('.scroll-pane').jScrollPane({
-            alwaysShowVScroll: false
-        });
-
-        $('nav li a').mouseover(function() {
-            // $(this).css({opacity: 0});
-            $('nav span').css({ width: $(this).outerWidth(), left: $(this).offset().left, top: ($(this).offset().top + $(this).outerHeight()) });
-        }).mouseout(function() {
-            // $(this).css({opacity: 0});
-            $('nav span').css({ width: $('nav li .active').outerWidth(), left: $('nav li .active').offset().left, top: ($('nav li .active').offset().top + $('nav li .active').outerHeight()) });
-        });
-        //methods
-        // $.fn.fullpage.setAllowScrolling(false);
-    });
+        },
+        afterRender: function() {
+            // $('img').css({ height: $(window).height() })
+        }
+    })
     </script>
-    <div class="opPage"></div>
 </body>
 
 </html>
