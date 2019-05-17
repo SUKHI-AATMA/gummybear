@@ -1246,7 +1246,14 @@ a.playButton {
 [data-view="mobile"].fp-viewing-5 .hamburger #chkbox:checked+label span:nth-child(2) {
     border-color: #fff;
 }
+.newSection[data-sec="8"] .lftSec {
+    left: unset;
+    right: 0;
+    text-align: right;
+    padding: 0 20px 20px 100px;
+}
 
+.newSection[data-sec="8"] .lftSec:after { left:unset; right:0}
 /*Site CSS*/
 
 
