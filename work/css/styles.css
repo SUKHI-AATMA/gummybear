@@ -238,7 +238,7 @@ header .logo {
     width: 80%;
 }
 
-nav {
+/*nav {
     float: right;
     margin: 10px 10px 17px;
     position: relative;
@@ -317,7 +317,7 @@ nav {
     border-color: #fff;
 }
 
-/* nav .hamburger {
+ nav .hamburger {
      background-image: url(../images/sprite-nav.png);
      background-repeat: no-repeat;
      background-position: 100% 0;
@@ -329,7 +329,7 @@ nav {
  nav.white .hamburger {
      background-position: 100% 100%;
 }
- */
+ 
 
 .nav-list {
     color: #fff;
@@ -398,7 +398,7 @@ nav {
 nav.is-active .nav-list {
     display: block;
 }
-
+*/
 .fp-bg {
     left: 0;
     position: absolute;
@@ -461,6 +461,7 @@ a.redButton {
     transition: transform 0.5s;
     text-indent: -999px;
     width: 60px;
+    display: none !important;
 }
 
 a.redButton.is-active {
