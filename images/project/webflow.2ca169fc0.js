@@ -1649,7 +1649,7 @@ var tram = __webpack_require__(27) && $.tram;
  * _.has
  * _.now
  *
- * http://underscorejs.org
+ * https://underscorejs.org
  * (c) 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  * Underscore may be freely distributed under the MIT license.
  * @license MIT
