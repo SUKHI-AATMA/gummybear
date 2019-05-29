@@ -1194,7 +1194,7 @@ a.playButton {
 }
 
 .newSection .btmSec .sec:first-child:after {
-    border-left: 1px dashed #ff1f1f;
+    /*border-left: 1px dashed #ff1f1f;*/
     content: '';
     float: left;
     height: 0;
@@ -1247,14 +1247,14 @@ a.playButton {
 [data-view="mobile"].fp-viewing-5 .hamburger #chkbox:checked+label span:nth-child(2) {
     border-color: #fff;
 }
-.newSection[data-sec="8"] .lftSec {
+/*.newSection[data-sec="8"] .lftSec {
     left: unset;
     right: 0;
     text-align: right;
     padding: 0 20px 20px 100px;
 }
 
-.newSection[data-sec="8"] .lftSec:after { left:unset; right:0}
+.newSection[data-sec="8"] .lftSec:after { left:unset; right:0}*/
 /*Site CSS*/
 
 
@@ -1318,7 +1318,7 @@ a.playButton {
     }
 
     nav {
-        margin: 20px;
+        margin: 15px 0;
     }
 
     .nav-list {
@@ -1949,23 +1949,23 @@ a.playButton {
         /*background: url('../images/lines/2.svg') no-repeat 0 0, url('../images/lines/4.svg') no-repeat 50% 84px;*/
         bottom: 0;
         float: left;
-        right: calc((100% - 770px) / 1.3);
+        right: calc((100% - 300px) / 2);
         /* overflow: hidden; */
         position: absolute;
         padding: 85px 0 10px;
-        width: 770px;
+        width: 300px;
     }
 
     .newSection .btmSec .sec {
         float: left;
         padding: 10px 0 0;
         position: relative;
-        width: 45%;
+        width: 100%;
     }
 
-    .newSection .btmSec .sec:first-child {
+    /*.newSection .btmSec .sec:first-child {
         width: 55%;
-    }
+    }*/
 
     .newSection .btmSec .sec strong {
         display: block;
@@ -1989,12 +1989,12 @@ a.playButton {
         transform: translateX(200px);
     }
 
-    .newSection.rev .btmSec {
-        /* background: url('../images/lines/2.1.svg') no-repeat 0 0, url('../images/lines/4.svg') no-repeat 50% 84px;*/
+    /*.newSection.rev .btmSec {
+         background: url('../images/lines/2.1.svg') no-repeat 0 0, url('../images/lines/4.svg') no-repeat 50% 84px;
         bottom: 5%;
         left: calc((100% - 770px) / 1.7);
         right: auto;
-    }
+    }*/
 
     .newSection.rev .lftSec {
         /*background: url('../images/lines/1.1.svg') no-repeat 100% 100%;*/
@@ -2010,7 +2010,7 @@ a.playButton {
         text-align: left;
     }
 
-    [data-sec="3"].newSection .btmSec {
+/*    [data-sec="3"].newSection .btmSec {
         right: calc((100% - 750px) / 2);
         width: 750px;
     }
@@ -2026,7 +2026,7 @@ a.playButton {
         transition: height 0.5s 1.5s;
         width: 0px;
     }
-
+*/
     .newSection[data-sec="3"].active .btmSec .sec:after {
         height: 100%;
     }
@@ -2071,18 +2071,29 @@ a.playButton {
         left: 48%;
         top: 87px;
     }
+    .newSection[data-sec="8"] .btmSec {
+        right: calc((100% - 750px) / 2);
+        width: 750px;
+    }
 
-    [data-sec="5"].newSection .btmSec .sec {
+    .newSection[data-sec="8"] .btmSec .sec {
         width: 50%;
     }
+
+    .newSection[data-sec="8"] .btmSec .sec:first-child:after {
+        border-left: 1px dashed #ff1f1f;
+    }
+    /*[data-sec="5"].newSection .btmSec .sec {
+        width: 50%;
+    }*/
 
     /*[data-sec="5"].newSection .btmSec .sec:first-child {
     width: 47%;
       }*/
-    [data-sec="5"].newSection .btmSec {
-        /*background: url('../images/lines/2.svg') no-repeat 0 0, url('../images/lines/4.svg') no-repeat 43% 84px;*/
+    /*[data-sec="5"].newSection .btmSec {
+        background: url('../images/lines/2.svg') no-repeat 0 0, url('../images/lines/4.svg') no-repeat 43% 84px;
         right: calc((100% - 770px) / 1.5);
-    }
+    }*/
 
     [data-sec="5"].newSection .btmSec .sec .buttons {
         right: -75px;
@@ -2108,7 +2119,7 @@ a.playButton {
       background-size: 40% !important;
       background-position: center center !important;
     }*/
-    [data-sec="6"] .btmSec {
+/*    [data-sec="6"] .btmSec {
         bottom: 5%;
         right: calc((100% - 770px) / 1.8);
     }
@@ -2159,16 +2170,16 @@ a.playButton {
 
     .newSection[data-sec="9"] .btmSec .sec:after {
         display: none;
-    }
+    }*/
 
-    .newSection[data-sec="8"] .rgtSec {
+    /*.newSection[data-sec="8"] .rgtSec {
         left: 0;
         text-align: left;
     }
 
     .newSection[data-sec="8"] .rgtSec:after {
         left: 0;
-    }
+    }*/
 
 
     [data-sec="10"] .boxContainer {
