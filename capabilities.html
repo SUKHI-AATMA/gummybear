@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
+    <!-- <link href="css/custom.css" rel="stylesheet" type="text/css"> -->
     <link href="css/navigation.css" rel="stylesheet" type="text/css">
     <style>
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,900 ');
@@ -12,7 +13,60 @@
         font-family: 'Open Sans', sans-serif;
         overflow: auto;
     }
+.opPage {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #0A47ED;
+            transition: all 1.2s;
+            width: 0px;
+            height: 0px;
+            border-radius: 50%;
+            z-index: 1000;
+        }
 
+        .opPage:before {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /*background: #0A47ED;*/
+            transition: all 1.2s 0.2s;
+            width: 0px;
+            height: 0px;
+            z-index: 1001;
+            content: '';
+            border-radius: 50%;
+        }
+
+        .home.opPage:before {
+            background: #fff;
+        }
+        .about.opPage:before {
+            background: #fff;
+        }
+
+        .work.opPage:before {
+            background: #fff;
+        }
+
+        .contact.opPage:before {
+            background: #e00909;
+        }
+        
+        .opPage.active {
+            height: 5000px;
+            /*transform: translate(0,0);*/
+            width: 5000px;
+            /*top: -0%;*/
+            /*left: -0%;*/
+        }
+
+        .opPage.active:before {
+            width: 5000px;
+            height: 5000px;
+        }
     #services .pgTitle {
         font-size: 150px;
         font-weight: 900;
@@ -171,6 +225,7 @@
             </div>
         </div>
     </div>
+    <div class="opPage"></div>
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/custom.js" type="text/javascript"></script>
 </body>

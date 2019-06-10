@@ -306,7 +306,7 @@ nav.whiteNav span {
         padding: 10px 0 0;
         border: none;
     }
-    .hamburger {
+    .hamburge_r {
         display: flex;
         align-items: flex-start;
         cursor: pointer;
@@ -315,7 +315,7 @@ nav.whiteNav span {
         float: right;
     }
 
-    .hamburger__icon {
+    .hamburge_r__icon {
         width: 28px;
         height: 20px;
         transform: rotate(0deg);
@@ -326,7 +326,7 @@ nav.whiteNav span {
         align-self: center;
     }
 
-    .hamburger__icon span {
+    .hamburge_r__icon span {
         display: block;
         position: absolute;
         height: 3px;
@@ -339,38 +339,38 @@ nav.whiteNav span {
         transition: .25s ease-in-out;
     }
 
-    .hamburger__icon span:nth-child(1) {
+    .hamburge_r__icon span:nth-child(1) {
         top: 0;
     }
 
-    .hamburger__icon span:nth-child(2),
-    .hamburger__icon span:nth-child(3) {
+    .hamburge_r__icon span:nth-child(2),
+    .hamburge_r__icon span:nth-child(3) {
         top: 8px;
     }
 
-    .hamburger__icon span:nth-child(4) {
+    .hamburge_r__icon span:nth-child(4) {
         top: 16px;
     }
 
-    .hamburger__icon.open span {
+    .hamburge_r__icon.open span {
         background: #f00;
     }
 
-    .hamburger__icon.open span:nth-child(1) {
+    .hamburge_r__icon.open span:nth-child(1) {
         top: 16px;
         width: 0%;
         left: 50%;
     }
 
-    .hamburger__icon.open span:nth-child(2) {
+    .hamburge_r__icon.open span:nth-child(2) {
         transform: rotate(45deg);
     }
 
-    .hamburger__icon.open span:nth-child(3) {
+    .hamburge_r__icon.open span:nth-child(3) {
         transform: rotate(-45deg);
     }
 
-    .hamburger__icon.open span:nth-child(4) {
+    .hamburge_r__icon.open span:nth-child(4) {
         top: 16px;
         width: 0%;
         left: 50%;
@@ -386,14 +386,6 @@ body {
     display: none;
 }
 
-nav {
-    /*display: none;*/
-    position: fixed;
-    top: 0;
-    overflow: hidden;
-    left: 0;
-    z-index: 10;
-}
 
 .container {
     display: flex;
@@ -406,8 +398,13 @@ nav {
 
 nav {
     width: 100%;
+    /*display: none;*/
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    left: 0;
+    z-index: 10;
 }
-
 nav ul {
     float: right;
 }
@@ -427,6 +424,7 @@ nav ul li a {
     font-size: 20px;
     font-weight: 400;
     color: #000;
+    transition: all 0.5s linear;
 }
 nav.whiteNav ul li a { color: #fff; }
 nav ul li a:before {
@@ -453,6 +451,7 @@ nav ul li a.active:before {}
     transition: all 0.5s linear;
 }
 nav.whiteNav  .underline { background: #fff; }
+
 @media (max-width:768px) {
     body {
         padding: 0;
@@ -462,10 +461,10 @@ nav.whiteNav  .underline { background: #fff; }
         margin: 0;
         padding: 0;
         float: none;
-        display: flex;
+        display: none;
         flex-direction: row;
         justify-content: space-evenly;
-        width: 100%;
+        width: 94%;
         align-items: center;
     }
 
@@ -478,6 +477,51 @@ nav.whiteNav  .underline { background: #fff; }
     nav ul li a {
         font-size: 14px;
     }
+    .hamburge_r {
+        position: fixed;
+        top: 15px;
+        right: 30px;
+        width: 20px;
+        height: 20px;
+        
+    }
+    .hamburge_r span {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        width: 20px;
+        height: 2px;
+        top:50%;
+        background: #000;
+        border-radius: 3px;
+        transition: all linear 0.2s;
+    }
 
+    .hamburge_r span:after, .hamburge_r span:before {
+        position: absolute;
+        top: -6px;
+        right: 0;
+        width: 100%;
+        content: '';
+        display: inline-block;
+        background: #000;
+        height: 2px;
+        transition: all linear 0.2s;
+    }
 
+    .hamburge_r span:before {
+        top: 6px;
+    }
+    .open .hamburge_r span:after, .open .hamburge_r span:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .open .hamburge_r span:before {
+        transform: rotate(-45deg);
+    }
+
+    .open .hamburge_r span{
+        background: none;
+    }
 }
