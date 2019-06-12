@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,900 ');
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,900 '); */
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap ');
+
 
 @font-face {
     font-family: 'fontello';
@@ -78,7 +80,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
     transition: all 0.8s;
 }
 
@@ -91,7 +93,7 @@ html#contactPage {
 #contactPage body {
     background: #e00909;
     color: #fff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
     font-weight: 900;
     display: flex;
     height: 100%;
@@ -180,7 +182,8 @@ html#contactPage {
     left: 0;
     color: #fff;
     font-size: 50px;
-    font-family: NeueHaasGroteskBold;
+    /* font-family: NeueHaasGroteskBold; */
+    font-family: 'Luckiest Guy', cursive;
     float: left;
     line-height: 50px;
     transition: all 0.5s;
@@ -195,7 +198,8 @@ html#contactPage {
     color: #fff;
     font-size: 40px;
     line-height: 40px;
-    font-family: NeueHaasGroteskBold;
+    /* font-family: NeueHaasGroteskBold; */
+    font-family: 'Luckiest Guy', cursive;
 }
 
 .is-active.mat-div .mat-label,
@@ -508,7 +512,7 @@ html#contactPage {
     /*line-height: 1;*/
     position: relative;
     /*padding: 0 0 0 10px;*/
-    width: 34%;
+    width: 41%;
 }
 
 #contactPage .title .smText {
@@ -531,7 +535,7 @@ html#contactPage {
 }
 
 #contactPage .slide.slide3 .content {
-    width: 34%;
+    width: 41%;
 }
 
 #contactPage .slide2 .row .column {
@@ -571,7 +575,8 @@ html#contactPage {
     border: none;
     font-size: 23px;
     color: #710707;
-    font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+    /* font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif; */
+    font-family: 'Luckiest Guy', cursive;
     font-weight: 900;
 }
 
@@ -611,7 +616,8 @@ html#contactPage {
     min-width: 202px;
     width: auto;
     margin: 0 auto;
-    font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+    /* font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif; */
+    font-family: 'Luckiest Guy', cursive;
     font-size: 18px;
     color: #60666d;
     transform: translateY(4px);
@@ -781,7 +787,7 @@ html#contactPage {
     transition: -webkit-transform 200ms ease;
     transition: transform 200ms ease;
     transition: transform 200ms ease, -webkit-transform 200ms ease;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
     color: #000;
     font-size: 20px;
     font-weight: 800;
@@ -883,21 +889,21 @@ html#contactPage {
 
 @media (max-width:1440px) {
     #contactPage .title {
-        width: 42%;
+        width: 44%;
     }
 
     #contactPage .slide.slide3 .content {
-        width: 42%;
+        width: 44%;
     }
 }
 
 @media (max-width:1366px) {
     #contactPage .title {
-        width: 45%;
+        width: 50%;
     }
 
     #contactPage .slide.slide3 .content {
-        width: 45%;
+        width: 50%;
     }
 
     #contactPage .title {
@@ -933,6 +939,14 @@ html#contactPage {
     #contactPage .select-box {
         font-size: 16px;
     }
+}
+
+@media (max-width:1024px){
+
+    #contactPage .title {
+        font-size: 30px;
+    }
+
 }
 
 @media (device-height:1024px) and (device-width:768px) {

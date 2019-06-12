@@ -7,66 +7,68 @@
     <!-- <link href="css/custom.css" rel="stylesheet" type="text/css"> -->
     <link href="css/navigation.css" rel="stylesheet" type="text/css">
     <style>
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,900 ');
+    /* @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,900 '); */
+    @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap ');
 
     body {
-        font-family: 'Open Sans', sans-serif;
+        /* font-family: 'Open Sans', sans-serif; */
+        font-family: 'Luckiest Guy', cursive;
         overflow: auto;
     }
-.opPage {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #0A47ED;
-            transition: all 1.2s;
-            width: 0px;
-            height: 0px;
-            border-radius: 50%;
-            z-index: 1000;
-        }
+    .opPage {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #0A47ED;
+        transition: all 1.2s;
+        width: 0px;
+        height: 0px;
+        border-radius: 50%;
+        z-index: 1000;
+    }
 
-        .opPage:before {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /*background: #0A47ED;*/
-            transition: all 1.2s 0.2s;
-            width: 0px;
-            height: 0px;
-            z-index: 1001;
-            content: '';
-            border-radius: 50%;
-        }
+    .opPage:before {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*background: #0A47ED;*/
+        transition: all 1.2s 0.2s;
+        width: 0px;
+        height: 0px;
+        z-index: 1001;
+        content: '';
+        border-radius: 50%;
+    }
 
-        .home.opPage:before {
-            background: #fff;
-        }
-        .about.opPage:before {
-            background: #fff;
-        }
+    .home.opPage:before {
+        background: #fff;
+    }
+    .about.opPage:before {
+        background: #fff;
+    }
 
-        .work.opPage:before {
-            background: #fff;
-        }
+    .work.opPage:before {
+        background: #fff;
+    }
 
-        .contact.opPage:before {
-            background: #e00909;
-        }
-        
-        .opPage.active {
-            height: 5000px;
-            /*transform: translate(0,0);*/
-            width: 5000px;
-            /*top: -0%;*/
-            /*left: -0%;*/
-        }
+    .contact.opPage:before {
+        background: #e00909;
+    }
+    
+    .opPage.active {
+        height: 5000px;
+        /*transform: translate(0,0);*/
+        width: 5000px;
+        /*top: -0%;*/
+        /*left: -0%;*/
+    }
 
-        .opPage.active:before {
-            width: 5000px;
-            height: 5000px;
-        }
+    .opPage.active:before {
+        width: 5000px;
+        height: 5000px;
+    }
     #services .pgTitle {
         font-size: 150px;
         font-weight: 900;
@@ -120,7 +122,7 @@
         padding: 20px 0 0px;
         letter-spacing: 1px;
         font-weight: 900;
-         transform: translateY(0px);
+        transform: translateY(0px);
         transition: all 0.5s;
     }
 
@@ -140,6 +142,32 @@
     #services .boxContainer .box:hover .content ul { opacity: 1; transform: translateY(30px); /*position: relative;*/ }
     #services .boxContainer .box:hover .content .title {  transform: translateY(-100px); }
     #services .boxContainer .box:hover:nth-child(5) .content .title ,#services .boxContainer .box:hover:nth-child(6) .content .title {  transform: translateY(-60px); }
+    
+    @media (max-width: 1600px){
+        #services .pgTitle{
+            font-size: 120px;
+        }
+    }
+    @media (max-width: 1440px){
+        #services .pgTitle{
+            font-size: 100px;
+        }
+    }
+    @media (max-width: 1366px){
+        #services .pgTitle{
+            font-size: 80px;
+        }
+    }
+
+    @media (max-width: 768px){
+        #services .boxContainer .box{
+            display: flex;
+            flex-shrink: unset;
+            flex-basis: 100%;
+            width: 100%;
+        }
+    }
+    
     </style>
 
 </head>
