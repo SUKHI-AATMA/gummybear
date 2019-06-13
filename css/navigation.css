@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap ');
+
 /*@font-face {
   font-family: 'NeueHaasGrotesk';
   src: url('https://uploads-ssl.webflow.com/5b13df51d0d5fe8211f203da/5b1ab09a55bb9e923212c9e9_36D748_0_0.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/5b13df51d0d5fe8211f203da/5b1ab0ce06d32f606cf6920d_36D748_0_0.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/5b13df51d0d5fe8211f203da/5b1ab09ac15b133c5c2a2a19_36D748_0_0.woff') format('woff'), url('https://uploads-ssl.webflow.com/5b13df51d0d5fe8211f203da/5b1ab09ac15b133c5c2a2a19_36D748_0_0.woff') format('woff'), url('https://uploads-ssl.webflow.com/5b13df51d0d5fe8211f203da/5b1ab0ce5508052d9a5cedf2_36D748_0_0.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/5b13df51d0d5fe8211f203da/5b1ab0ce5508052d9a5cedf2_36D748_0_0.ttf') format('truetype');
@@ -206,6 +208,7 @@
     width: 100%;
 }*/
 
+
 /*nav {
     left: 0;
     margin: 0 auto;
@@ -386,7 +389,6 @@ body {
     display: none;
 }
 
-
 .container {
     display: flex;
     width: 100vw;
@@ -405,6 +407,7 @@ nav {
     left: 0;
     z-index: 10;
 }
+
 nav ul {
     float: right;
 }
@@ -419,14 +422,19 @@ nav ul li a {
     position: relative;
     display: block;
     text-decoration: none;
-    font-family: 'Open Sans';
+    /* font-family: 'Open Sans'; */
+    font-family: 'Luckiest Guy', cursive;
     padding: 5px 0;
     font-size: 20px;
     font-weight: 400;
     color: #000;
     transition: all 0.5s linear;
 }
-nav.whiteNav ul li a { color: #fff; }
+
+nav.whiteNav ul li a {
+    color: #fff;
+}
+
 nav ul li a:before {
     content: '';
     display: block;
@@ -450,13 +458,15 @@ nav ul li a.active:before {}
     width: 0;
     transition: all 0.5s linear;
 }
-nav.whiteNav  .underline { background: #fff; }
+
+nav.whiteNav .underline {
+    background: #fff;
+}
 
 @media (max-width:768px) {
     body {
         padding: 0;
     }
-
     nav ul {
         margin: 0;
         padding: 0;
@@ -467,13 +477,11 @@ nav.whiteNav  .underline { background: #fff; }
         width: 94%;
         align-items: center;
     }
-
     nav ul li {
         margin: 0;
         float: none;
         display: flex;
     }
-
     nav ul li a {
         font-size: 14px;
     }
@@ -483,7 +491,6 @@ nav.whiteNav  .underline { background: #fff; }
         right: 30px;
         width: 20px;
         height: 20px;
-        
     }
     .hamburge_r span {
         position: absolute;
@@ -491,13 +498,13 @@ nav.whiteNav  .underline { background: #fff; }
         right: 0;
         width: 20px;
         height: 2px;
-        top:50%;
+        top: 50%;
         background: #000;
         border-radius: 3px;
         transition: all linear 0.2s;
     }
-
-    .hamburge_r span:after, .hamburge_r span:before {
+    .hamburge_r span:after,
+    .hamburge_r span:before {
         position: absolute;
         top: -6px;
         right: 0;
@@ -508,20 +515,18 @@ nav.whiteNav  .underline { background: #fff; }
         height: 2px;
         transition: all linear 0.2s;
     }
-
     .hamburge_r span:before {
         top: 6px;
     }
-    .open .hamburge_r span:after, .open .hamburge_r span:before {
+    .open .hamburge_r span:after,
+    .open .hamburge_r span:before {
         transform: rotate(45deg);
         top: 0;
     }
-
     .open .hamburge_r span:before {
         transform: rotate(-45deg);
     }
-
-    .open .hamburge_r span{
+    .open .hamburge_r span {
         background: none;
     }
 }
