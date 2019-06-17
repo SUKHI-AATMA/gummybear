@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,900 ');
-
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap ');
 /* https://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
 
 html,
@@ -109,7 +109,7 @@ section {
 
 body {
     color: #323232;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
     font-size: 0.750em;
     line-height: 1.4;
     letter-spacing: 1px;
@@ -408,7 +408,7 @@ nav.is-active .nav-list {
 }
 
 p.title {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
     font-weight: 600;
     text-align: center;
     font-size: 9vw;
@@ -416,6 +416,17 @@ p.title {
     margin-right: 2%;
     text-transform: uppercase;
     width: 96%;
+
+}
+
+[data-sec="0"] .title{
+    /*display: flex;*/
+    font-size: 120px;
+    font-size: 5.5vw;
+    font-weight: 900;
+    line-height: 1;
+    /*padding: 0 0 0 100px;*/
+    /*width: 40%;*/
 }
 
 p.title span {
@@ -487,7 +498,7 @@ a.redBoxButton:hover {
 .ftNote {
     bottom: 65px;
     color: #323232;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
     font-weight: 600;
     float: left;
     margin: 0;
@@ -505,7 +516,7 @@ a.redBoxButton:hover {
     margin: 0 0 5px;
     line-height: 1.2;
     font-size: 1.2em;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
     font-weight: 600;
 }
 
@@ -650,7 +661,7 @@ a.redBoxButton:hover {
 
 .mbPopup.white .modelTitle {
     color: #c3002f;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
     font-weight: 600;
     font-size: 1.2em;
     text-transform: uppercase;
@@ -772,7 +783,7 @@ a.playButton {
     border-radius: 50px;
     color: #fff;
     display: inline-block;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
     font-weight: 600;
     margin: 0 0 10px;
     padding: 10px;
@@ -928,7 +939,7 @@ a.playButton {
 
 [data-view="mobile"] [data-sec="2"] .ftNote,
 [data-view="mobile"] [data-sec="3"] .ftNote {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
     font-weight: 600;
     /*bottom: 90px;*/
 }
@@ -1367,7 +1378,7 @@ a.playButton {
         color: #fff;
         display: inline;
         line-height: initial;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Luckiest Guy', cursive;
         font-size: inherit;
     }
 
@@ -1492,7 +1503,7 @@ a.playButton {
         background-position: center;
       }
       [data-sec="2"] p.bl span {
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Luckiest Guy', cursive;
         font-weight:600;
       }
       [data-sec="2"] p, [data-sec="3"] p, [data-sec="5"] p {
@@ -1500,7 +1511,7 @@ a.playButton {
       }
       [data-sec="2"] p.br, [data-sec="3"] p.tl {
         font-size: 3em;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Luckiest Guy', cursive;
         font-weight:600;
       }
       [data-sec="2"] p.br span, [data-sec="3"] p.tl span {
@@ -1520,7 +1531,7 @@ a.playButton {
       }
       [data-sec="2"] p span span {
         color: #323232 !important;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Luckiest Guy', cursive;
         font-weight:600;
         font-size: 2.1em;
         line-height: 1;
@@ -1848,12 +1859,12 @@ a.playButton {
 
     .newSection .desktop .car p.title {
         font-size: 3.5em;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Luckiest Guy', cursive;
     }
 
     .newSection .desktop .car p.title strong {
         display: block;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Luckiest Guy', cursive;
         font-weight: 600;
         font-size: 1.07em;
     }
@@ -1879,6 +1890,7 @@ a.playButton {
     }
 
     .newSection .lftSec {
+        font-family: 'Open Sans', sans-serif;
         float: left;
         left: 0;
         overflow: hidden;
@@ -1917,7 +1929,7 @@ a.playButton {
     section .lftSec strong {
         display: block;
         font-family: 'Open Sans', sans-serif;
-        font-weight: 600;
+        font-weight: 900;
         margin: 0 0 10px;
     }
 
@@ -1947,7 +1959,7 @@ a.playButton {
 
     .newSection .rgtSec strong {
         display: block;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Luckiest Guy', cursive;
         font-weight: 600;
     }
 
@@ -1975,7 +1987,7 @@ a.playButton {
 
     .newSection .btmSec .sec strong {
         display: block;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Luckiest Guy', cursive;
         font-weight: 600;
     }
 
