@@ -219,9 +219,17 @@ var CONTACT = {
         };
         $('#submit').attr('disabled', true).addClass('send').val('Sending...');
         // console.log(data)
-        $.post($('form'), $('form').serialize()).then(function() {
-            $('#submit').attr('disabled', false).removeClass('send').val('Submit');
-            $('label.error').html("THANK YOU! We will get in touch with you shortly.").css({ 'display': 'block' }).addClass('success');
+        // $.post($('form'), $('form').serialize()).then(function() {
+        //     $('#submit').attr('disabled', false).removeClass('send').val('Submit');
+        //     $('label.error').html("THANK YOU! We will get in touch with you shortly.").css({ 'display': 'block' }).addClass('success');
+        // });
+        $("#contact").submit(function(e) {
+          e.preventDefault();
+
+          var $form = $(this);
+          $.post($form.attr("action"), $form.serialize()).then(function() {
+            alert("Thank you!");
+          });
         });
         // $.ajax({
         //     type: "POST",
