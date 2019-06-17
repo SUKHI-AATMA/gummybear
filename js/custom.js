@@ -21,8 +21,7 @@ $(document).on('click touchend', '.customNavLink', function(e) {
     }
 }).on('click touchend', ".mat-label", function() {
     $(this).parent().addClass("is-active is-completed");
-})
-.on('click', '#submit', function(e) {
+}).on('click', '#submit', function(e) {
     e.preventDefault();
     CONTACT.formSubmit();
 }).on('click touchend','.hamburge_r',function(){
@@ -219,21 +218,25 @@ var CONTACT = {
             // message: message,
         };
         $('#submit').attr('disabled', true).addClass('send').val('Sending...');
-        console.log(data)
-        $.ajax({
-            type: "POST",
-            url: "email.php",
-            data: data,
-            success: function(response) {
-                $('#submit').attr('disabled', false).removeClass('send').val('Submit');
-                $('label.error').html("THANK YOU! We will get in touch with you shortly.").css({ 'display': 'block' }).addClass('success');
-            },
-            error: function(response) {
-                $('#submit').attr('disabled', false).removeClass('send').val('Submit');
-                alert('There was a problem. Please try again');
-            },
-            complete: function(response) {}
+        // console.log(data)
+        $.post($('form'), $('form').serialize()).then(function() {
+            $('#submit').attr('disabled', false).removeClass('send').val('Submit');
+            $('label.error').html("THANK YOU! We will get in touch with you shortly.").css({ 'display': 'block' }).addClass('success');
         });
+        // $.ajax({
+        //     type: "POST",
+        //     url: "email.php",
+        //     data: data,
+        //     success: function(response) {
+        //         $('#submit').attr('disabled', false).removeClass('send').val('Submit');
+        //         $('label.error').html("THANK YOU! We will get in touch with you shortly.").css({ 'display': 'block' }).addClass('success');
+        //     },
+        //     error: function(response) {
+        //         $('#submit').attr('disabled', false).removeClass('send').val('Submit');
+        //         alert('There was a problem. Please try again');
+        //     },
+        //     complete: function(response) {}
+        // });
     },
     validateEmail: function(email) {
         var re = /^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!\.)){0,61}[a-zA-Z0-9]?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!$)){0,61}[a-zA-Z0-9]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/;
