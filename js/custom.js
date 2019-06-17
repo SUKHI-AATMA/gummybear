@@ -21,7 +21,8 @@ $(document).on('click touchend', '.customNavLink', function(e) {
     }
 }).on('click touchend', ".mat-label", function() {
     $(this).parent().addClass("is-active is-completed");
-}).on('click', '#submit', function(e) {
+})
+.on('click', '#submit', function(e) {
     e.preventDefault();
     CONTACT.formSubmit();
 }).on('click touchend','.hamburge_r',function(){
@@ -134,9 +135,10 @@ var CONTACT = {
             // e.preventDefault(); // prevent the default action (scroll / move caret)
             // // console.log(slideIndex);
             // CONTACT.nextSlide(slideIndex)
-        }).on('click', '#submit', function() {
-            CONTACT.formSubmit();
         })
+        // .on('click', '#submit', function() {
+        //     CONTACT.formSubmit();
+        // })
         // $(window).bind('mousewheel', function(event) {
         //     var slideIndex = $('.slide.active').index();
         //     if (event.originalEvent.wheelDelta >= 0) {
