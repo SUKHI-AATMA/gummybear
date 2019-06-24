@@ -223,6 +223,7 @@ var CONTACT = {
         //     $('#submit').attr('disabled', false).removeClass('send').val('Submit');
         //     $('label.error').html("THANK YOU! We will get in touch with you shortly.").css({ 'display': 'block' }).addClass('success');
         // });
+        $("#contact").submit();
         $("#contact").submit(function(e) {
           e.preventDefault();
 
