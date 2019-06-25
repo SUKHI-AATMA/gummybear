@@ -999,9 +999,9 @@ a.playButton {
     color: #c3002f;
 }
 
-[data-view="mobile"] [data-sec="7"] .fp-bg {
+/* [data-view="mobile"] [data-sec="7"] .fp-bg {
     background: #fff !important;
-}
+} */
 
 .svgL2.play .paths2 {
     fill: none;
@@ -2455,5 +2455,37 @@ a.playButton {
     [data-view="desktop"] [data-sec="1"] .ftNote {
         bottom: 3%;
         right: 3%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .fp-bg{
+        background-position: center 50% !important;
+        background-size: 80% !important;
+    }
+    .companyLogo{
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+        padding-top: 20%;
+        text-align: center;
+        margin: 0 auto
+    }
+    .companyLogo img{
+        width: 100%;
+        height: auto;
+    }
+    .mobile .ftNote{
+        bottom: 15% !important;
+    }
+    .mobile .ftNote p.title{
+        font-size: 5vw;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+    .companyLogo{
+        max-width: 120px;
     }
 }
