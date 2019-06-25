@@ -74,17 +74,22 @@
 
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
     font-family: 'Luckiest Guy', cursive;
+    -webkit-transition: all 0.8s;
+    -o-transition: all 0.8s;
     transition: all 0.8s;
 }
 
 html#contactPage {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     height: 100%;
@@ -95,6 +100,8 @@ html#contactPage {
     color: #fff;
     font-family: 'Luckiest Guy', cursive;
     font-weight: 900;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100%;
     width: 100%;
@@ -112,8 +119,12 @@ html#contactPage {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     background: #0A47ED;
+    -webkit-transition: all 1.2s;
+    -o-transition: all 1.2s;
     transition: all 1.2s;
     width: 0px;
     height: 0px;
@@ -125,8 +136,12 @@ html#contactPage {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     /*background: #0A47ED;*/
+    -webkit-transition: all 1.2s 0.2s;
+    -o-transition: all 1.2s 0.2s;
     transition: all 1.2s 0.2s;
     width: 0px;
     height: 0px;
@@ -186,6 +201,8 @@ html#contactPage {
     font-family: 'Luckiest Guy', cursive;
     float: left;
     line-height: 50px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -217,9 +234,16 @@ html#contactPage {
 }
 
 .album-section .fp-tableCell {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .person-title {
@@ -241,8 +265,13 @@ html#contactPage {
 }
 
 #workPage #fullpage {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 #workPage #fullpage .section {
@@ -259,13 +288,21 @@ html#contactPage {
 
 .slideUp {
     opacity: 0;
-    transform: translate(0, 50px);
+    -webkit-transform: translate(0, 50px);
+        -ms-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+    -webkit-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
     transition: all linear 0.5s;
 }
 
 .slideDown {
     opacity: 0;
-    transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+        -ms-transform: translate(0, -100px);
+            transform: translate(0, -100px);
+    -webkit-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
     transition: all linear 0.5s;
 }
 
@@ -312,34 +349,56 @@ html#contactPage {
 }
 
 #services .boxContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     /*margin: 0 0 60px;*/
     width: 80%;
 }
 
 #services .boxContainer .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0 0 90px 0;
     width: 33%;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 33%;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
 }
 
 #services .boxContainer .box .content {
     background: #ffdd19;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 10px;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 80%;
 }
 
 #services .boxContainer .box .content .title {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     /* height: 70px; */
     /* background: #bfa50f; */
     font-size: 25px;
@@ -374,6 +433,8 @@ html#contactPage {
 
 #services .boxContainer .box .content:before {
     content: '';
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: absolute;
     width: 30px;
@@ -382,11 +443,15 @@ html#contactPage {
     z-index: 1;
     top: 15px;
     left: -30px;
-    transform: skewY(-45deg);
+    -webkit-transform: skewY(-45deg);
+        -ms-transform: skewY(-45deg);
+            transform: skewY(-45deg);
 }
 
 #services .boxContainer .box .content:after {
     content: '';
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: absolute;
     width: 80%;
@@ -395,7 +460,9 @@ html#contactPage {
     z-index: 1;
     bottom: -30px;
     left: -15px;
-    transform: skewX(-45deg);
+    -webkit-transform: skewX(-45deg);
+        -ms-transform: skewX(-45deg);
+            transform: skewX(-45deg);
 }
 
 .number[data-ix=slide-right-x] {
@@ -403,8 +470,13 @@ html#contactPage {
 }
 
 .album-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .album-row .column-art {
@@ -416,8 +488,12 @@ html#contactPage {
 }
 
 .album-row .column-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 0 0 10%;
     width: 50%;
 }
@@ -445,7 +521,9 @@ html#contactPage {
     font-style: normal;
     /*font-weight: normal;*/
     display: inline-block;
-    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
     /*padding: 0 0 10px;*/
 }
 
@@ -454,29 +532,56 @@ html#contactPage {
 }
 
 #contactPage .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     height: 100%;
 }
 
 #contactPage .carou {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     height: 100%;
     position: relative;
 }
 
 #contactPage .slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -487,6 +592,8 @@ html#contactPage {
 
 #contactPage .slide.active {
     z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -504,7 +611,9 @@ html#contactPage {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
 }
 
 #contactPage .title {
@@ -519,7 +628,9 @@ html#contactPage {
     position: absolute;
     top: 13px;
     left: 0;
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
 }
 
 #contactPage .slide .content {
@@ -551,6 +662,34 @@ html#contactPage {
 
 #contactPage .row .column a {
     color: #fff;
+}
+
+#contactPage ::-webkit-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #710707;
+    opacity: 1;
+    /* Firefox */
+}
+
+#contactPage ::-moz-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #710707;
+    opacity: 1;
+    /* Firefox */
+}
+
+#contactPage :-ms-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #710707;
+    opacity: 1;
+    /* Firefox */
+}
+
+#contactPage ::-ms-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #710707;
+    opacity: 1;
+    /* Firefox */
 }
 
 #contactPage ::placeholder {
@@ -605,6 +744,8 @@ html#contactPage {
     color: #710707;
     -webkit-text-fill-color: #710707;
     -webkit-box-shadow: unset;
+    -webkit-transition: unset;
+    -o-transition: unset;
     transition: unset;
     -webkit-animation-name: autofill;
     -webkit-animation-fill-mode: both;
@@ -620,7 +761,9 @@ html#contactPage {
     font-family: 'Luckiest Guy', cursive;
     font-size: 18px;
     color: #60666d;
-    transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+        -ms-transform: translateY(4px);
+            transform: translateY(4px);
 }
 
 #contactPage .select-box__current {
@@ -643,7 +786,8 @@ html#contactPage {
 
 #contactPage .select-box__current:focus .select-box__icon {
     -webkit-transform: translateY(-50%) rotate(180deg);
-    transform: translateY(-50%) rotate(180deg);
+    -ms-transform: translateY(-50%) rotate(180deg);
+        transform: translateY(-50%) rotate(180deg);
 }
 
 #contactPage .select-box__icon {
@@ -651,13 +795,18 @@ html#contactPage {
     top: 50%;
     right: 15px;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     width: 20px;
     opacity: 0.3;
+    -webkit-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
     transition: 0.2s ease;
 }
 
 #contactPage .select-box__value {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -687,15 +836,20 @@ html#contactPage {
     list-style: none;
     opacity: 0;
     /*-webkit-animation-name: HideList;*/
-    animation-name: HideList;
+    -webkit-animation-name: HideList;
+            animation-name: HideList;
     /*-webkit-animation-duration: 0.5s;*/
-    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
     /*-webkit-animation-delay: 0.5s;*/
-    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
     /*-webkit-animation-fill-mode: forwards;*/
-    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     /*-webkit-animation-timing-function: step-start;*/
-    animation-timing-function: step-start;
+    -webkit-animation-timing-function: step-start;
+            animation-timing-function: step-start;
     /*box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);*/
 }
 
@@ -751,6 +905,8 @@ html#contactPage {
     border-radius: 50%;
     background: #fff;
     margin: 0 5px;
+    -webkit-transition: all ease 0.8s;
+    -o-transition: all ease 0.8s;
     transition: all ease 0.8s;
 }
 
@@ -765,7 +921,8 @@ html#contactPage {
 }
 
 #contactPage .btn * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 #contactPage .button {
@@ -785,6 +942,7 @@ html#contactPage {
     background-color: #FFCF31;
     -webkit-transition: -webkit-transform 200ms ease;
     transition: -webkit-transform 200ms ease;
+    -o-transition: transform 200ms ease;
     transition: transform 200ms ease;
     transition: transform 200ms ease, -webkit-transform 200ms ease;
     font-family: 'Luckiest Guy', cursive;
@@ -812,6 +970,7 @@ html#contactPage {
     transform-origin: 100% 50%;
     -webkit-transition: height 200ms ease, -webkit-transform 200ms ease;
     transition: height 200ms ease, -webkit-transform 200ms ease;
+    -o-transition: height 200ms ease, transform 200ms ease;
     transition: height 200ms ease, transform 200ms ease;
     transition: height 200ms ease, transform 200ms ease, -webkit-transform 200ms ease;
 }
@@ -840,6 +999,7 @@ html#contactPage {
     transform-origin: 50% 100% 0px;
     -webkit-transition: width 200ms ease, -webkit-transform 200ms ease;
     transition: width 200ms ease, -webkit-transform 200ms ease;
+    -o-transition: transform 200ms ease, width 200ms ease;
     transition: transform 200ms ease, width 200ms ease;
     transition: transform 200ms ease, width 200ms ease, -webkit-transform 200ms ease;
 }
@@ -853,16 +1013,20 @@ html#contactPage {
 }
 
 #contactPage .button:hover .button-link {
-    transform: translate(16px, -16px);
+    -webkit-transform: translate(16px, -16px);
+        -ms-transform: translate(16px, -16px);
+            transform: translate(16px, -16px);
 }
 
 #contactPage .button:hover .extrude-right.alt {
-    transform: skew(0deg, -45deg) scale3d(1, 1, 1);
+    -webkit-transform: skew(0deg, -45deg) scale3d(1, 1, 1);
+            transform: skew(0deg, -45deg) scale3d(1, 1, 1);
     height: 100%;
 }
 
 #contactPage .button:hover .extrude-bottom.alt {
-    transform: skew(-45deg, 0deg) scale3d(1, 1, 1);
+    -webkit-transform: skew(-45deg, 0deg) scale3d(1, 1, 1);
+            transform: skew(-45deg, 0deg) scale3d(1, 1, 1);
     width: 100%;
 }
 
@@ -884,7 +1048,9 @@ html#contactPage {
     position: fixed;
     top: 50%;
     left: 20%;
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
 }
 
 @media (max-width:1440px) {
@@ -1053,7 +1219,10 @@ html#contactPage {
     }
 
     .album-row {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .album-row .column-art {
@@ -1086,7 +1255,8 @@ html#contactPage {
 
     #services .boxContainer .box {
         width: 80%;
-        flex-basis: 80%;
+        -ms-flex-preferred-size: 80%;
+            flex-basis: 80%;
         margin: 0 10%;
     }
 

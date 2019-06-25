@@ -390,12 +390,21 @@ body {
 }
 
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100vw;
     height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 nav {
@@ -430,6 +439,8 @@ nav ul li a {
     font-size: 20px;
     font-weight: 400;
     color: #000;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
 
@@ -458,6 +469,8 @@ nav ul li a.active:before {}
     height: 2px;
     background: #f00;
     width: 0;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
 
@@ -474,14 +487,23 @@ nav.whiteNav .underline {
         padding: 0;
         float: none;
         display: none;
-        flex-direction: row;
-        justify-content: space-evenly;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
         width: 94%;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     nav ul li {
         margin: 0;
         float: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
     nav ul li a {
@@ -503,6 +525,8 @@ nav.whiteNav .underline {
         top: 50%;
         background: #000;
         border-radius: 3px;
+        -webkit-transition: all linear 0.2s;
+        -o-transition: all linear 0.2s;
         transition: all linear 0.2s;
     }
     .hamburge_r span:after,
@@ -515,6 +539,8 @@ nav.whiteNav .underline {
         display: inline-block;
         background: #000;
         height: 2px;
+        -webkit-transition: all linear 0.2s;
+        -o-transition: all linear 0.2s;
         transition: all linear 0.2s;
     }
     .hamburge_r span:before {
@@ -522,11 +548,15 @@ nav.whiteNav .underline {
     }
     .open .hamburge_r span:after,
     .open .hamburge_r span:before {
-        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
         top: 0;
     }
     .open .hamburge_r span:before {
-        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
     }
     .open .hamburge_r span {
         background: none;
