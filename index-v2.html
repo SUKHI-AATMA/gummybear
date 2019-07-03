@@ -28,12 +28,64 @@
         body {
             overflow: hidden !important;
         }
+
+        .gb-home{
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
+        .gb-home .inner-wrap{
+            display: flex;
+            align-items: flex-end;
+            padding: 0 100px;
+            margin-bottom: 150px;
+            width: 100%;
+        }
+        .gb-home .inner-wrap .col{
+            width: 100%;
+        }
+        .gb-home .inner-wrap .col img{
+            width: 100%;
+            height: auto;
+        }
+        .gb-home-head {}
+        .gb-home-head .gb-title{
+            color: #fff;
+            font-size: 120px;
+            font-weight: 900;
+            line-height: 1.3;
+            margin: 0;
+        }
+        .gb-home-head .gb-subtitle {
+            color: #fff;
+            font-size: 60px;
+        }
+        .gb-home-head .gb-caption{
+            color: #fff;
+            font-size: 30px;
+            line-height: 1;
+        }
+        .gb-home .gb-home-ft{
+            position: absolute;
+            bottom: 30px;
+            right: 100px;
+        }
+        .gb-home .gb-home-ft p{
+            width: 110px;
+            text-align: center;
+            color: #fff;
+            font-size: 18px; 
+            margin: 0;             
+        }
+
     </style>
 </head>
 
 <body class="body home">
     <nav>
-        <div class="logo"></div>
+        <div class="logo">
+            <img src="images/dummy-logo.png" alt="Gummy Bear">
+        </div>
         <ul>
             <li class="slideDown"><a href="/" class="customNavLink active" data-page="home">Home</a></li>
             <li class="slideDown"><a href="/about.html" class="customNavLink" data-page="home">About</a></li>
@@ -44,11 +96,19 @@
         <span class="underline"></span>
         <div class="hamburge_r"><span></span></div>
     </nav>
-    <div id="container" class="container">
-        <section id="top" class="hero">
-            <div class="wrapper">
-                <h1 class="hero-title hero-title-main slideUp">We’re gummy bear.</h1>
-                <h2 class="slideUp" style="color: #7B7676;">An aspiring borderless digital agency helping brands craft and communicate their brand story and connect with people.</h2>
+    <div id="container" class="gb-home">
+        <section id="top" class="hero gb-home">
+            <div class="inner-wrap">
+                <div class="col">
+                    <div class="gb-home-head">
+                        <h1 class="gb-title slideUp">Gidday</h1>
+                        <h2 class="gb-subtitle slideUp">We are the best Digital, design and marketing experts.</h2>
+                        <p class="gb-caption slideUp">(People Behind the sins)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gb-home-ft">
+                <p>The Delicious Digital agency</p>
             </div>
         </section>
     </div>
@@ -59,3 +119,5 @@
 </body>
 
 </html>
+
+

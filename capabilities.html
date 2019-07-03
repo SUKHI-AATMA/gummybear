@@ -14,7 +14,61 @@
         /* font-family: 'Open Sans', sans-serif; */
         font-family: 'Luckiest Guy', cursive;
         overflow: auto;
+        margin: 0;
     }
+    
+        .gb-cap{
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            background: #00892D;
+        }
+        .gb-cap .inner-wrap{
+            display: flex;
+            align-items: flex-end;
+            padding: 0 100px;
+            margin-bottom: 150px;
+            width: 100%;
+        }
+        .gb-cap .inner-wrap .col{
+            width: 100%;
+        }
+        .gb-cap .inner-wrap .col img{
+            width: 100%;
+            height: auto;
+        }
+        .gb-cap-head {}
+        .gb-cap-head .gb-title{
+            color: #fff;
+            font-size: 120px;
+            font-weight: 900;
+            line-height: 1.3;
+            margin: 0;
+        }
+        .gb-cap-head .gb-subtitle {
+            color: #fff;
+            font-size: 60px;
+        }
+        .gb-cap-head .gb-caption{
+            color: #fff;
+            font-size: 30px;
+            line-height: 1;
+            margin: 0;
+        }
+        .gb-cap .gb-cap-ft{
+            position: absolute;
+            bottom: 30px;
+            right: 100px;
+        }
+        .gb-cap .gb-cap-ft p{
+            width: 110px;
+            text-align: center;
+            color: #fff;
+            font-size: 18px; 
+            margin: 0;          
+        }
+
+
     .opPage {
         position: fixed;
         top: 50%;
@@ -263,7 +317,21 @@
         <div class="hamburge_r"><span></span></div>
     </nav>
     <div class="Wrapper">
-        <div class="pgTitle">Our Capabilities</div>
+        <!-- <div class="pgTitle">Our Capabilities</div> -->
+        <div class="gb-cap">
+            <div class="inner-wrap">
+                <div class="col">
+                    <div class="gb-cap-head">
+                        <h1 class="gb-title slideUp">Bear<br>Capabilities</h1>
+                        <p class="gb-caption slideUp">(Things we suck at!)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gb-cap-ft">
+                <p>Delicious Digital agency</p>
+            </div>
+        </div>
+
         <div class="boxContainer">
             <div class="box slideUp" style="background: #50cff8;">
                 <div class="content">

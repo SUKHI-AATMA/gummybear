@@ -96,7 +96,7 @@ html#contactPage {
 }
 
 #contactPage body {
-    background: #e00909;
+    background: #0A47ED;
     color: #fff;
     font-family: 'Luckiest Guy', cursive;
     font-weight: 900;
@@ -1280,4 +1280,37 @@ html#contactPage {
         font-size: 14px;
         padding: 15px;
     }
+}
+
+
+
+/* gb style */
+.gb-home{
+    background: #EB2E2A;
+}
+.gb-title{
+    font-size: 100px;
+    line-height: 1.2;
+    color: #fff;
+}
+.gb-subtitle{
+    font-size: 60px;
+    line-height: 1.2;
+    color: #fff;
+}
+.gb-caption{
+    font-size: 30px;
+    line-height: 1.2;
+    color: #fff;
+}
+.gb-ft{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+.gb-ft .gb-ft-head{
+    width: 110px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
 }
