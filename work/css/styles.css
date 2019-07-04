@@ -2087,7 +2087,12 @@ a.playButton {
         margin: 0 0 10px 0;
         width: 30%;
     }
-
+    .newSection[data-sec="10"] .rgtSec img {
+        width: 50%;
+    }
+    .newSection[data-sec="1"] .rgtSec img {
+        width: 50%;
+    }
     .newSection[data-sec='5'] .rgtSec img {
         width: 30%;
     }

@@ -122,10 +122,14 @@ html#contactPage {
     width: 100% !important;
 }
 #contactPage .bg-contact .slide3 .title h1{
+    font-size: 60px;
     padding-bottom: 30px !important;
 }
-#contactPage .bg-contact .slide3 .title p{
-    font-size: 24px !important;
+#contactPage .bg-contact .slide3 .title p {
+    font-size: 30px !important;
+}
+#contactPage .slide .content {
+    font-size: 30px !important;
 }
 #contactPage .bg-contact .slide3 .title .casing,
 #contactPage .bg-contact .slide3 .content .casing{
@@ -161,7 +165,7 @@ html#contactPage {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    background: #0A47ED;
+    background: #fff;
     -webkit-transition: all 1.2s;
     -o-transition: all 1.2s;
     transition: all 1.2s;
@@ -190,15 +194,21 @@ html#contactPage {
 }
 
 .home.opPage:before {
-    background: #fff;
+    background: #EB2E2A;
 }
 
+.about.opPage:before {
+    background: #FFCF31;
+}
+.capabilities.opPage:before {
+    background: #00892D;
+}
 .work.opPage:before {
     background: #fff;
 }
 
 .contact.opPage:before {
-    background: #e00909;
+    background: #fd5e0f;
 }
 
 .opPage.active {
@@ -695,8 +705,8 @@ html#contactPage {
 }
 
 #contactPage .carou a {
-    text-decoration: none;
     color: #710707;
+    text-decoration: none;
 }
 
 #contactPage .row .column a {
@@ -847,6 +857,8 @@ html#contactPage {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
+    top: -3px;
 }
 
 #contactPage .select-box__input {
@@ -855,6 +867,10 @@ html#contactPage {
 
 #contactPage .select-box__input:checked+.select-box__input-text {
     display: block;
+    font-size: 30px;
+}
+#contactPage input {
+    font-size: 30px !important;
 }
 
 #contactPage .slide p.select-box__input-text {
@@ -986,7 +1002,7 @@ html#contactPage {
     transition: transform 200ms ease, -webkit-transform 200ms ease;
     font-family: 'Luckiest Guy', cursive;
     color: #000;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 800;
     text-align: center;
     text-decoration: none;
@@ -1146,6 +1162,16 @@ html#contactPage {
     }
 }
 
+
+
+@media (max-width:1290px) and (max-height: 860) {
+    #contactPage .bg-contact .slide3 .title p {
+        font-size: 40px;   
+    }
+    #contactPage .slide .content {
+        font-size: 30px;
+    }
+}
 @media (max-width:1024px){
 
     #contactPage .title {
