@@ -1210,12 +1210,17 @@ a.playButton {
 }
 
 .newSection.active .lftSec:after {
-    width: 350px;
+    width: 350px;   
 }
 
-.newSection .rgtSec:after {
+.newSection .rgtSec .img{
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.newSection .rgtSec .img:after {
     border-bottom: 10px dashed #FFCF31;
-    bottom: 3px;
+    bottom: 0px;
     content: '';
     float: left;
     height: 1px;
@@ -1227,7 +1232,7 @@ a.playButton {
     width: 0;
 }
 
-.newSection.active .rgtSec:after {
+.newSection.active .rgtSec .img:after {
     width: 100%;
 }
 
@@ -1305,8 +1310,8 @@ a.playButton {
 }
 
 .newSection.rev .btmSec:before {
-    border-right: 0px dashed #FFCF31;
-    border-left: 10px dashed #FFCF31;
+    border-right: 0px dashed #ff1f1f;
+    border-left: 1px dashed #ff1f1f;
     right: auto;
     left: 0;
     -webkit-transition: height 0.5s 1.5s, width 0.5s 1.9s;
@@ -1325,7 +1330,7 @@ a.playButton {
     right: 0;
 }
 
-.newSection.rev .rgtSec:after {
+.newSection.rev .rgtSec .img:after {
     right: auto;
     left: 0;
 }
@@ -1955,9 +1960,9 @@ a.playButton {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        -webkit-box-pack: center;
+        /* -webkit-box-pack: center;
             -ms-flex-pack: center;
-                justify-content: center;
+                justify-content: center; */
     }
 
     [data-sec="1"] .img img {
@@ -2076,11 +2081,11 @@ a.playButton {
         padding: 0 0 15px;
         right: 0;
         text-align: right;
-        top: 40%;
+        top: 50%;
         -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
-        width: 300px;
+        width: 400px;
     }
 
     .newSection .rgtSec img {
@@ -2111,7 +2116,7 @@ a.playButton {
 
     .newSection .btmSec .sec {
         float: left;
-        padding: 10px 0 0;
+        padding: 20px 0 0;
         position: relative;
         width: 100%;
     }
@@ -2129,7 +2134,6 @@ a.playButton {
     .newSection .btmSec .sec strong.price {
         font-size: 2em;
         /* line-height: 1; */
-        padding-top: 10px;
     }
 
     .newSection .btmSec .sec .buttons {
@@ -2160,7 +2164,7 @@ a.playButton {
         text-align: right;
     }
 
-    .newSection.rev .rgtSec {
+    .newSection.rev .rgtSec{
         left: 0;
         right: 0;
         text-align: left;
@@ -2239,7 +2243,7 @@ a.playButton {
     }
 
     .newSection[data-sec="8"] .btmSec .sec:first-child:after {
-        border-left: 10px dashed #FFCF31;
+        border-left: 1px dashed #ff1f1f;
     }
     /*[data-sec="5"].newSection .btmSec .sec {
         width: 50%;

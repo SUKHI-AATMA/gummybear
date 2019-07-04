@@ -37,7 +37,7 @@
                 padding: 0 !important;
             }
             .gb-work{
-                background: #fff;
+                background: #00b0f0;
                 position: relative;
                 height: 100vh;
                 width: 100%;
@@ -46,9 +46,9 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
-                padding-left: 100px;
-                padding-bottom: 150px;
+                padding: 0 100px;
                 height: 100%;
+                padding-bottom: 150px;
             }
             .gb-work .inner-wrap .col{
                 width: 40%;
@@ -62,15 +62,14 @@
                 text-align: center;
             }
             .gb-work-head .gb-title{
-                color: #EB2E2A;
+                color: #fff;
                 font-size: 120px;
                 font-weight: 900;
-                line-height: 100px;
+                line-height: 1.3;
                 margin: 0;
-                padding-bottom: 50px;
             }
             .gb-work-head .gb-caption{
-                color: #EB2E2A;
+                color: #fff;
                 font-size: 30px;
                 line-height: 1;
             }
@@ -80,58 +79,11 @@
                 right: 100px;
             }
             .gb-work .gb-work-ft p{
+                width: 110px;
                 text-align: center;
-                color: #EB2E2A;
+                color: #fff;
                 font-size: 18px; 
                 margin: 0;             
-            }
-            
-            .newSection .gb-red .lftSec:before,
-            .newSection .gb-red .lftSec:after,
-            .newSection .gb-red .rgtSec:after,
-            .newSection .gb-red .rgtSec:before,
-            .newSection .gb-red .btmSec:after,
-            .newSection .gb-red .btmSec:before{
-                border-color: #EB2E2A;
-            }
-            .newSection[data-sec="8"] .btmSec .sec:first-child:after{
-                border-color: #EB2E2A;
-            }
-
-            .newSection .gb-blue .lftSec:before,
-            .newSection .gb-blue .lftSec:after,
-            .newSection .gb-blue .rgtSec:after,
-            .newSection .gb-blue .rgtSec:before,
-            .newSection .gb-blue .btmSec:after,
-            .newSection .gb-blue .btmSec:before{
-                border-color: #0A47ED;
-            }
-
-            .newSection .gb-yellow .lftSec:before,
-            .newSection .gb-yellow .lftSec:after,
-            .newSection .gb-yellow .rgtSec:after,
-            .newSection .gb-yellow .rgtSec:before,
-            .newSection .gb-yellow .btmSec:after,
-            .newSection .gb-yellow .btmSec:before{
-                border-color: #FFCF31;
-            }
-
-            .newSection .gb-green .lftSec:before,
-            .newSection .gb-green .lftSec:after,
-            .newSection .gb-green .rgtSec:after,
-            .newSection .gb-green .rgtSec:before,
-            .newSection .gb-green .btmSec:after,
-            .newSection .gb-green .btmSec:before{
-                border-color: #00892D;
-            }
-
-            .newSection .gb-orange .lftSec:before,
-            .newSection .gb-orange .lftSec:after,
-            .newSection .gb-orange .rgtSec:after,
-            .newSection .gb-orange .rgtSec:before,
-            .newSection .gb-orange .btmSec:after,
-            .newSection .gb-orange .btmSec:before{
-                border-color: #fd5e0f;
             }
     
         </style>
@@ -176,11 +128,11 @@
                             </div>
                         </div>
                         <div class="col">
-                            <img src="images/bn-workpg.png" alt="Team Bear" />
+                            <img src="images/work/7.png" alt="Team Bear" />
                         </div>
                     </div>
                     <div class="gb-work-ft">
-                        <p>Delicious. Digital. agency</p>
+                        <p>Delicious Digital agency</p>
                     </div>
                 </div>
             </div>
@@ -188,7 +140,7 @@
         <section data-sec="10" class="section newSection">
             <div>
                 <div class="colorElements" style="background: url(images/elements/2.png) no-repeat 120% 150%;background-size: 40%;transform: scaleX(-1);  "></div>
-                <div class="fp-bg" style=" background-image: url(images/work/10.png); background-repeat: no-repeat; background-position: center 30%; background-size: 50%;"></div>
+                <div class="fp-bg" style=" background-image: url(images/work/10.png); background-repeat: no-repeat; background-position: left 50%; background-size: 50%;"></div>
                 <div class="triangles" style=" background: url('https://gummybear.co.nz/projects/nissan-v1/images/triangles/12.png') no-repeat 100% 0; background-size:20%;"></div>
                 <div class="centerCont">
                     <div class="mobile">
@@ -199,14 +151,20 @@
                       <p class="title">BUSINESS WEBSITE</p>
                     </div>
                   </div>
-                    <div class="desktop gb-orange">
+                    <div class="desktop">
                         <div class="car">
-                            <div class="lftSec">
-                                <strong>Built With</strong> HTML5, CSS3, JQuery, Javascript.</div>
+                            <!-- <div class="lftSec">
+                                <strong>Built With</strong> HTML5, CSS3, JQuery, Javascript.
+                            </div> -->
                             <div class="rgtSec">
-                                <img src="images/mobil.png" alt="">
+                                <div class="img">
+                                    <img src="images/mobil.png" alt="">
+                                </div>
+                                <div class="category">
+                                    <span>Business Website</span>
+                                </div>
                             </div>
-                            <div class="btmSec">
+                            <!-- <div class="btmSec">
                                 <div class="sec">
                                     <strong class="price">Business Website</strong>
                                     <br class="desktop">
@@ -214,7 +172,7 @@
                                         <a href="javascript:;" class="redButton" data-popuppos="br" data-popup="<span>PRISEN INKLUDERER:</span><br><br>19&quot; Alufælge<br>Navigationsanlæg med 7&quot; touchscreen<br>For- og bagsæder i nappalæder, førersæde med 4-punkts lændestøtte og sædeindstillingshukkommelse til 2 personer<br>Elektriske sidespejle med indstillingshukommelse til 2 personer<br>Sølvfarvede tagrælinger<br>Premium Bose® Audio System * 8 Bose® højttalere * 7.7-liter dobbelt subwoofer * Digital forstærker<br>Safety shield Plus: Intelligent parkeringsassistent, Rear cross traffic alert, Advarsel om biler i den blinde vinkel, Intelligent træthedsregistrering<br>Panoramaglastag med mørktonet glas og elekstrisk solskærm<br>Bi-LED forlygter med Adaptivt kurvelys (SFS)<br>Automatisk justerbare forlygter<br>Og meget mere">+</a>
                                     </span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -223,7 +181,7 @@
         <section data-sec="9" class="section newSection rev">
             <div>
                 <div class="colorElements" style="background: url(images/elements/2.png) no-repeat 120% 150%;background-size: 40%;transform: scaleX(-1);  "></div>
-                <div class="fp-bg" style=" background-image: url(images/work/1.png); background-repeat: no-repeat; background-position: center 30%; background-size: 50%;"></div>
+                <div class="fp-bg" style=" background-image: url(images/work/1.png); background-repeat: no-repeat; background-position: right 50%; background-size: 50%;"></div>
                 <div class="triangles" style=" background: url('https://gummybear.co.nz/projects/nissan-v1/images/triangles/12.png') no-repeat 100% 0; background-size:20%;"></div>
                 <div class="centerCont">
                     <div class="mobile">
@@ -234,14 +192,24 @@
                       <p class="title">eCommerce Website</p>
                     </div>
                   </div>
-                    <div class="desktop gb-blue">
+                    <div class="desktop">
                         <div class="car">
-                            <div class="lftSec">
-                                <strong>Built With</strong> Magento.</div>
+                            <!-- <div class="lftSec">
+                                <strong>Built With</strong> Magento.
+                            </div> -->
                             <div class="rgtSec">
-                                <img src="images/cc.png" alt="">
+                                <div class="img">
+                                    <img src="images/cc.png" alt="">
+                                </div>
+                                <div class="category">
+                                    <span>eCommerce Website</span>
+                                </div>
                             </div>
-                            <div class="btmSec">
+                            
+                            <!-- <div class="rgtSec">
+                                <img src="images/cc.png" alt="">
+                            </div> -->
+                            <!-- <div class="btmSec">
                                 <div class="sec">
                                     <strong class="price">eCommerce Website</strong>
                                     <br class="desktop">
@@ -249,7 +217,7 @@
                                         <a href="javascript:;" class="redButton" data-popuppos="br" data-popup="<span>PRISEN INKLUDERER:</span><br><br>19&quot; Alufælge<br>Navigationsanlæg med 7&quot; touchscreen<br>For- og bagsæder i nappalæder, førersæde med 4-punkts lændestøtte og sædeindstillingshukkommelse til 2 personer<br>Elektriske sidespejle med indstillingshukommelse til 2 personer<br>Sølvfarvede tagrælinger<br>Premium Bose® Audio System * 8 Bose® højttalere * 7.7-liter dobbelt subwoofer * Digital forstærker<br>Safety shield Plus: Intelligent parkeringsassistent, Rear cross traffic alert, Advarsel om biler i den blinde vinkel, Intelligent træthedsregistrering<br>Panoramaglastag med mørktonet glas og elekstrisk solskærm<br>Bi-LED forlygter med Adaptivt kurvelys (SFS)<br>Automatisk justerbare forlygter<br>Og meget mere">+</a>
                                     </span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -258,7 +226,7 @@
         <section data-sec="8" class="section newSection">
             <div>
                 <div class="colorElements" style="background: url(images/elements/2.png) no-repeat 120% 150%;background-size: 40%;"></div>
-                <div class="fp-bg" style=" background-image: url(images/work/2.png); background-repeat: no-repeat; background-position: center 30%; background-size: 50%;"></div>
+                <div class="fp-bg" style=" background-image: url(images/work/2.png); background-repeat: no-repeat; background-position: left 50%; background-size: 50%;"></div>
                 <div class="triangles" style=" background: url('https://gummybear.co.nz/projects/nissan-v1/images/triangles/12.png') no-repeat 100% 0; background-size:20%;"></div>
                 <div class="centerCont">
                     <div class="mobile">
@@ -266,18 +234,27 @@
                             <img src="../images/project/nissan.png" alt="">
                         </div>
                     <div class="ftNote">
-                      <p class="title">Multi-Lingual</p>
+                      <p class="title">Multi-Lingual<br>MICRA Launch Website</p>
                     </div>
                   </div>
 
-                    <div class="desktop gb-red">
+                    <div class="desktop">
                         <div class="car">
-                            <div class="lftSec">
-                                <strong>Built With</strong> HTML5, CSS3, JQuery, Javascript.</div>
-                            <div class="rgtSec">
+                            <!-- <div class="lftSec">
+                                <strong>Built With</strong> HTML5, CSS3, JQuery, Javascript.
+                            </div> -->
+                            <!-- <div class="rgtSec">
                                 <img src="../images/project/nissan.png" alt="">
+                            </div> -->
+                            <div class="rgtSec">
+                                <div class="img">
+                                    <img src="../images/project/nissan.png" alt="">
+                                </div>
+                                <div class="category">
+                                    <span>Multi-Lingual<br>MICRA Launch Website</span>
+                                </div>
                             </div>
-                            <div class="btmSec">
+                            <!-- <div class="btmSec">
                                 <div class="sec">
                                     <strong class="price">Multi-Lingual</strong>
                                 </div>
@@ -288,7 +265,7 @@
                                         <a href="javascript:;" class="redButton" data-popuppos="br" data-popup="<span>PRISEN INKLUDERER:</span><br><br>19&quot; Alufælge<br>Navigationsanlæg med 7&quot; touchscreen<br>For- og bagsæder i nappalæder, førersæde med 4-punkts lændestøtte og sædeindstillingshukkommelse til 2 personer<br>Elektriske sidespejle med indstillingshukommelse til 2 personer<br>Sølvfarvede tagrælinger<br>Premium Bose® Audio System * 8 Bose® højttalere * 7.7-liter dobbelt subwoofer * Digital forstærker<br>Safety shield Plus: Intelligent parkeringsassistent, Rear cross traffic alert, Advarsel om biler i den blinde vinkel, Intelligent træthedsregistrering<br>Panoramaglastag med mørktonet glas og elekstrisk solskærm<br>Bi-LED forlygter med Adaptivt kurvelys (SFS)<br>Automatisk justerbare forlygter<br>Og meget mere">+</a>
                                     </span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -296,7 +273,7 @@
         </section>
         <section data-sec="7" class="section newSection rev">
             <div>
-                <div class="fp-bg" style="background-image: url('images/work/3.png'); background-repeat: no-repeat; background-position: center 30%; background-size: 50%;"></div>
+                <div class="fp-bg" style="background-image: url('images/work/3.png'); background-repeat: no-repeat; background-position: right 50%; background-size: 50%;"></div>
                 <div class="triangles" style=" background: url('images/triangles/3.png') no-repeat 100% 0; background-size:25%;"></div>
                 <div class="colorElements" style="background: url(images/elements/3.png) no-repeat 110% 120%; background-size: 30%;"></div>
                 <div class="centerCont">
@@ -308,14 +285,23 @@
                       <p class="title">Campaign Website</p>
                     </div>
                   </div>
-                    <div class="desktop gb-green">
+                    <div class="desktop">
                         <div class="car">
-                            <div class="lftSec">
-                                <strong>Built With</strong> HTML5, CSS3, JQuery, Javascript.</div>
-                            <div class="rgtSec">
+                            <!-- <div class="lftSec">
+                                <strong>Built With</strong> HTML5, CSS3, JQuery, Javascript.
+                            </div> -->
+                            <!-- <div class="rgtSec">
                                 <img src="../images/project/nissan.png" alt="">
+                            </div> -->
+                            <div class="rgtSec">
+                                <div class="img">
+                                    <img src="../images/project/nissan.png" alt="">
+                                </div>
+                                <div class="category">
+                                    <span>Campaign Website</span>
+                                </div>
                             </div>
-                            <div class="btmSec">
+                            <!-- <div class="btmSec">
                                 <div class="sec">
                                     <strong class="price">Campaign Website</strong>
                                     <br class="desktop">
@@ -323,7 +309,7 @@
                                         <a href="javascript:;" class="redButton" data-popuppos="br" data-popup="<span>NY NISSAN X-TRAIL – CROSSOVER FYLDT MED DEN NYESTE TEKNOLOGI:</span><br><br>Håndfri betjening af bagklap<br>Bose lydsystem<br>Vamer I bagsædet<br>7 sæder<br>Safety shield plus: intelligent parkeringsassistent, Rear Cross Traffic Alert, Advarsel om biler i den blinde vinkel, Intelligent træthedsregistrering<br>Panoramaglastag med mørktonet glas og elekstrisk solskærm<br>Bi-LED forlygter med Adaptivt kurvelys (SFS)<br>Automatisk justerbare forlygter<br>Navigationsanlæg med 7&quot; touchscreen<br>19&quot; Alufælge<br>Og meget mere">+</a>
                                     </span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -331,7 +317,7 @@
         </section>
         <section data-sec="6" class="section newSection">
             <div>
-                <div class="fp-bg" style="background-image: url('images/work/4.png'); background-repeat: no-repeat; background-position: center 30%; background-size: 50%;"></div>
+                <div class="fp-bg" style="background-image: url('images/work/4.png'); background-repeat: no-repeat; background-position: left 50%; background-size: 50%;"></div>
                 <div class="triangles" style=" background: url('images/triangles/4.png') no-repeat 100% 0; background-size:25%;"></div>
                 <div class="colorElements" style=" background: url(images/elements/4.png) no-repeat -10% 120%; background-size: 35%;"></div>
                 <div class="centerCont">
@@ -343,21 +329,29 @@
                           <p class="title">Corporate Website</p>
                         </div>
                     </div>
-                    <div class="desktop gb-yellow">
+                    <div class="desktop">
                         <div class="car">
-                            <div class="lftSec">
+                            <!-- <div class="lftSec">
                                 <strong>Built With</strong> Drupal 7.XX</div>
                             <div class="rgtSec">
                                 <img src="images/footbalance.png" alt="">
+                            </div> -->
+                            <div class="rgtSec">
+                                <div class="img">
+                                        <img src="images/footbalance.png" alt="">
+                                </div>
+                                <div class="category">
+                                    <span>Corporate Website</span>
+                                </div>
                             </div>
-                            <div class="btmSec">
+                            <!-- <div class="btmSec">
                                 <div class="sec">
                                     <strong class="price">Corporate Website</strong>
                                     <span class="buttons">
                                         <a href="javascript:;" class="redButton" data-popuppos="br" data-popup="<span>INNOVATIVE FUNKTIONER</span><br><br>Individuelle interiør- og eksteriørpakker<br>Premium Bose lydsystem<br>Apple Carplay<br>NissanConnect multimedia- og navigationssystem<br>og meget mere">+</a>
                                     </span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -365,7 +359,7 @@
         </section>
         <section data-sec="5" class="section newSection rev">
             <div>
-                <div class="fp-bg" style="background-image: url('images/work/5.png'); background-repeat: no-repeat; background-position: center 30%; background-size: 50%;"></div>
+                <div class="fp-bg" style="background-image: url('images/work/5.png'); background-repeat: no-repeat; background-position: right 50%; background-size: 50%;"></div>
                 <div class="triangles" style=" background: url('images/triangles/5.png') no-repeat 100% 0; background-size:25%;"></div>
                 <!-- <div class="colorElements" style="background: url(images/elements/5.png) no-repeat 100% 100%; background-size: 18%;"></div> -->
                 <div class="centerCont">
@@ -377,14 +371,22 @@
                           <p class="title">Campaign Website</p>
                         </div>
                     </div>
-                    <div class="desktop gb-blue">
+                    <div class="desktop">
                         <div class="car">
-                            <div class="lftSec">
+                            <!-- <div class="lftSec">
                                 <strong>Built With</strong> HTML5, CSS3, JQuery, Javascript.</div>
                             <div class="rgtSec">
                                 <img src="images/fujitsu.png" alt="">
+                            </div> -->
+                            <div class="rgtSec">
+                                <div class="img">
+                                    <img src="images/fujitsu.png" alt="">
+                                </div>
+                                <div class="category">
+                                    <span>Campaign Website</span>
+                                </div>
                             </div>
-                            <div class="btmSec">
+                            <!-- <div class="btmSec">
                                 <div class="sec">
                                     <strong class="price">Campaign website</strong>
                                     <br class="desktop">
@@ -392,7 +394,7 @@
                                         <a href="javascript:;" class="redButton" data-popuppos="br" data-popup="<span>Med Nissan JUKE Acenta Connect får du udstyr som:</span><br><br>NissanConnect navigation, mørktonede ruder, læderrat og –gearknop, fartpilot, klimaanlæg, 17&quot; alufælge, en 115 hk turbomotor og meget mere.">+</a>
                                     </span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -400,7 +402,7 @@
         </section>
         <section data-sec="4" class="section newSection">
             <div>
-                <div class="fp-bg" style="background-image: url('images/work/6.png'); background-repeat: no-repeat; background-position: center 30%; background-size: 50%;"></div>
+                <div class="fp-bg" style="background-image: url('images/work/6.png'); background-repeat: no-repeat; background-position: left 50%; background-size: 50%;"></div>
                 <div class="triangles" style=" background: url('images/triangles/6.png') no-repeat 100% 0; background-size:25%;"></div>
                 <!-- <div class="colorElements" style="background: url(images/elements/6.png) no-repeat  -150px 50%; background-size: 30%;"></div> -->
                 <div class="centerCont">
@@ -412,14 +414,22 @@
                           <p class="title">Corporate Website</p>
                         </div>
                     </div>
-                    <div class="desktop gb-red">
+                    <div class="desktop">
                         <div class="car">
-                            <div class="lftSec">
+                            <!-- <div class="lftSec">
                                 <strong>Built With</strong> Drupal 8</div>
                             <div class="rgtSec">
                                 <img src="images/nokia.png" alt="">
+                            </div> -->
+                            <div class="rgtSec">
+                                <div class="img">
+                                    <img src="images/nokia.png" alt="">
+                                </div>
+                                <div class="category">
+                                    <span>Corporate Website</span>
+                                </div>
                             </div>
-                            <div class="btmSec">
+                            <!-- <div class="btmSec">
                                 <div class="sec">
                                     <strong class="price">Corporate website</strong>
                                     <br class="desktop">
@@ -427,7 +437,7 @@
                                         <a href="javascript:;" class="redButton" data-popuppos="br" data-popup="<span>Med Acenta får du udstyr som:</span><br><br>Klimaanlæg, regnsensor,fartpilot, nøglefri betjening, 16” alufælge og meget mere.">+</a>
                                     </span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -435,7 +445,7 @@
         </section>
         <section data-sec="3" class="section newSection rev">
             <div>
-                <div class="fp-bg" style="background-image: url('images/work/7.png'); background-repeat: no-repeat; background-position: center 30%; background-size: 50%;"></div>
+                <div class="fp-bg" style="background-image: url('images/work/7.png'); background-repeat: no-repeat; background-position: right 50%; background-size: 50%;"></div>
                 <div class="triangles" style=" background: url('images/triangles/6.png') no-repeat 100% 0; background-size:25%;"></div>
                 <!-- <div class="colorElements" style="background: url(images/elements/6.png) no-repeat  -150px 50%; background-size: 30%; transform: scaleX(-1);"></div> -->
                 <div class="centerCont">
@@ -447,14 +457,22 @@
                           <p class="title">UK Partner Portal</p>
                         </div>
                     </div>
-                    <div class="desktop gb-green">
+                    <div class="desktop">
                         <div class="car">
-                            <div class="lftSec">
+                            <!-- <div class="lftSec">
                                 <strong>Built With</strong> Drupal 7.XX</div>
                             <div class="rgtSec">
                                 <img src="images/nokia.png" alt="">
+                            </div> -->
+                            <div class="rgtSec">
+                                <div class="img">
+                                    <img src="images/nokia.png" alt="">
+                                </div>
+                                <div class="category">
+                                    <span>UK Partner Portal</span>
+                                </div>
                             </div>
-                            <div class="btmSec">
+                            <!-- <div class="btmSec">
                                 <div class="sec">
                                     <strong class="price">UK Partner Portal</strong>
                                     <br>
@@ -462,7 +480,7 @@
                                         <a href="javascript:;" class="redButton" data-popuppos="br" data-popup="<span>Med Acenta får du udstyr som:</span><br><br>Klimaanlæg, regnsensor,fartpilot, nøglefri betjening, 16” alufælge og meget mere.">+</a>
                                     </span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -470,7 +488,7 @@
         </section>
         <section data-sec="2" class="section newSection">
             <div>
-                <div class="fp-bg" style="background-image: url('images/work/8.png'); background-repeat: no-repeat; background-position: center 30%; background-size: 50%;"></div>
+                <div class="fp-bg" style="background-image: url('images/work/8.png'); background-repeat: no-repeat; background-position: left 50%; background-size: 50%;"></div>
                 <div class="triangles" style=" background: url('images/triangles/6.png') no-repeat 100% 0; background-size:25%;"></div>
                 <!-- <div class="colorElements" style="background: url(images/elements/6.png) no-repeat  -150px 50%; background-size: 30%; transform: scaleX(-1);"></div> -->
                 <div class="centerCont">
@@ -482,14 +500,22 @@
                           <p class="title">Corporate Blogs</p>
                         </div>
                     </div>
-                    <div class="desktop gb-orange">
+                    <div class="desktop">
                         <div class="car">
-                            <div class="lftSec">
+                            <!-- <div class="lftSec">
                                 <strong>Built With</strong> WordPress</div>
                             <div class="rgtSec">
                                 <img src="images/nokia.png" alt="">
+                            </div> -->
+                            <div class="rgtSec">
+                                <div class="img">
+                                    <img src="images/nokia.png" alt="">
+                                </div>
+                                <div class="category">
+                                    <span>Corporate Blogs</span>
+                                </div>
                             </div>
-                            <div class="btmSec">
+                            <!-- <div class="btmSec">
                                 <div class="sec">
                                     <strong class="price">Corporate Blogs</strong>
                                     <br>
@@ -497,7 +523,7 @@
                                         <a href="javascript:;" class="redButton" data-popuppos="br" data-popup="<span>Med Acenta får du udstyr som:</span><br><br>Klimaanlæg, regnsensor,fartpilot, nøglefri betjening, 16” alufælge og meget mere.">+</a>
                                     </span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -505,7 +531,7 @@
         </section>
         <section data-sec="1" class="section newSection rev">
             <div>
-                <div class="fp-bg" style="background-image: url('images/work/9.png'); background-repeat: no-repeat; background-position: center 30%; background-size: 50%;"></div>
+                <div class="fp-bg" style="background-image: url('images/work/9.png'); background-repeat: no-repeat; background-position: right 50%; background-size: 50%;"></div>
                 <div class="triangles" style=" background: url('images/triangles/6.png') no-repeat 100% 0; background-size:25%;"></div>
                 <!-- <div class="colorElements" style="background: url(images/elements/6.png) no-repeat  -150px 50%; background-size: 30%;"></div> -->
                 <div class="centerCont">
@@ -517,14 +543,22 @@
                           <p class="title">Corporate Website</p>
                         </div>
                     </div>
-                    <div class="desktop gb-yellow">
+                    <div class="desktop">
                         <div class="car">
-                            <div class="lftSec">
+                            <!-- <div class="lftSec">
                                 <strong>Built With</strong> Drupal 7.XX</div>
                             <div class="rgtSec">
                                 <img src="images/ncp.png" alt="">
+                            </div> -->
+                            <div class="rgtSec">
+                                <div class="img">
+                                    <img src="images/ncp.png" alt="">
+                                </div>
+                                <div class="category">
+                                    <span>Corporate Website</span>
+                                </div>
                             </div>
-                            <div class="btmSec">
+                            <!-- <div class="btmSec">
                                 <div class="sec">
                                     <strong class="price">Corporate Website</strong>
                                     <br>
@@ -532,7 +566,7 @@
                                         <a href="javascript:;" class="redButton" data-popuppos="br" data-popup="<span>Med Acenta får du udstyr som:</span><br><br>Klimaanlæg, regnsensor,fartpilot, nøglefri betjening, 16” alufælge og meget mere.">+</a>
                                     </span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
