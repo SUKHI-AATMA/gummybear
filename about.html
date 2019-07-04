@@ -5,6 +5,7 @@
     <title></title>
     <meta name="description" content="">
     <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
     <style>
         /* @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,900 '); */
         
@@ -39,48 +40,8 @@
             background: #FFCF31;
         }
         
-        .gb-about .inner-wrap{
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            padding: 0 100px;
-        }
-        .gb-about .inner-wrap .col{
-            width: 40%;
-        }
-        .gb-about .inner-wrap .col img{
-            width: 100%;
-            height: auto;
-        }
-        .gb-abt-head {
-            width: 53%;
-            text-align: center;
-        }
-        .gb-abt-head .gb-title{
-            color: #fff;
-            font-size: 120px;
-            font-weight: 900;
-            line-height: 100px;
-            margin: 0;
-            padding-bottom: 50px;
-        }
-        .gb-abt-head .gb-caption{
-            color: #fff;
-            font-size: 30px;
-            line-height: 1;
-        }
-        .gb-about .gb-abt-ft{
-            position: absolute;
-            bottom: 30px;
-            right: 100px;
-        }
-        .gb-about .gb-abt-ft p{
-            font-size: 18px;
-            line-height: 1;
-            color: #fff; 
-            margin: 0;           
-        }
         
+
         .sec {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -223,10 +184,10 @@
 
         /* media query */
         @media screen and (max-width:1024px){
-            .section:first-child{
+            /* .section:first-child{
                 background: url(images/about/bg1.png) no-repeat center bottom #fff;
                 background-size: 50%;
-            }
+            } */
             .noBg .fp-tableCell{
                 padding-bottom: 25%;
             }
@@ -354,11 +315,11 @@
         <span class="underline"></span>
     </nav>
     <div class="wrapper">
-        <div class="section noBg gb-about">
+        <div class="section noBg gb-about gb-abt-wrk">
             <div class="inner-wrap">
                 <div class="col">
-                    <div class="gb-abt-head">
-                        <h1 class="gb-title slideUp">Team<br>BEAR!</h1>
+                    <div class="gb-head">
+                        <h1 class="gb-title slideUp">Team&nbsp;<br>BEAR!</h1>
                         <p class="gb-caption slideUp">(People Behind the sins)</p>
                     </div>
                 </div>
@@ -366,8 +327,8 @@
                     <img src="images/about/bg1.png" alt="Team Bear" />
                 </div>
             </div>
-            <div class="gb-abt-ft">
-                <p>Delicious. Digital. agency</p>
+            <div class="gb-ft slideUp">
+                <p>Delicious. Digital. Agency</p>
             </div>
         </div>
         <div class="section bg-img1">
