@@ -386,8 +386,13 @@ body {
 }
 
 .logo {
-    display: none;
+    display: flex;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 200px;
 }
+.logo img { width: 100%; }
 
 .container {
     display: -webkit-box;
@@ -412,7 +417,7 @@ nav {
     /*display: none;*/
     position: fixed;
     top: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
     left: 0;
     z-index: 10;
 }
@@ -472,13 +477,20 @@ nav ul li a.active:before {}
     -o-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
-
+nav.blacknav .logo {
+    display: flex;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 200px;
+}
+.logo img { width: 100%; }
 nav.blacknav ul li a {
-    color: #eb2e2a;
+    color: #000;
 }
 
 nav.blacknav .underline {
-    background: #eb2e2a;
+    background: #000;
 }
 
 @media (max-width:768px) {
