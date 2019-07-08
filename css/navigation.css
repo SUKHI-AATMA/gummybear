@@ -387,6 +387,7 @@ body {
 
 .logo {
     display: flex;
+    /*display: none;*/
     position: absolute;
     left: 50px;
     top: 50px;
@@ -479,6 +480,7 @@ nav ul li a.active:before {}
 }
 nav.blacknav .logo {
     display: flex;
+    /*display: none;*/
     position: absolute;
     left: 50px;
     top: 50px;

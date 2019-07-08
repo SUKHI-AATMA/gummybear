@@ -73,7 +73,9 @@ function navigationline(){
         $('nav span.underline').css({ width: $('nav li .active').outerWidth(), left: $('nav li .active').offset().left, top: ($('nav li .active').offset().top + $('nav li .active').outerHeight()) });
     });
 }
-navigationline();
+setTimeout(function(){
+    navigationline();
+},1000);
 var CONTACT = {
     init: function() {
         CONTACT.events();

@@ -2088,7 +2088,7 @@ a.playButton {
         width: 30%;
     }
     .newSection[data-sec="10"] .rgtSec img {
-        width: 50%;
+        width: 40%;
     }
     .newSection[data-sec="1"] .rgtSec img {
         width: 50%;
@@ -2575,6 +2575,7 @@ a.playButton {
   }*/
 }
 
+
 @media screen and (min-width: 1300px) and (max-width: 1366px) {
     [data-view="desktop"] [data-sec="2"] .fp-bg {
         background-size: 35% !important;
@@ -2639,7 +2640,11 @@ a.playButton {
         right: 3%;
     }
 }
-
+@media (max-width:1290px) {
+    nav {
+        margin: 0;
+    }
+}
 @media screen and (max-width: 768px){
     .fp-bg{
         background-position: center 50% !important;

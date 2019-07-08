@@ -24,7 +24,9 @@
   }
 }
 */
-
+/** {
+    letter-spacing: 1px;
+}*/
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
     font-family: "fontello";
@@ -201,7 +203,7 @@ html#contactPage {
     background: #FFCF31;
 }
 .capabilities.opPage:before {
-    background: #00892D;
+    background: #00b0f0;
 }
 .work.opPage:before {
     background: #fff;
@@ -1164,12 +1166,50 @@ html#contactPage {
 
 
 
-@media (max-width:1290px) and (max-height: 860) {
+@media (max-width:1290px) {
     #contactPage .bg-contact .slide3 .title p {
         font-size: 40px;   
     }
     #contactPage .slide .content {
         font-size: 30px;
+    }
+    #contactPage .bg-contact .slide3 .title, #contactPage .bg-contact .slide3 .content {
+        width: 70% !important;
+    }
+    #work .gb-work .gb-head .gb-title {
+        line-height: 60px !important;
+    }
+    .gb-work .gb-head .gb-title {
+        font-size: 80px;
+    }
+    .gb-work .gb-head .gb-title span {
+        font-size: 67px;   
+    }
+    #work .gb-abt-wrk .inner-wrap {
+        align-items: center;
+    }
+    #work .gb-abt-wrk .inner-wrap {
+        padding: 0 70px;
+    }
+    #work .gb-head, #work .gb-abt-wrk .inner-wrap .col img {
+        top: 0 !important;
+    }
+    .gb-abt-wrk .inner-wrap .col:first-child {
+        min-height: 430px;
+        display: flex;
+        align-items: flex-end;
+        width: 40% !important;
+    }
+    .gb-abt-wrk .inner-wrap .col {
+        width: 65% !important;
+    }
+    .logo, .blacknav .logo {
+        width: 150px !important;
+        top: 30px !important;
+        left: 30px !important;
+    }
+    .gb-head .gb-title {
+        line-height: 80px !important;
     }
 }
 @media (max-width:1024px){
