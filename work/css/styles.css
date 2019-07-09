@@ -2080,16 +2080,17 @@ a.playButton {
         -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
-        width: 300px;
+        /* width: 300px; */
+        width: 250px;
     }
 
     .newSection .rgtSec img {
         margin: 0 0 10px 0;
         width: 30%;
     }
-    .newSection[data-sec="10"] .rgtSec img {
+    /* .newSection[data-sec="10"] .rgtSec img {
         width: 40%;
-    }
+    } */
     .newSection[data-sec="1"] .rgtSec img {
         width: 50%;
     }
@@ -2260,7 +2261,7 @@ a.playButton {
 
     [data-sec="5"].newSection .btmSec .sec .buttons {
         right: -75px;
-    }
+    }l
 
     .newSection .btmSec .sec span {
         font-size: 1.5em;
