@@ -2550,27 +2550,27 @@ a.playButton {
         right: 2%;
     }
 
-    [data-view="desktop"] [data-sec="2"] .fp-bg {
+    /* [data-view="desktop"] [data-sec="2"] .fp-bg {
         background-size: 35% !important;
-    }
+    } */
 
     [data-view="desktop"] .newSection .btmSec {
         /* bottom: 0; */
         bottom: 20px;
     }
 
-    [data-view="desktop"] [data-sec="3"] .fp-bg {
+    /* [data-view="desktop"] [data-sec="3"] .fp-bg {
         background-size: 40% !important;
-    }
+    } */
 
     [data-view="desktop"] [data-sec="4"] .colorElements {
         background: url(../images/elements/4.png) no-repeat -15% 120% !important;
         background-size: 35% !important;
     }
 
-    [data-view="desktop"] [data-sec="5"] .fp-bg {
+    /* [data-view="desktop"] [data-sec="5"] .fp-bg {
         background-size: 30% !important;
-    }
+    } */
 
     /*[data-sec="2"] .triangles {
     background-size: 20% !important;
