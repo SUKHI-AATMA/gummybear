@@ -2555,7 +2555,8 @@ a.playButton {
     }
 
     [data-view="desktop"] .newSection .btmSec {
-        bottom: 0;
+        /* bottom: 0; */
+        bottom: 20px;
     }
 
     [data-view="desktop"] [data-sec="3"] .fp-bg {
