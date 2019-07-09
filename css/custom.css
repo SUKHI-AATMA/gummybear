@@ -196,7 +196,7 @@ html#contactPage {
 }
 
 .home.opPage:before {
-    background: #EB2E2A;
+    background: #e00909;
 }
 
 .about.opPage:before {
@@ -281,7 +281,7 @@ html#contactPage {
 }
 
 .bg-red {
-    background-color: #EB2E2A;
+    background-color: #e00909;
 }
 
 .album-section .fp-tableCell {
@@ -1391,7 +1391,7 @@ html#contactPage {
 
 /* gb style */
 .gb-home{
-    background: #EB2E2A;
+    background: #e00909;
 }
 .gb-title{
     font-size: 100px;
