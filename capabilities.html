@@ -7,6 +7,7 @@
     <!-- <link href="css/custom.css" rel="stylesheet" type="text/css"> -->
     <link href="css/navigation.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.min.css" />
     <style>
     /* @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,900 '); */
     @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap ');
@@ -99,107 +100,43 @@
             -ms-flex-align: center;
                 align-items: center;
     }
-
-    #services .boxContainer {
-        display: -webkit-box;
-        display: -ms-flexbox;
+    
+    #services .box .content{
         display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        /*margin: 0 0 60px;*/
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        width: 99.5%;
-        margin: 0 0 0.5% 0.5%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
     }
-
-    #services .boxContainer .box {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin: 0.5% 0.5% 0 0;
-        width: 49%;
-        -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-                flex-grow: 1;
-        -ms-flex-negative: 0;
-            flex-shrink: 0;
-        -ms-flex-preferred-size: 49%;
-            flex-basis: 49%;
-    }
-
-    #services .boxContainer .box .content {
-        /*background: #ffdd19;*/
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        padding: 10px;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        width: 100%;
-        min-height: 400px;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-    }
-
-    #services .boxContainer .box .content .title {
-        width: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        /* height: 70px; */
-        /* background: #bfa50f; */
+    #services .box .content .title {
         font-size: 40px;
-        overflow: hidden;
         position: relative;
         color: #fff;
         text-transform: uppercase;
-        padding: 20px 0 0px;
+        padding-bottom: 30px;
         letter-spacing: 1px;
         font-weight: 900;
-        -webkit-transform: translateY(0px);
-            -ms-transform: translateY(0px);
-                transform: translateY(0px);
         -webkit-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s;
     }
 
-    #services .boxContainer .box .content ul {
-        padding: 30px;
-        line-height: 2;
-        font-size: 24px;
-        list-style-type: none;
-        margin: 0;
+    #services .box .content ul {
         text-align: center;
+        padding: 0;
+        margin: 0;
+        line-height: 2;
+        font-size: 21px;
+        list-style-type: none;
         color: #fff;
-        position: absolute;
-        opacity: 0;
-        -webkit-transform: translateY(-20px);
-            -ms-transform: translateY(-20px);
-                transform: translateY(-20px);
         -webkit-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s;
     }
-    #services .boxContainer .box:hover .content ul { opacity: 1; -webkit-transform: translateY(30px); -ms-transform: translateY(30px); transform: translateY(30px); /*position: relative;*/ }
-    #services .boxContainer .box:hover .content .title {  -webkit-transform: translateY(-100px);  -ms-transform: translateY(-100px);  transform: translateY(-100px); }
-    #services .boxContainer .box:hover:nth-child(5) .content .title ,#services .boxContainer .box:hover:nth-child(6) .content .title {  -webkit-transform: translateY(-60px);  -ms-transform: translateY(-60px);  transform: translateY(-60px); }
-    
+    /* #services .box:hover .content ul { opacity: 1; -webkit-transform: translateY(30px); -ms-transform: translateY(30px); transform: translateY(30px); }
+    #services .box:hover .content .title {  -webkit-transform: translateY(-100px);  -ms-transform: translateY(-100px);  transform: translateY(-100px); } */
+    /* #services .box:hover:nth-child(5) .content .title ,#services .boxContainer .box:hover:nth-child(6) .content .title {  -webkit-transform: translateY(-60px);  -ms-transform: translateY(-60px);  transform: translateY(-60px); }
+     */
     @media screen and (max-width: 1600px){
         #services .pgTitle{
             font-size: 120px;
@@ -274,7 +211,7 @@
     </nav>
     <div class="Wrapper">
         <!-- <div class="pgTitle">Our Capabilities</div> -->
-        <div class="gb-cap gb-common">
+        <div class="section gb-cap gb-common">
             <div class="inner-wrap">
                 <div class="col">
                     <div class="gb-head">
@@ -288,76 +225,108 @@
                 </div>
         </div>
 
-        <div class="boxContainer">
-            <div class="box slideUp" style="background: #00b0f0;">
-                <div class="content">
-                    <div class="title">User Expereince</div>
-                    <ul>
-                        <li><i class="icon-right-dir"></i>Website Feature Roadmap</li>
-                        <li><i class="icon-right-dir"></i>Site-Mapping</li>
-                        <li><i class="icon-right-dir"></i>Wireframes</li>
-                        <li><i class="icon-right-dir"></i>UX Testing & Reporting</li>
-                    </ul>
+        <!-- <div class="boxContainer"> -->
+            <div class="section">
+               <div class="box-wrap">
+                    <div class="box slideUp" style="background: #00b0f0;">
+                        <div class="content">
+                            <div class="title">User Expereince</div>
+                            <ul>
+                                <li><i class="icon-right-dir"></i>Website Feature Roadmap</li>
+                                <li><i class="icon-right-dir"></i>Site-Mapping</li>
+                                <li><i class="icon-right-dir"></i>Wireframes</li>
+                                <li><i class="icon-right-dir"></i>UX Testing & Reporting</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box slideUp" style="background: #e00909;">
+                        <div class="content">
+                            <div class="title">Strategy</div>
+                            <ul>
+                                <li><i class="icon-right-dir"></i>Concept & Product Ideation</li>
+                                <li><i class="icon-right-dir"></i>Defining MVP</li>
+                                <li><i class="icon-right-dir"></i>UX & UI Consultation</li>
+                                <li><i class="icon-right-dir"></i>Brand Positioning</li>
+                            </ul>
+                        </div>
+                    </div>
+               </div>
+            </div>
+            <div class="section">
+                <div class="box-wrap">
+                    <div class="box slideUp" style="background: #ffc72a;">
+                        <div class="content">
+                            <div class="title">Websites</div>
+                            <ul>
+                                <li><i class="icon-right-dir"></i>Fully Responsive Web Design</li>
+                                <li><i class="icon-right-dir"></i>Secure Websites</li>
+                                <li><i class="icon-right-dir"></i>Open-Source Platforms</li>
+                                <li><i class="icon-right-dir"></i>Mobile Sites</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box slideUp" style="background: #009e53;">
+                        <div class="content">
+                            <div class="title">Branding</div>
+                            <ul>
+                                <li><i class="icon-right-dir"></i>Brand Identity Design</li>
+                                <li><i class="icon-right-dir"></i>Brand Logo Creation</li>
+                                <li><i class="icon-right-dir"></i>Brand Guidelines</li>
+                                <li><i class="icon-right-dir"></i>Marketing Collateral</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="box slideUp" style="background: #e00909;">
-                <div class="content">
-                    <div class="title">Strategy</div>
-                    <ul>
-                        <li><i class="icon-right-dir"></i>Concept & Product Ideation</li>
-                        <li><i class="icon-right-dir"></i>Defining MVP</li>
-                        <li><i class="icon-right-dir"></i>UX & UI Consultation</li>
-                        <li><i class="icon-right-dir"></i>Brand Positioning</li>
-                    </ul>
+            <div class="section">
+                <div class="box-wrap">
+                    <div class="box slideUp" style="background: #ec7a84;">
+                        <div class="content">
+                            <div class="title">Interface/UI Design</div>
+                            <ul>
+                                <li><i class="icon-right-dir"></i>Interface & Visual Design</li>
+                                <li><i class="icon-right-dir"></i>Responsive Web Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box slideUp" style="background: #1432d9;">
+                        <div class="content">
+                            <div class="title">Content Production</div>
+                            <ul>
+                                <li><i class="icon-right-dir"></i>Brand Videos & Films</li>
+                                <li><i class="icon-right-dir"></i>Photography</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="box slideUp" style="background: #ffc72a;">
-                <div class="content">
-                    <div class="title">Websites</div>
-                    <ul>
-                        <li><i class="icon-right-dir"></i>Fully Responsive Web Design</li>
-                        <li><i class="icon-right-dir"></i>Secure Websites</li>
-                        <li><i class="icon-right-dir"></i>Open-Source Platforms</li>
-                        <li><i class="icon-right-dir"></i>Mobile Sites</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- </div>
-                            <div class="boxContainer"> -->
-            <div class="box slideUp" style="background: #009e53;">
-                <div class="content">
-                    <div class="title">Branding</div>
-                    <ul>
-                        <li><i class="icon-right-dir"></i>Brand Identity Design</li>
-                        <li><i class="icon-right-dir"></i>Brand Logo Creation</li>
-                        <li><i class="icon-right-dir"></i>Brand Guidelines</li>
-                        <li><i class="icon-right-dir"></i>Marketing Collateral</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="box slideUp" style="background: #ec7a84;">
-                <div class="content">
-                    <div class="title">Interface/UI Design</div>
-                    <ul>
-                        <li><i class="icon-right-dir"></i>Interface & Visual Design</li>
-                        <li><i class="icon-right-dir"></i>Responsive Web Design</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="box slideUp" style="background: #1432d9;">
-                <div class="content">
-                    <div class="title">Content Production</div>
-                    <ul>
-                        <li><i class="icon-right-dir"></i>Brand Videos & Films</li>
-                        <li><i class="icon-right-dir"></i>Photography</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <!-- </div> -->
     </div>
     <div class="opPage"></div>
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.fullpage.min.js"></script>
     <script src="js/custom.js" type="text/javascript"></script>
+    <script>
+        $('.wrapper').fullpage({
+            anchors: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16.0", "16", "17", "18", "18.1", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"],
+            normalScrollElements: '.scroll',
+            onLeave: function(index, nextIndex, direction) {
+                // if (nextIndex == 1) {
+                //     $('nav a').css({
+                //         color: '#000'
+                //     });
+                // } else {
+                //     $('nav a').css({
+                //         color: '#fff'
+                //     });
+                // }
+            },
+            afterLoad: function(anchorLink, index) {},
+            afterRender: function() {
+                // $('img').css({ height: $(window).height() })
+            }
+        });
+    </script>
 </body>
 
 </html>

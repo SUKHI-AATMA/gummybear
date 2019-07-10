@@ -25,6 +25,16 @@
     background: #00b0f0 ;
 }
 
+#services .section .box-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;   
+}
+#services .section .box-wrap .box{
+    width: 50%;
+}
+
 /* About and Work page */ 
 .gb-abt-wrk .inner-wrap{
     display: -webkit-box;
