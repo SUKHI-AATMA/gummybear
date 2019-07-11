@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>About us | Gummy Bear</title>
     <meta name="description" content="">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.min.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <style>
@@ -304,7 +305,7 @@
 
 </head>
 
-<body>
+<body class="about-pg header">
     <nav>
         <div class="logo">
             <a href="/">
@@ -313,12 +314,54 @@
         </div>
         <ul>
             <!-- <li class="slideDown"><a href="/" class="customNavLink" data-page="home">Home</a></li> -->
-            <li class="slideDown"><a href="/about.html" class="customNavLink active" data-page="about">About</a></li>
+
+            <!-- <li class="slideDown"><a href="/about.html" class="customNavLink active" data-page="about">About</a></li>
             <li class="slideDown"><a href="/capabilities.html" class="customNavLink" data-page="capabilities">Capabilities</a></li>
             <li class="slideDown"><a href="/work/index.html" class="customNavLink" data-page="work">Work</a></li>
-            <li class="slideDown"><a href="/contact.html" class="customNavLink" data-page="contact">Contact</a></li>
+            <li class="slideDown"><a href="/contact.html" class="customNavLink" data-page="contact">Contact</a></li> -->
+
+            <li class="slideDown">
+                <div class="menu">
+                    <a href="/about.html" class="menu-link active" data-page="about">About</a>
+                    <div class="extrude-rt"></div>
+                    <div class="extrude-rt alt"></div>
+                    <div class="extrude-bt"></div>
+                    <div class="extrude-bt alt"></div>
+                </div>
+                <!-- <a href="/about.html" class="customNavLink active" data-page="about">About</a> -->
+            </li>
+            <li class="slideDown">
+                <div class="menu">
+                    <a href="/capabilities.html" class="menu-link" data-page="capabilities">Capabilities</a>
+                    <div class="extrude-rt"></div>
+                    <div class="extrude-rt alt"></div>
+                    <div class="extrude-bt"></div>
+                    <div class="extrude-bt alt"></div>
+                </div>
+                <!-- <a href="/capabilities.html" class="customNavLink" data-page="capabilities">Capabilities</a> -->
+            </li>
+            <li class="slideDown">
+                <div class="menu">
+                    <a href="/work/index.html" class="menu-link" data-page="work">Work</a>
+                    <div class="extrude-rt"></div>
+                    <div class="extrude-rt alt"></div>
+                    <div class="extrude-bt"></div>
+                    <div class="extrude-bt alt"></div>
+                </div>
+                <!-- <a href="/work/index.html" class="customNavLink" data-page="work">Work</a> -->
+            </li>
+            <li class="slideDown">
+                <div class="menu">
+                    <a href="/contact.html" class="menu-link " data-page="contact">Contact</a>
+                    <div class="extrude-rt"></div>
+                    <div class="extrude-rt alt"></div>
+                    <div class="extrude-bt"></div>
+                    <div class="extrude-bt alt"></div>
+                </div>
+                <!-- <a href="/contact.html" class="customNavLink" data-page="contact">Contact</a> -->
+            </li>
         </ul>
-        <span class="underline"></span>
+        <!-- <span class="underline"></span> -->
     </nav>
     <div class="wrapper">
         <div class="section noBg gb-about gb-abt-wrk">
@@ -374,15 +417,15 @@
             anchors: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16.0", "16", "17", "18", "18.1", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46"],
             normalScrollElements: '.scroll',
             onLeave: function(index, nextIndex, direction) {
-                if (nextIndex == 1) {
-                    $('nav a').css({
-                        color: '#000'
-                    });
-                } else {
-                    $('nav a').css({
-                        color: '#fff'
-                    });
-                }
+                // if (nextIndex == 1) {
+                //     $('nav a').css({
+                //         color: '#000'
+                //     });
+                // } else {
+                //     $('nav a').css({
+                //         color: '#fff'
+                //     });
+                // }
                 // $('.text').each(function(){
                 // 	var wid = $(this).siblings('.img').find('img').outerWidth(true);
                 // 	$(this).css({width: $(window).width() - wid, height: $(window).height()})

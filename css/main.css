@@ -1,3 +1,137 @@
+
+/* menu button - start #contactPage */
+.header nav .menu {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.header nav .menu .menu-link {
+    position: relative;
+    bottom: 0px;
+    z-index: 10;
+    display: block;
+    padding: 12px 20px 12px;
+    background-color: #FFCF31;
+    -webkit-transition: -webkit-transform 200ms ease;
+    transition: -webkit-transform 200ms ease;
+    -o-transition: transform 200ms ease;
+    transition: transform 200ms ease;
+    transition: transform 200ms ease, -webkit-transform 200ms ease;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    text-decoration: none;
+    color: #fd5e0f;
+}
+
+.header nav .menu .extrude-rt {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 9;
+    width: 10px;
+    height: 70%;
+    background-color: #ebc721;
+    -webkit-transform: skew(0deg, -45deg);
+    -ms-transform: skew(0deg, -45deg);
+    transform: skew(0deg, -45deg);
+    -webkit-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-transition: height 200ms ease, -webkit-transform 200ms ease;
+    transition: height 200ms ease, -webkit-transform 200ms ease;
+    -o-transition: height 200ms ease, transform 200ms ease;
+    transition: height 200ms ease, transform 200ms ease;
+    transition: height 200ms ease, transform 200ms ease, -webkit-transform 200ms ease;
+}
+
+.header nav .menu .extrude-rt.alt {
+    height: 97%;
+    -webkit-transform: skew(0deg, -22.5deg) scale3d(0, 1, 1);
+    transform: skew(0deg, -22.5deg) scale3d(0, 1, 1);
+    -webkit-transform-origin: 0% 50% 0px;
+    -ms-transform-origin: 0% 50% 0px;
+    transform-origin: 0% 50% 0px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.header nav .menu .extrude-bt {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 8;
+    width: 80%;
+    height: 10px;
+    background-color: #ebc721;
+    -webkit-transform-origin: 50% 100% 0px;
+    -ms-transform-origin: 50% 100% 0px;
+    transform-origin: 50% 100% 0px;
+    -webkit-transition: width 200ms ease, -webkit-transform 200ms ease;
+    transition: width 200ms ease, -webkit-transform 200ms ease;
+    -o-transition: transform 200ms ease, width 200ms ease;
+    transition: transform 200ms ease, width 200ms ease;
+    transition: transform 200ms ease, width 200ms ease, -webkit-transform 200ms ease;
+}
+
+.header nav .menu .extrude-bt.alt {
+    width: 98.5%;
+    -webkit-transform: skew(-45deg, 0deg) scale3d(1, 0, 1);
+    transform: skew(-45deg, 0deg) scale3d(1, 0, 1);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.header nav .menu:hover .menu-link {
+    -webkit-transform: translate(10px, -10px);
+        -ms-transform: translate(10px, -10px);
+            transform: translate(10px, -10px);
+}
+
+.header nav .menu:hover .extrude-rt.alt {
+    -webkit-transform: skew(0deg, -45deg) scale3d(1, 1, 1);
+            transform: skew(0deg, -45deg) scale3d(1, 1, 1);
+    height: 100%;
+}
+
+.header nav .menu:hover .extrude-bt.alt {
+    -webkit-transform: skew(-45deg, 0deg) scale3d(1, 1, 1);
+            transform: skew(-45deg, 0deg) scale3d(1, 1, 1);
+    width: 100%;
+}
+
+
+/* home page */
+/* .home.header nav .menu .menu-link{
+    color: #e00909;
+} */
+
+/* about page */
+.about-pg.header nav .menu .menu-link{
+    background-color: #fff;
+    color: #FFCF31;
+}
+.about-pg.header nav .menu .extrude-rt,
+.about-pg.header nav .menu .extrude-bt{
+    background-color: #eee;
+}
+
+/* Capabilities page */
+/* .capabilities-pg.header nav .menu .menu-link{
+    color: #00b0f0;
+} */
+
+/* Work page */
+/* .work-pg.header nav .menu .menu-link{
+    color: #fff;
+} */
+
+
+/* menu button - end  */
+
+
+
 .gb-common{
     display: -webkit-box;
     display: -ms-flexbox;
