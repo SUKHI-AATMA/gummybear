@@ -1020,7 +1020,7 @@ html#contactPage {
     z-index: 9;
     width: 10px;
     height: 70%;
-    background-color: #FFCF31;
+    background-color: #ebc721;
     -webkit-transform: skew(0deg, -45deg);
     -ms-transform: skew(0deg, -45deg);
     transform: skew(0deg, -45deg);
@@ -1052,7 +1052,7 @@ html#contactPage {
     z-index: 8;
     width: 80%;
     height: 10px;
-    background-color: #FFCF31;
+    background-color: #ebc721;
     -webkit-transform-origin: 50% 100% 0px;
     -ms-transform-origin: 50% 100% 0px;
     transform-origin: 50% 100% 0px;
