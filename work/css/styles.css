@@ -1412,9 +1412,9 @@ a.playButton {
         width: auto
     }
 
-    nav {
+    /* nav {
         margin: 15px 0;
-    }
+    } */
 
     .nav-list {
         max-width: 420px;
@@ -2106,7 +2106,8 @@ a.playButton {
 
     .newSection .btmSec {
         /*background: url('../images/lines/2.svg') no-repeat 0 0, url('../images/lines/4.svg') no-repeat 50% 84px;*/
-        bottom: 10%;
+        /* bottom: 10%; */
+        bottom: 7%;
         float: left;
         right: calc((100% - 300px) / 2);
         /* overflow: hidden; */
