@@ -1181,9 +1181,9 @@ html#contactPage {
     #contactPage .bg-contact .slide3 .title, #contactPage .bg-contact .slide3 .content {
         width: 70% !important;
     }
-    #work .gb-work .gb-head .gb-title {
+    /* #work .gb-work .gb-head .gb-title {
         line-height: 60px !important;
-    }
+    } */
     /* .gb-work .gb-head .gb-title {
         font-size: 80px;
     } */
@@ -1204,6 +1204,7 @@ html#contactPage {
         display: flex;
         align-items: flex-end;
         width: 40% !important;
+        justify-content: center;
     }
     .gb-abt-wrk .inner-wrap .col {
         width: 55% !important;
