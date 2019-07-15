@@ -2677,6 +2677,9 @@ a.playButton {
 @media screen and (max-width: 480px){
     .companyLogo{
         max-width: 120px;
-        padding-top: 25%;
+        padding-top: 27%;
+    }
+    .mobile .ftNote {
+        bottom: 10% !important;
     }
 }
