@@ -1233,7 +1233,7 @@ html#contactPage {
 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .nav-logo {
         padding: 10px;
         width: 56px;
@@ -1494,6 +1494,7 @@ html#contactPage {
     #contactPage input{
         font-size: 20px !important;
         line-height: 1.4;
+        width: 100%;
     }
     
 }
