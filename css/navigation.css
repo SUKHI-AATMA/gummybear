@@ -498,6 +498,29 @@ nav.blacknav .underline {
     background: #e00909;
 }
 
+nav ul li {
+    position: relative;
+}
+
+nav ul li ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500%;
+    background: #e00909;
+    transform: translate(0, 38px);
+    display: none;
+}
+
+nav ul li ul li {
+    width: calc(100% - 50px);
+}
+
+nav.blacknav ul li ul a, nav ul li ul a  {
+    color: #fff;
+    text-align: center;
+}
+
 @media (max-width:768px) {
     body {
         padding: 0;
