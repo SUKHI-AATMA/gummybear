@@ -1,14 +1,17 @@
 $(document).on('click touchend', '.customNavLink', function(e) {
     e.preventDefault();
-    var hrefval = $(this).attr('data-page'),
-        hrefval2 = $(this).attr('href');
-    // alert(hrefval[0]);
-    // $('body').addClass(hrefval[0])
-    $('.opPage').addClass(hrefval);
-    $('.opPage').addClass('active ');
-    setTimeout(function() {
-        window.location.href = hrefval2;
-    }, 1200);
+    if($(this).attr('href') != 'javascript:;')
+    {
+        var hrefval = $(this).attr('data-page'),
+            hrefval2 = $(this).attr('href');
+        // alert(hrefval[0]);
+        // $('body').addClass(hrefval[0])
+        $('.opPage').addClass(hrefval);
+        $('.opPage').addClass('active ');
+        setTimeout(function() {
+            window.location.href = hrefval2;
+        }, 1200);
+    }
 }).on('focus', ".mat-input", function() {
     $(this).parent().addClass("is-active is-completed");
 }).on('focusout', ".mat-input", function() {
@@ -65,12 +68,12 @@ $('.slideUp').each(function(index) {
 function navigationline(){
     setTimeout(function() { $('nav span.underline').css({ left: $('nav li .active').offset().left, top: ($('nav li .active').offset().top + $('nav li .active').outerHeight()) }); }, 1000);
     setTimeout(function() { $('nav span.underline').css({ width: $('nav li .active').outerWidth(), transition: 'all ease 0.5s' }); }, 1200);
-    $(document).on('mouseover', 'nav li a', function() {
+    $(document).on('mouseover', 'nav > ul > li > a', function() {
         // $(this).css({opacity: 0});
-        $('nav span.underline').css({ width: $(this).outerWidth(), left: $(this).offset().left, top: ($(this).offset().top + $(this).outerHeight()) });
+        $('nav span.underline').css({ width: $(this).outerWidth(), left: $(this).offset().left, top: (($(this).offset().top-2) + $(this).outerHeight()) });
     }).on('mouseout', 'nav li a', function() {
         // $(this).css({opacity: 0});
-        $('nav span.underline').css({ width: $('nav li .active').outerWidth(), left: $('nav li .active').offset().left, top: ($('nav li .active').offset().top + $('nav li .active').outerHeight()) });
+        $('nav span.underline').css({ width: $('nav li .active').outerWidth(), left: $('nav li .active').offset().left, top: (($('nav li .active').offset().top-2) + $('nav li .active').outerHeight()) });
     });
 }
 setTimeout(function(){
