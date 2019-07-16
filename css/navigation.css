@@ -427,6 +427,8 @@ nav ul {
     float: right;
     margin: 0;
     padding: 0;
+    position: relative;
+    z-index: 1;
 }
 
 nav ul li {
@@ -508,7 +510,7 @@ nav ul li ul {
     right: 0;
     width: 500%;
     background: #e00909;
-    transform: translate(0, 38px);
+    transform: translate(0, 34px);
     display: none;
 }
 nav ul li:hover ul {
