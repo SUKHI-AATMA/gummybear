@@ -24,10 +24,12 @@ $(document).on('click touchend', '.customNavLink', function(e) {
     }
 }).on('click touchend', ".mat-label", function() {
     $(this).parent().addClass("is-active is-completed");
-}).on('click', '#submit', function(e) {
-    e.preventDefault();
-    CONTACT.formSubmit();
-}).on('click touchend','.hamburge_r',function(){
+})
+// .on('click', '#submit', function(e) {
+//     e.preventDefault();
+//     CONTACT.formSubmit();
+// })
+.on('click touchend','.hamburge_r',function(){
     if($(this).parents('nav').hasClass('open') == true){
         $(this).parents('nav').removeClass('open')
     }
