@@ -189,8 +189,7 @@
     align-items: center;
     height: 100%;   
 }
-#services .section .box-wrap .box,
-#adobeStack .section .box-wrap .box{
+#services .section .box-wrap .box{
     width: 50%;
     height: 100%;
 }
@@ -508,6 +507,14 @@
     }
 
 }
+
+@media screen and (min-width: 769px){
+    .gb-aem .newSection .rgtSec img {
+        margin: 0 0 10px 0;
+        width: 70%;
+    }
+}
+
 @media screen and (max-width:768px){
     body.home{
         padding: 0;
