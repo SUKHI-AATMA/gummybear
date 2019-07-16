@@ -65,7 +65,7 @@ $('.slideUp').each(function(index) {
 function navigationline(){
     setTimeout(function() { $('nav span.underline').css({ left: $('nav li .active').offset().left, top: ($('nav li .active').offset().top + $('nav li .active').outerHeight()) }); }, 1000);
     setTimeout(function() { $('nav span.underline').css({ width: $('nav li .active').outerWidth(), transition: 'all ease 0.5s' }); }, 1200);
-    $(document).on('mouseover', 'nav li a', function() {
+    $(document).on('mouseover', 'nav > ul > li > a', function() {
         // $(this).css({opacity: 0});
         $('nav span.underline').css({ width: $(this).outerWidth(), left: $(this).offset().left, top: ($(this).offset().top + $(this).outerHeight()) });
     }).on('mouseout', 'nav li a', function() {

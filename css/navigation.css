@@ -511,7 +511,9 @@ nav ul li ul {
     transform: translate(0, 38px);
     display: none;
 }
-
+nav ul li:hover ul {
+    display: block;
+}
 nav ul li ul li {
     width: calc(100% - 50px);
 }
