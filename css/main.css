@@ -182,13 +182,15 @@
     background: #00b0f0 ;
 }
 
-#services .section .box-wrap{
+#services .section .box-wrap,
+#adobeStack .section .box-wrap{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;   
 }
-#services .section .box-wrap .box{
+#services .section .box-wrap .box,
+#adobeStack .section .box-wrap .box{
     width: 50%;
     height: 100%;
 }
