@@ -5,22 +5,41 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Contact | Gummy Bear</title>
-    <meta content="" name="description">
-    <meta content="" property="og:title">
-    <meta content="" property="og:description">
-    <meta content="" property="og:image">
-    <!-- https://i.imgur.com/PRPLkGk.jpg -->
-    <meta content="summary" name="twitter:card">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- COMMON TAGS -->
+
+    <!-- Search Engine -->
+    <meta name="description" content="We design and build coolest websites and produce great videos.">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="GUMMY BEAR">
+    <meta itemprop="description" content="We design and build coolest websites and produce great videos.">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="GUMMY BEAR">
+    <meta name="twitter:description" content="We design and build coolest websites and produce great videos.">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="GUMMY BEAR">
+    <meta name="og:description" content="We design and build coolest websites and produce great videos.">
+    <meta name="og:image" content="https://gummybear.co.nz/images/fb.jpg">
+    <meta name="og:url" content="https://gummybear.co.nz/">
+    <meta name="og:site_name" content="GUMMY BEAR">
+    <meta name="og:type" content="website">
     
+
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <!-- <link href="css/webflow.css" rel="stylesheet" type="text/css"> -->
-    <!-- <link href="Project%20Candy_files/project-candy.css" rel="stylesheet" type="text/css"> -->
     <link href="css/navigation.css" rel="stylesheet" type="text/css">
     <link href="css/custom.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <!-- styles needed by jScrollPane -->
     <link type="text/css" href="css/vendor/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143933968-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-143933968-1');
+    </script>
 </head>
 
 <body class="header">
@@ -37,12 +56,11 @@
             <li class="slideDown"><a href="/work.html" class="customNavLink" data-page="work">Work</a></li>
             <li class="slideDown"><a href="/contact.html" class="customNavLink active" data-page="contact">Contact</a></li>
             <li class="slideDown"><a href="javascript:;" class="customNavLink" data-page="contact">Adobe</a>
-                    <ul>
-                        <li><a href="/aem-websites.html">AEM Websites</a></li>
-                        <li><a href="/aem-technology-stack.html">Adobe Technology Stack</a></li>
-                    </ul>
-                </li>
-
+                <ul>
+                    <li><a href="/aem-websites.html">AEM Websites</a></li>
+                    <li><a href="/aem-technology-stack.html">Adobe Technology Stack</a></li>
+                </ul>
+            </li>
             <!-- <li class="slideDown">
                 <div class="menu">
                     <a href="/about.html" class="menu-link" data-page="about">About</a>
@@ -158,7 +176,7 @@
                     <div class="casing">
                         <div class="element"></div>
                     </div>
-                </div> -->
+                    </div> -->
                     <div class="title">
                         <div class="casing">
                             <div class="element">
@@ -242,13 +260,13 @@
                             <div class="element">Maybe we can chat over a coffee or a call.</div>
                         </div>
                         <div class="casing">
-                            <div class="element">You can email me at <input type="email" id="email" placeholder="my email."></div>
+                            <div class="element">You can email me at <input type="email" id="email" placeholder="my email." name="email"></div>
                         </div>
                         <div class="casing">
                             <div class="element">Thanks,</div>
                         </div>
                         <div class="casing">
-                            <div class="element"><input type="text" id="name" placeholder="Name"></div>
+                            <div class="element"><input type="text" id="name" placeholder="Name" name="name"></div>
                         </div>
                         <div class="casing">
                             <div class="element"><label class="error"></label></div>
@@ -256,7 +274,8 @@
                         <div class="casing btn">
                             <div class="element">
                                 <div class="button">
-                                    <a id="submit" class="button-link">SUBMIT</a>
+                                    <!-- <a id="submit" class="button-link">SUBMIT</a> -->
+                                    <button type="submit" class="button-link">SUBMIT</button>
                                     <div class="extrude-right"></div>
                                     <div class="extrude-right alt"></div>
                                     <div class="extrude-bottom"></div>
@@ -264,28 +283,10 @@
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
-                <div class="slide slide4">
-                    <div class="social">
-                        <div class="casing">
-                            <div class="element"><a href="javascript:;">Instagram.</a></div>
-                        </div>
-                    </div>
-                    <div class="social">
-                        <div class="casing">
-                            <div class="element"><a href="javascript:;">Facebook.</a></div>
-                        </div>
-                    </div>
-                    <div class="social">
-                        <div class="casing">
-                            <div class="element"><a href="javascript:;">Medium.</a></div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
-            
             <div class="gb-ft slideUp">
                 <p>Delicious . Digital . Agency</p>
             </div>
