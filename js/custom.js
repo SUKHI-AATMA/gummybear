@@ -1,14 +1,17 @@
 $(document).on('click touchend', '.customNavLink', function(e) {
     e.preventDefault();
-    var hrefval = $(this).attr('data-page'),
-        hrefval2 = $(this).attr('href');
-    // alert(hrefval[0]);
-    // $('body').addClass(hrefval[0])
-    $('.opPage').addClass(hrefval);
-    $('.opPage').addClass('active ');
-    setTimeout(function() {
-        window.location.href = hrefval2;
-    }, 1200);
+    if($(this).attr('href') != 'javascript:;')
+    {
+        var hrefval = $(this).attr('data-page'),
+            hrefval2 = $(this).attr('href');
+        // alert(hrefval[0]);
+        // $('body').addClass(hrefval[0])
+        $('.opPage').addClass(hrefval);
+        $('.opPage').addClass('active ');
+        setTimeout(function() {
+            window.location.href = hrefval2;
+        }, 1200);
+    }
 }).on('focus', ".mat-input", function() {
     $(this).parent().addClass("is-active is-completed");
 }).on('focusout', ".mat-input", function() {
