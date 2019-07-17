@@ -29,7 +29,7 @@ $(document).on('click touchend', '.customNavLink', function(e) {
 //     e.preventDefault();
 //     CONTACT.formSubmit();
 // })
-.on('click touchend','.hamburge_r',function(){
+.on('click','.hamburge_r',function(){
     if($(this).parents('nav').hasClass('open') == true){
         $(this).parents('nav').removeClass('open')
     }

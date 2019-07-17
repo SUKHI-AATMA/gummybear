@@ -522,7 +522,8 @@
     .logo, .blacknav .logo {
         width: 110px !important;
         top: 20px !important;
-        left: 20px !important;
+        left: 30px !important;
+        margin: 0;
     }
     .gb-common .inner-wrap,
     .gb-abt-wrk .inner-wrap {

@@ -579,6 +579,7 @@ html#contactPage {
         -ms-transform: translateY(-100%);
             transform: translateY(-100%);
     /*padding: 0 0 10px;*/
+    cursor: pointer;
 }
 
 #contactPage .casing.btn {
@@ -992,6 +993,7 @@ html#contactPage {
     position: relative;
     display: inline-block;
     text-align: center;
+    
 }
 
 #contactPage .button-link {
@@ -1009,12 +1011,14 @@ html#contactPage {
     transition: transform 200ms ease;
     transition: transform 200ms ease, -webkit-transform 200ms ease;
     font-family: 'Luckiest Guy', cursive;
-    color: #000;
+    /* color: #000; */
+    color: #fff;
     font-size: 30px;
     font-weight: 800;
     text-align: center;
     text-decoration: none;
     line-height: 20px;
+    cursor: pointer;
 }
 
 #contactPage .extrude-right {

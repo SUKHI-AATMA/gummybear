@@ -231,9 +231,9 @@ header .logo {
     width: 20%;
 }
 
-[data-view="mobile"] header .logo {
+/* [data-view="mobile"] header .logo {
     margin: 0 10px;
-}
+} */
 
 [data-view="desktop"] header .logo img {
     width: 100%;
@@ -2651,7 +2651,7 @@ a.playButton {
 @media screen and (max-width: 768px){
     .fp-bg{
         background-position: center 50% !important;
-        background-size: 80% !important;
+        background-size: 75% !important;
     }
     .companyLogo{
         max-width: 200px;
