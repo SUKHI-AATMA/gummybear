@@ -1220,10 +1220,10 @@ html#contactPage {
         top: 30px !important;
         left: 30px !important;
     }
-    .logo img, .nav.blacknav .logo img{
+    nav .logo img, .nav.blacknav .logo img{
         width: 150px;
     } 
-    
+
     /* .gb-head .gb-title {
         line-height: 80px !important;
     } */
