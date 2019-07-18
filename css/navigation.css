@@ -495,7 +495,10 @@ nav.blacknav .logo {
     top: 50px;
     width: 200px;
 }
-.logo img { width: 100%; }
+nav.blacknav .logo img{
+    width: 200px;
+}
+/* .logo img { width: 100%; } */
 nav.blacknav ul li a {
     /* color: #000; */
     color: #e00909;

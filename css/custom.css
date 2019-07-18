@@ -1212,7 +1212,7 @@ html#contactPage {
         justify-content: center;
     }
     .gb-abt-wrk .inner-wrap .col {
-        width: 60% !important;
+        width: 55% !important;
         padding-bottom: 30px;
     }
     .logo, .blacknav .logo {
@@ -1220,6 +1220,9 @@ html#contactPage {
         top: 30px !important;
         left: 30px !important;
     }
+    .logo a img, .blacknav .logo a img{
+        width: 150px;
+    } 
     /* .gb-head .gb-title {
         line-height: 80px !important;
     } */
