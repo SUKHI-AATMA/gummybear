@@ -1220,7 +1220,7 @@ html#contactPage {
         top: 30px !important;
         left: 30px !important;
     }
-    .logo a img, .blacknav .logo a img{
+    .logo img, .blacknav .logo img{
         width: 150px;
     } 
     /* .gb-head .gb-title {
