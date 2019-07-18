@@ -614,8 +614,8 @@
         top: 15px !important;
         left: 20px !important;
     }
-    .logo img, .blacknav .logo img{
-        width: 110px;
+    .logo img, nav.blacknav .logo img{
+        width: 110px !important;
     }
     .gb-head .gb-title{
         font-size: 40px;
