@@ -239,9 +239,9 @@ header .logo {
     width: 100%;
 }
 
-[data-view="mobile"] header .logo img {
+/* [data-view="mobile"] header .logo img {
     width: 80%;
-}
+} */
 
 /*nav {
     float: right;
@@ -2661,6 +2661,9 @@ a.playButton {
         text-align: center;
         margin: 0 auto
     }
+    .companyLogo.imgSize{
+        max-width: 250px;
+    }
     .companyLogo img{
         width: 100%;
         height: auto;
@@ -2678,6 +2681,9 @@ a.playButton {
     .companyLogo{
         max-width: 120px;
         padding-top: 27%;
+    }
+    .companyLogo.imgSize{
+        max-width: 175px;
     }
     .mobile .ftNote {
         bottom: 10% !important;

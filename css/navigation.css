@@ -597,7 +597,10 @@ nav.blacknav ul li ul a, nav ul li ul a  {
         font-size: 14px;
         padding: 0 15px;
         padding-top: 120px;
-    }
+        -moz-transform: translate(-5x);
+        -ms-transform: translate(-5x);
+        -o-transform: translate(-5x);
+}
     nav ul li{
         margin: 0;
         padding: 15px 0;
@@ -733,10 +736,10 @@ nav.blacknav ul li ul a, nav ul li ul a  {
 
 
 @media (max-width:480px){
-    nav ul{
+    /* nav ul{
         max-width: unset;
         width: auto;
-    }
+    } */
     
     /* nav.open .hamburge_r span:after, nav.open .hamburge_r span:before{
         background: #fff;

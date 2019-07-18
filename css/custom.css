@@ -1212,7 +1212,8 @@ html#contactPage {
         justify-content: center;
     }
     .gb-abt-wrk .inner-wrap .col {
-        width: 55% !important;
+        width: 75% !important;
+        padding-bottom: 30px;
     }
     .logo, .blacknav .logo {
         width: 150px !important;
