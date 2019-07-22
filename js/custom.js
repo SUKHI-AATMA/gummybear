@@ -233,7 +233,7 @@ var CONTACT = {
         $("#contact").submit();
         $("#contact").submit(function(e) {
           e.preventDefault();
-
+          //alert("Thanks!");
           var $form = $(this);
           $.post($form.attr("action"), $form.serialize()).then(function() {
             alert("Thank you!");

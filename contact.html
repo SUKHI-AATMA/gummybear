@@ -101,7 +101,7 @@
         <span class="underline"></span>
         <div class="hamburge_r"><span></span></div>
     </nav>
-    <form name="contact" method="POST" action="/pages/success" data-netlify="true" style=" display: flex; width: 100%;">
+    <form name="contact" id="contact" method="POST" data-netlify="true" style=" display: flex; width: 100%;">
         <div class="contact">
             <div class="carou  bg-contact">
                 <div class="slide slide1">
@@ -269,13 +269,15 @@
                             <div class="element"><input type="text" id="name" placeholder="Name" name="name"></div>
                         </div>
                         <div class="casing">
-                            <div class="element"><label class="error"></label></div>
+                            <div class="element">
+                                <label class="error"></label>
+                            </div>
                         </div>
                         <div class="casing btn">
                             <div class="element">
                                 <div class="button">
                                     <!-- <a id="submit" class="button-link">SUBMIT</a> -->
-                                    <button type="submit" class="button-link">SUBMIT</button>
+                                    <button type="submit" class="button-link" id="submit">SUBMIT</button>
                                     <div class="extrude-right"></div>
                                     <div class="extrude-right alt"></div>
                                     <div class="extrude-bottom"></div>
@@ -296,7 +298,13 @@
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/custom.js" type="text/javascript"></script>
     <script>
-    CONTACT.init();
+        CONTACT.init();
+    
+        $("#contact").submit(function(e) {
+            e.preventDefault();
+            alert("Thanks!");
+        });
+    
     </script>
     <div class="opPage"></div>
 </body>
