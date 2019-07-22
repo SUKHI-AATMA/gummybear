@@ -16,7 +16,6 @@
     background-color: #FFCF31;
     -webkit-transition: -webkit-transform 200ms ease;
     transition: -webkit-transform 200ms ease;
-    -o-transition: transform 200ms ease;
     transition: transform 200ms ease;
     transition: transform 200ms ease, -webkit-transform 200ms ease;
     font-family: 'Luckiest Guy', cursive;
@@ -34,14 +33,11 @@
     height: 70%;
     background-color: #ebc721;
     -webkit-transform: skew(0deg, -45deg);
-    -ms-transform: skew(0deg, -45deg);
     transform: skew(0deg, -45deg);
     -webkit-transform-origin: 100% 50%;
-    -ms-transform-origin: 100% 50%;
     transform-origin: 100% 50%;
     -webkit-transition: height 200ms ease, -webkit-transform 200ms ease;
     transition: height 200ms ease, -webkit-transform 200ms ease;
-    -o-transition: height 200ms ease, transform 200ms ease;
     transition: height 200ms ease, transform 200ms ease;
     transition: height 200ms ease, transform 200ms ease, -webkit-transform 200ms ease;
 }
@@ -51,7 +47,6 @@
     -webkit-transform: skew(0deg, -22.5deg) scale3d(0, 1, 1);
     transform: skew(0deg, -22.5deg) scale3d(0, 1, 1);
     -webkit-transform-origin: 0% 50% 0px;
-    -ms-transform-origin: 0% 50% 0px;
     transform-origin: 0% 50% 0px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -66,11 +61,9 @@
     height: 10px;
     background-color: #ebc721;
     -webkit-transform-origin: 50% 100% 0px;
-    -ms-transform-origin: 50% 100% 0px;
     transform-origin: 50% 100% 0px;
     -webkit-transition: width 200ms ease, -webkit-transform 200ms ease;
     transition: width 200ms ease, -webkit-transform 200ms ease;
-    -o-transition: transform 200ms ease, width 200ms ease;
     transition: transform 200ms ease, width 200ms ease;
     transition: transform 200ms ease, width 200ms ease, -webkit-transform 200ms ease;
 }
@@ -85,7 +78,6 @@
 
 .header nav .menu:hover .menu-link {
     -webkit-transform: translate(10px, -10px);
-        -ms-transform: translate(10px, -10px);
             transform: translate(10px, -10px);
 }
 
@@ -105,22 +97,37 @@
 /*  logo shake effects - start */
 
 .logo:hover img{
-    animation: shake 0.5s; 
+    -webkit-animation: shake 0.5s;
+            animation: shake 0.5s; 
     -webkit-animation-iteration-count: 1;    animation-iteration-count: 1;
 }
 
+@-webkit-keyframes shake {
+    0% { -webkit-transform: translate(1px, 1px) rotate(0deg); transform: translate(1px, 1px) rotate(0deg); }
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(3px, 2px) rotate(0deg); transform: translate(3px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(3px, 1px) rotate(-1deg); transform: translate(3px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(1px, 2px) rotate(0deg); transform: translate(1px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
 @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
+    0% { -webkit-transform: translate(1px, 1px) rotate(0deg); transform: translate(1px, 1px) rotate(0deg); }
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(3px, 2px) rotate(0deg); transform: translate(3px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(3px, 1px) rotate(-1deg); transform: translate(3px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(1px, 2px) rotate(0deg); transform: translate(1px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); transform: translate(1px, -2px) rotate(-1deg); }
   }
 
 /* logo shake effects -  end  */
@@ -163,9 +170,15 @@
     height: 100vh;
 }
 .gb-common .inner-wrap{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 0 100px;
     margin: 100px 0 0;
     width: 100%;
@@ -189,9 +202,15 @@
 
 #services .section .box-wrap,
 #adobeStack .section .box-wrap{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100%;   
 }
 #services .section .box-wrap .box{
@@ -221,6 +240,8 @@
 }
 #work .gb-abt-wrk .inner-wrap .col img {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     top: -30px; 
 }
@@ -357,10 +378,6 @@
 }
 
 
-
-
-
-
 @media screen and (max-width:1600px){
     .gb-common .inner-wrap,
     .gb-abt-wrk .inner-wrap{
@@ -377,6 +394,7 @@
         font-size: 27px;
     }
 }
+
 @media screen and (max-width:1366px){
     /* #contactPage .bg-contact .slide3{
         padding-left: 70px;
@@ -388,7 +406,9 @@
         padding-bottom: 70px;
     }
     .gb-abt-wrk .inner-wrap .col:first-child{
-        justify-content:flex-start;
+        -webkit-box-pack:start;
+            -ms-flex-pack:start;
+                justify-content:flex-start;
     }
     .gb-head .gb-title{
         font-size: 80px;
@@ -412,6 +432,7 @@
        width:100%;
    }
 }
+
 @media screen and (min-width:1260px) and (max-width:1290px) {
     
     .gb-common .inner-wrap .col .imgBox {
@@ -432,6 +453,7 @@
         background-position: center 40% !important;
     }
 }
+
 @media screen and (max-width:1280px){
 
     .gb-head .gb-title {
@@ -445,6 +467,7 @@
        font-size: 25px;
    }
 }
+
 @media screen and (max-width:1200px){
 
     .gb-common .inner-wrap .col .imgBox{
@@ -464,6 +487,7 @@
         font-size: 24px;
     }
 }
+
 @media screen and (max-width:1024px){
 
     .logo, .blacknav .logo {
@@ -579,11 +603,18 @@
         margin: 0;
     }
     .gb-abt-wrk .inner-wrap .col:first-child{
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     .gb-common .inner-wrap{
-        justify-content: center;
-        flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .gb-common .inner-wrap .col{
         width:100%;
@@ -642,6 +673,7 @@
         width: 75% !important;
     }
 }
+
 @media screen and (max-width:480px){
     .logo, .blacknav .logo {
         width: 110px !important;
@@ -681,6 +713,7 @@
         bottom: 15px;
     }
 }
+
 @media screen and (max-width:360px){
     .logo, .blacknav .logo {
         width: 90px !important;
@@ -704,6 +737,7 @@
         font-size: 16px;
     }
 }
+
 @media screen and (max-width:330px){
     .gb-head .gb-title{
         font-size: 30px;

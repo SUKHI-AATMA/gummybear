@@ -45,11 +45,9 @@
         top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
         background: #fff;
         -webkit-transition: all 1.2s;
-        -o-transition: all 1.2s;
         transition: all 1.2s;
         width: 0px;
         height: 0px;
@@ -62,11 +60,9 @@
         top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         /*background: #0A47ED;*/
         -webkit-transition: all 1.2s 0.2s;
-        -o-transition: all 1.2s 0.2s;
         transition: all 1.2s 0.2s;
         width: 0px;
         height: 0px;
@@ -129,10 +125,19 @@
     }
     
     #adobeStack .box .content{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         height: 100%;
     }
     #adobeStack .box .content .title {
@@ -143,7 +148,6 @@
         padding-bottom: 30px;
         /* letter-spacing: 1px; */
         -webkit-transition: all 0.5s;
-        -o-transition: all 0.5s;
         transition: all 0.5s;
     }
 
@@ -154,10 +158,8 @@
         position: absolute;
         opacity: 0;
         -webkit-transform: translateY(-20px);
-            -ms-transform: translateY(-20px);
                 transform: translateY(-20px);
         -webkit-transition: all 0.5s;
-        -o-transition: all 0.5s;
         transition: all 0.5s;
     }
     #adobeStack .box .desc p{
@@ -190,21 +192,17 @@
     #adobeStack .box:hover .content .desc {
         opacity: 1;
         -webkit-transform: translateY(50px);
-        -ms-transform: translateY(50px);
         transform: translateY(50px);
         -webkit-transition: all 0.9s;
-        -o-transition: all 0.9s;
         transition: all 0.9s;
     }
     #adobeStack .box:hover .content .title { 
-        -webkit-transform: translateY(-150px); 
-        -ms-transform: translateY(-150px);
+        -webkit-transform: translateY(-150px);
         transform: translateY(-150px);
     }
     #adobeStack .box:hover:nth-child(5) .content .title,
     #adobeStack .boxContainer .box:hover:nth-child(6) .content .title{
         -webkit-transform: translateY(-60px);
-        -ms-transform: translateY(-60px);
         transform: translateY(-60px);
     }
     
@@ -236,12 +234,10 @@
 
         #adobeStack .box:hover .content .title{
             -webkit-transform: translateY(-100px);
-            -ms-transform: translateY(-100px);
             transform: translateY(-100px);
         }
         #adobeStack .box:hover .content .desc{
             -webkit-transform: translateY(60px);
-            -ms-transform: translateY(60px);
             transform: translateY(60px);
         }
     }
@@ -277,17 +273,22 @@
             width: 100%;
         }
         #adobeStack .section .box-wrap{
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
         }
         #adobeStack .section .box-wrap .box{
             -webkit-transition: all 0.5s;
-            -o-transition: all 0.5s;
             transition: all 0.5s;
             width: 100%;
             height: 100%;
         }
         #adobeStack .box .content{
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             height: 100%;
         }
         #adobeStack .box .content .title{
@@ -302,12 +303,10 @@
         }
         #adobeStack .box:hover .content .title{
             -webkit-transform: translateY(-150px);
-            -ms-transform: translateY(-150px);
             transform: translateY(-150px);
         }
         #adobeStack .box:hover .content .desc{
             -webkit-transform: translateY(10px);
-            -ms-transform: translateY(10px);
             transform: translateY(10px);
         }
         #adobeStack nav.open ul li ul li:last-child a{
@@ -329,7 +328,6 @@
 
         #adobeStack .box:hover .content .desc{
             -webkit-transform: translateY(-30px);
-            -ms-transform: translateY(-30px);
             transform: translateY(-30px);
         }
         #adobeStack .box .content ul,
