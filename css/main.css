@@ -187,7 +187,7 @@
     width: 45%;
 }
 .gb-common .inner-wrap .col .imgBox{
-    max-width: 580px;
+    max-width: 500px;
     width: 100%;
 }
 .gb-common .inner-wrap .col img{
@@ -411,6 +411,9 @@
         padding-left: 70px;
     } */
 
+    .gb-common .inner-wrap .col .imgBox {
+        max-width: 400px;
+    }
     .gb-common .inner-wrap,
     .gb-abt-wrk .inner-wrap{
         padding: 0 70px;
@@ -447,7 +450,7 @@
 @media screen and (min-width:1260px) and (max-width:1290px) {
     
     .gb-common .inner-wrap .col .imgBox {
-        max-width: 480px;
+        max-width: 400px;
     }
     .gb-head .gb-title {
         font-size: 70px;
@@ -482,7 +485,7 @@
 @media screen and (max-width:1200px){
 
     .gb-common .inner-wrap .col .imgBox{
-        max-width: 400px;
+        max-width: 350px;
     }
     .gb-head .gb-title{
         font-size: 60px;
@@ -500,14 +503,12 @@
 }
 
 @media screen and (max-width:1024px){
-
     .logo, .blacknav .logo {
         width: 125px !important;
     }
     nav .logo img, nav.blacknav .logo img {
         width: 125px !important;
-    }
-    
+    }    
     .gb-common .inner-wrap,
     .gb-abt-wrk .inner-wrap{
         padding: 0 50px;
