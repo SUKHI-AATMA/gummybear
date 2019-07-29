@@ -678,6 +678,7 @@ nav.blacknav ul li ul a, nav ul li ul a  {
         cursor: pointer;
     }
     .hamburge_r span {
+        cursor: pointer;
         position: absolute;
         top: 15px;
         right: 0;
