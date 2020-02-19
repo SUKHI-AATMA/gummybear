@@ -44,6 +44,7 @@ header nav {
 header nav .logoo {
     width: 60px;
     z-index: 99999;
+    float: left;
 }
 header nav .logo:hover a img {
     -webkit-animation: shake 0.5s;
@@ -339,6 +340,9 @@ footer .show {display:block;}
 .slider-wrap .slider-container ul li .bg-wrap .bg-inner.green-flower-wrap{
     max-width: 1000px;
 }
+.slider-wrap .slider-container ul li .bg-wrap .bg-inner.bee-wrap{
+    max-width: 700px;
+}
 .slider-wrap .slider-container ul li .bg-wrap .bg-inner img{
     width: 100%;
     height: auto;
@@ -368,6 +372,9 @@ footer .show {display:block;}
     }
     .slider-wrap .slider-container ul li .bg-wrap .bg-inner.green-flower-wrap{
         max-width: 800px;
+    }
+    .slider-wrap .slider-container ul li .bg-wrap .bg-inner.bee-wrap{
+        max-width: 520px;
     }
     /* footer .ft-container ul .ft-logo{
         width: 100px !important;
