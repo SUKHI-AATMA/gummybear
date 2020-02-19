@@ -502,6 +502,9 @@ footer .show {display:block;}
         height: 30px;
         width: 30px;
     }
+    .slider-wrap .slider-container ul li .bg-wrap .bg-inner.bee-wrap{
+        max-width: 215px;
+    }
 }
 
 
