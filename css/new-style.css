@@ -42,6 +42,7 @@ header nav {
     padding: 50px 70px;
 }
 header nav .logoo {
+    float: left;
     width: 60px;
     z-index: 99999;
     float: left;
@@ -75,6 +76,7 @@ header nav ul.social{
     -webkit-box-align: center;
             align-items: center; */
     list-style: none;
+    padding: 9px 0;
 }
 header nav ul.social li{
     margin: 0 100px 0 0;
