@@ -1,0 +1,296 @@
+@font-face {
+    font-family: 'Acid-bold';
+    src: url('/fonts/Acid-bold/Acid-bold.eot');
+    src: url('/fonts/Acid-bold/Acid-bold.woff2') format('woff2'),
+        url('/fonts/Acid-bold/Acid-bold.woff') format('woff'),
+        url('/fonts/Acid-bold/Acid-bold.ttf') format('truetype'),
+        url('/fonts/Acid-bold/Acid-bold.svg#Acid-bold') format('svg'),
+        url('/fonts/Acid-bold/Acid-bold.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, 
+body {
+    height: 100%;
+}
+
+
+/* new home page  */
+.new-home-pg{
+    font-family: 'Acid-bold';
+}
+
+
+/* header */
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header nav {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+    padding: 50px 70px;
+}
+header nav .logo {
+    width: 60px;
+    z-index: 99999;
+}
+header nav .logo a{
+    display: block;
+}
+header nav .logo img {
+    width: 100%;
+}
+header nav ul.menu {
+    display: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+header nav ul.social{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    list-style: none;
+}
+header nav ul.social li{
+    margin-right: 100px;
+}
+header nav ul.social li:last-child{
+    margin-right: 0;
+}
+header nav ul.social li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #231f20;
+}
+header nav ul.social li a:hover{
+    text-decoration: underline;
+}
+
+
+/* footer */
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    z-index: 10;
+}
+
+footer .container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+footer .container ul{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    list-style: none;
+}
+footer .container ul li{
+    margin-right: 130px;
+}
+footer .container ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #231f20;
+}
+footer .container ul li a:hover{
+    text-decoration: underline;
+}
+footer .container ul li:last-child{
+    margin-right: 0;
+}
+footer .container ul .logo{
+    width: 110px;   
+}
+footer .container ul .logo a{
+    display: block;
+}
+footer .container ul .logo img{
+    width: 100%;
+}
+
+.main{
+    height: 100vh;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+/* slider */
+.slider-wrap {
+    display: block;
+    width: 100%;
+}
+.slider-wrap .container {
+    margin:0 auto;
+    width: 100%;
+    position: relative;
+}
+
+.slider-wrap .container>div.prev,
+.slider-wrap .container>div.next {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.slider-wrap .container>div.prev {
+    left: 150px;
+}
+
+.slider-wrap .container>div.prev>.arrow-left {
+    background-image: url("../images/left-icon.svg");
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.slider-wrap .container>div.next {
+    right: 150px;
+}
+
+.slider-wrap .container>div.next>.arrow-right {
+    background-image: url("../images/right-icon.svg");
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.slider-wrap .container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.slider-wrap .container ul li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: 0.6s ease-in-out;
+    transition: 0.6s ease-in-out;
+}
+
+.slider-wrap .container ul li.visible {
+    opacity: 1;
+    -webkit-transition: 0.6s ease-in-out;
+    transition: 0.6s ease-in-out;
+}
+
+.slider-wrap .container ul li .inner-wrap{
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+}
+
+.slider-wrap .container ul li .inner-wrap img{
+    width: 100%;
+    height: auto;
+}
+
+.slider-wrap .container ul li .bg-wrap{
+    width:100%; 
+    height:100%; 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* margin-left: -25%;
+    margin-top: -25%; */
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+.slider-wrap .container ul li .bg-wrap .bg-inner{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.slider-wrap .container ul li .bg-wrap .bg-inner.green-flower-wrap{
+    max-width: 1000px;
+}
+.slider-wrap .container ul li .bg-wrap .bg-inner img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/* media query */
+
+@media screen and (max-width:1290px){
+    header nav .logo{
+        width: 60px !important;
+    }
+    header nav .logo img{
+        width: 100% !important;
+    }
+    .slider-wrap .container>div.prev{
+        left: 100px;
+    }
+    .slider-wrap .container>div.next{
+        right: 100px;
+    }
+    .slider-wrap .container ul li .bg-wrap .bg-inner{
+        max-width: 440px;
+    }
+    .slider-wrap .container ul li .bg-wrap .bg-inner.green-flower-wrap{
+        max-width: 800px;
+    }
+    footer .container ul .logo{
+        width: 100px !important;
+    }
+}

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Acid-Bold';
+  src: url('Acid-Bold.eot');
+  src: url('Acid-Bold.eot?#iefix') format('embedded-opentype'),
+       url('Acid-Bold.svg#Acid-Bold') format('svg'),
+       url('Acid-Bold.ttf') format('truetype'),
+       url('Acid-Bold.woff') format('woff'),
+       url('Acid-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
