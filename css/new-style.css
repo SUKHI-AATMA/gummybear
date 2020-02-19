@@ -140,8 +140,15 @@ footer .ft-container ul li:last-child{
     margin-right: 0;
 }
 footer .ft-container ul .ft-logo{
-    width: 160px;   
+    width: 190px;   
     position: relative;
+}
+footer .ft-container ul .ft-logo > a{
+    max-width: 140px;
+    margin: 0 auto;
+}
+footer .ft-container ul .ft-logo p{
+    font-size: 20px;
 }
 footer .ft-container ul .ft-logo:hover a img {
     -webkit-animation: shake 0.5s;
@@ -398,8 +405,14 @@ footer .show {display:block;}
     header nav ul.social li{
         margin-right: 70px;
     }
-    footer .ft-container ul li{
+    /* footer .ft-container ul li{
         margin-right: 100px;
+    } */
+    footer .ft-container ul .ft-logo > a{
+        max-width: 110px;
+    }
+    footer .ft-container ul .ft-logo p{
+        font-size: 15px;
     }
 }
 
@@ -413,9 +426,9 @@ footer .show {display:block;}
     footer{
         bottom: 30px;
     }
-    footer .ft-container ul li{
+    /* footer .ft-container ul li{
         margin-right: 70px;
-    }
+    } */
 
     .main{
         height: 100vh; /* Fallback for browsers that do not support Custom Properties */
@@ -473,9 +486,9 @@ footer .show {display:block;}
     footer{
         display: none;
     }
-    footer .ft-container ul li{
+    /* footer .ft-container ul li{
         margin-right: 50px;
-    }
+    } */
     footer .ft-container ul .ft-logo {
         width: 80px !important;
     }
@@ -487,9 +500,9 @@ footer .show {display:block;}
 
 
 @media screen and (max-width:480px){
-    footer .ft-container ul li{
+    /* footer .ft-container ul li{
         margin-right: 24px;
-    }
+    } */
     /* .slider-wrap .slider-container>div.prev{
         left: 10px;
     }
@@ -522,11 +535,5 @@ footer .show {display:block;}
     }
     .slider-wrap .slider-container ul li:last-child .bg-wrap .bg-inner img{
         width: 120%;
-    }
-}
-
-@media screen and (max-width:330px){
-    footer .ft-container ul li{
-        margin-right: 20px;
     }
 }
