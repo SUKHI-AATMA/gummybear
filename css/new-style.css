@@ -19,6 +19,7 @@ body {
 /* new home page  */
 .new-home-pg{
     font-family: 'Acid-bold';
+    padding: 0 !important;
 }
 
 
@@ -161,11 +162,10 @@ footer .container ul .logo img{
     top: 0;
     width: 40px;
     height: 100%;
-    cursor: pointer;
 }
 
 .slider-wrap .container>div.prev {
-    left: 150px;
+    left: 120px;
 }
 
 .slider-wrap .container>div.prev>.arrow-left {
@@ -176,10 +176,12 @@ footer .container ul .logo img{
     position: absolute;
     top: 50%;
     left: 50%;
+    margin-left: -20px;
+    cursor: pointer;
 }
 
 .slider-wrap .container>div.next {
-    right: 150px;
+    right: 120px;
 }
 
 .slider-wrap .container>div.next>.arrow-right {
@@ -190,6 +192,8 @@ footer .container ul .logo img{
     position: absolute;
     top: 50%;
     left: 50%;
+    margin-left: -20px;
+    cursor: pointer;
 }
 
 .slider-wrap .container ul {
@@ -232,7 +236,7 @@ footer .container ul .logo img{
 
 .slider-wrap .container ul li .inner-wrap img{
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .slider-wrap .container ul li .bg-wrap{
@@ -293,5 +297,88 @@ footer .container ul .logo img{
     }
     footer .container ul .logo{
         width: 100px !important;
+    }
+}
+
+@media screen and (max-width:1200px){
+    header nav{
+        padding: 40px 40px;
+    }
+    header nav ul.social li{
+        margin-right: 70px;
+    }
+    footer .container ul li{
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    header nav{
+        padding: 20px 30px;
+    }
+    header nav ul.social li{
+        margin-right: 40px;
+    }
+    footer{
+        bottom: 20px;
+    }
+    footer .container ul li{
+        margin-right: 70px;
+    }
+
+    .slider-wrap .container>div.next{
+        right:30px
+    }
+    .slider-wrap .container>div.prev{
+        left: 30px;
+    }
+    .slider-wrap .container ul li .bg-wrap .bg-inner{
+        max-width: 380px;
+    }
+}
+
+@media screen and (max-width:767px){
+
+    footer .container ul li{
+        margin-right: 50px;
+    }
+    footer .container ul .logo {
+        width: 80px !important;
+    }
+    .slider-wrap .container ul li .bg-wrap .bg-inner{
+        max-width: 300px;
+    }
+
+}
+
+
+@media screen and (max-width:480px){
+    footer .container ul li{
+        margin-right: 24px;
+    }
+    .slider-wrap .container>div.prev{
+        left: 10px;
+    }
+    .slider-wrap .container>div.next{
+        right: 10px;
+    }
+    .slider-wrap .container ul li .bg-wrap .bg-inner{
+        max-width: 220px;
+    }
+}
+
+
+@media screen and (max-width:360px){
+    footer .container ul .logo{
+        width: 60px !important;
+    }
+    .slider-wrap .container ul li .bg-wrap .bg-inner{
+        max-width: 180px;
+    }
+}
+
+@media screen and (max-width:330px){
+    footer .container ul li{
+        margin-right: 20px;
     }
 }
