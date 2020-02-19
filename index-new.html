@@ -172,7 +172,7 @@
             <ul>
                 <li><a href="/about.html">About</a></li>
                 <li><a href="capabilities.html">capabilities</a></li>
-                <li class="logo">
+                <li class="ft-logo">
                     <a href="/">
                         <img src="images/logo-red.svg" alt="Gummy Bear">
                     </a>
@@ -224,8 +224,13 @@
             lis[index].classList.add('visible');
         });
 
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
+        // dropdown
         function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
         }
