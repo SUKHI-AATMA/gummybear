@@ -179,7 +179,8 @@
                 </li>
                 <li><a href="/work.html">Work</a></li>
                 <li><a href="/contact.html">Contact</a></li>
-                <li><a href="javascript:;"onclick="myFunction()" class="dropbtn">Adobe</a>
+                <!-- onclick="myFunction()" -->
+                <li><a href="javascript:;" class="dropbtn">Adobe</a>
                     <div class="box">
                         <div id="myDropdown" class="dropdown-content">
                             <a href="/aem-websites.html">AEM Websites</a>
@@ -231,22 +232,22 @@
 
 
         // dropdown
-        function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-        }
+        // function myFunction() {
+        // document.getElementById("myDropdown").classList.toggle("show");
+        // }
 
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-                }
-            }
-        }
+        // window.onclick = function(event) {
+        //     if (!event.target.matches('.dropbtn')) {
+        //         var dropdowns = document.getElementsByClassName("dropdown-content");
+        //         var i;
+        //         for (i = 0; i < dropdowns.length; i++) {
+        //         var openDropdown = dropdowns[i];
+        //         if (openDropdown.classList.contains('show')) {
+        //             openDropdown.classList.remove('show');
+        //         }
+        //         }
+        //     }
+        // }
        
 
 
