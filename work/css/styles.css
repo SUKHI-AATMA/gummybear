@@ -2493,6 +2493,18 @@ a.playButton {
         font-size: 50px;
         font-weight: 900;
     }
+    [data-sec="11"].newSection .rgtSec img {
+        width: 50%;
+    }
+    [data-sec="12"].newSection .rgtSec img {
+        width: 100%;
+    }
+    [data-sec="13"].newSection .rgtSec img {
+        width: 80%;
+    }
+    [data-sec="12"].newSection .btmSec {
+            bottom: 0%;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
