@@ -2502,8 +2502,14 @@ a.playButton {
     [data-sec="13"].newSection .rgtSec img {
         width: 80%;
     }
+    [data-sec="11"].newSection .btmSec {
+        right: calc((100% - 700px) / 2);
+            width: 700px;
+    }
     [data-sec="12"].newSection .btmSec {
             bottom: 0%;
+            right: calc((100% - 600px) / 2);
+            width: 600px;
     }
 }
 
