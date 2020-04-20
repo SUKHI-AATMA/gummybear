@@ -2511,6 +2511,17 @@ a.playButton {
             right: calc((100% - 600px) / 2);
             width: 600px;
     }
+    .newSection[data-sec="14"] .rgtSec img {
+        width: 40%;
+    }
+    .newSection[data-sec="14"] .btmSec {
+        right: calc((100% - 400px) / 2);
+        width: 400px;
+    }
+    .newSection[data-sec="15"] .btmSec {
+        right: calc((100% - 400px) / 2);
+        width: 400px;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
