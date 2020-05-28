@@ -57,7 +57,58 @@
         </nav>
         <div class="btmCopy"><span class="mktLine">Delicious. Digital. Agency.</span> <a href="contact.html">CONTACT US</a></div>
     </section>
-    <section>COMING SOON</section>
+    <section class="banner contact">
+        <div class="container">
+            <div class="pageSubTitle">
+                Get In Touch
+            </div>
+            <div class="row">
+                <div class="lftSec">
+                    <div class="mainTitle">Contact Us</div>
+                    <div class="title">let's get textual & start something Sweet, aye?!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="form">
+        <div class="lftSec">
+            <p>Maybe we can chat<br> over a coffee or a <br>call.</p>
+        </div>
+        <div class="rgtSec">
+            <form name="contact" method="POST" data-netlify="true">
+                <p class="hidden">
+                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                <p>
+                    <select name="role[]" required>
+                        <option value="">I'd like to get in touch about...</option>
+                        <option value="User Experience">User Experience</option>
+                        <option value="Strategy">Strategy</option>
+                        <option value="Websites">Websites</option>
+                        <option value="Branding">Branding</option>
+                        <option value="Interface/UI Design">Interface/UI Design</option>
+                        <option value="Content Production">Content Production</option>
+
+                    </select>
+                </p>
+                <p>
+                    <label>Email:</label> <input required type="email" placeholder="You can email me at..." name="email" />
+                </p>
+                <p>
+                    <label>Message:</label> <textarea required name="message" placeholder="I would like to..."></textarea>
+                </p>
+                <p>
+                    <button class="btn" type="submit">
+                      <span class="btn__content-wrap">
+                        <span class="btn__content">
+                          SEND MESSAGE
+                        </span>
+                      </span>
+                    </button>
+                </p>
+            </form>
+        </div>
+    </section>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 </body>
