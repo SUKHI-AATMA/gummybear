@@ -7,11 +7,12 @@ $(document).ready(function() {
     $('body').attr('data-page', pgNames.length > 1 ? pgNames[0] : 'home');
     $('.position').each(function() {
         if ($(this).outerWidth() < $(this).siblings('.title').outerWidth()) {
-            $(this).css({ width: $(this).siblings('.title').outerWidth() })
+            $(this).css({ width: $(this).siblings('.title').outerWidth() }).parents('.name').css({width: $(this).siblings('.title').outerWidth()})
         } else {
-            $(this).siblings('.title').css({ width: $(this).outerWidth() })
+            $(this).siblings('.title').css({ width: $(this).outerWidth() }).parents('.name').css({width: $(this).outerWidth() })
         }
-    }) // console.log(123);
+    }) 
+    // console.log(123);
     // var waypoints = $('#footer').waypoint({
     //     handler: function(direction) {
     //         notify(this.element.id + ' hit')
