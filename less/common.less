@@ -177,7 +177,7 @@ section {
     display: flex;
     border-right: 1px solid #707070;
     flex-direction: column;
-    height: calc(100%);
+    height: 100%;
     justify-content: space-between;
     left: 0;
     padding: 2% 1%;
@@ -185,6 +185,7 @@ section {
     top: 0;
     width: 8%;
     z-index: 10;
+    /*transition: height linear 0.3s;*/
 }
 
 .rgtHeader {
@@ -793,7 +794,7 @@ section.pagination {
     padding: 0;
     border-top: 1px solid #ccc;
 
-    .btn {
+    .bttn {
         /*border-bottom: 1px solid #818181;*/
         width: 50%;
         border-right: 1px solid #818181;
@@ -987,7 +988,7 @@ section.team {
             }
 
             &.name {
-                margin: 0 10% 0;
+                margin: 0 0 0 10%;
             }
 
             >div {
@@ -1003,11 +1004,22 @@ section.team {
             }
 
         }
-        &:nth-child(even) {
+        &:nth-child(odd) {
             flex-direction: row-reverse;
-            &.name {
-                margin: 0 0 0 10%;
+            > div {
+                &.name {
+                    margin: 0 10% 0 0;
+                }
             }
+        }
+        &:nth-child(4) {
+            justify-content: end;
+            padding: 0 0 0 10%;
+        }
+
+        &:nth-child(5) {
+            justify-content: start;
+            padding: 0 10% 0 0;
         }
     }
 }

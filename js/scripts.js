@@ -13,6 +13,10 @@ $(document).ready(function() {
     //     }
     // })
 });
+var ftPosition = $('footer').position().top,
+docHei = $(document).height(),
+winHei = $(window).height(),
+ftHei = $('footer').outerHeight(true);
 $(window).on('load', function() {
     $('.position').each(function() {
         if ($(this).outerWidth() < $(this).siblings('.title').outerWidth()) {
@@ -21,4 +25,17 @@ $(window).on('load', function() {
             $(this).siblings('.title').css({ width: $(this).outerWidth() }).parents('.name').css({width: $(this).outerWidth() })
         }
     })
+}).on('scroll', function(){
+    var scrltp = docHei - winHei - ftHei,
+    headerHei = $(document).scrollTop() - scrltp;
+    console.log(headerHei);
+    if($(document).scrollTop() > scrltp)
+    {
+        $('.lftHeader,.rgtHeader').css({height: winHei - headerHei});
+    }
+    else {
+        $('.lftHeader,.rgtHeader').css({height: '100%'});
+    }
 });
+
+// docuent height - winw height - footer height
