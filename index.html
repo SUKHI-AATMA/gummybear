@@ -61,7 +61,7 @@
     </section>
     <section id="content" class="home">
         <div class="inner">
-            <canvas id="goo" resize="true" stats="" hidpi="on" style="position: fixed; z-index: -1; pointer-events: auto;width: 100%; height: 100%; top: 0; left: 0;"></canvas>
+            <canvas id="goo" resize="true" stats="" hidpi="on" style="position:fixed;z-index:-1;pointer-events:auto;width:100%;height:100%;top:0;left:0;"></canvas>
             <div class="cap intro">
                 <div class="banner work">
                     <div class="container">
@@ -80,7 +80,7 @@
             </div>
             <div class="">
                 <div class="projects">
-                    <div class="row project" color="#FF4E00">
+                    <div class="row project" color="#e00909">
                         <div class="prjTitle">
                             <p class="title">Who Ate All The Pies</p>
                             <a href="javascript:;" class="btn">
@@ -91,10 +91,9 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="prjImg"><img src="images/mockups-1@2x.png" alt=""></div>
+                        <div class="prjImg"><img src="videos/WAATP/hm.png" alt=""></div>
                     </div>
-                
-                    <div class="row project" color="#2b2b2b">
+                    <div class="row project" color="#00b0f0">
                         <div class="prjTitle">
                             <p class="title">Mossy Bees</p>
                             <a href="javascript:;" class="btn">
@@ -105,10 +104,9 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="prjImg"><img src="images/mockups@2x.png" alt=""></div>
+                        <div class="prjImg"><img src="videos/MossyBees/hm.png" alt=""></div>
                     </div>
-                
-                    <div class="row project" color="#ff0095">
+                    <div class="row project" color="#ffffff">
                         <div class="prjTitle">
                             <p class="title">Bacon Buttie</p>
                             <a href="javascript:;" class="btn">
@@ -119,10 +117,9 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="prjImg mobileVerticle"><img src="images/m4@2x.png" class="" alt=""></div>
+                        <div class="prjImg"><video src="videos/BaconButtie/hm.mp4" controls="0" autoplay="true" loop="true" width="100%"></video></div>
                     </div>
-                
-                    <div class="row project" color="#0888cf">
+                    <div class="row project" color="#fd5e0f">
                         <div class="prjTitle">
                             <p class="title">Debtorinfo</p>
                             <a href="javascript:;" class="btn">
@@ -133,13 +130,13 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="prjImg"><img src="images/mockups@2x.png" class="" alt=""></div>
+                        <div class="prjImg"><img src="videos/DebtorInfo/hm.svg" class="" alt=""></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <canvas id="fluid" resize="true" stats="" hidpi="on" style="position: fixed; z-index: 8; width: 100%; height: 100%; top: 0; left: 0;"></canvas>
+    <canvas id="fluid" resize="true" stats="" hidpi="on" style="position: fixed; z-index: 8; width: 100%; height: 100%; top: 0; left: 0;pointer-events:none;"></canvas>
     <!-- <section class="projects">
         <div class="row">
             <div class="prjTitle">
@@ -228,10 +225,29 @@
                 </script> Gummybear</div>
         </div>
     </footer>
+    <div class="grid">
+        <div class="col1"></div>
+        <div class="col2"></div>
+        <div class="col3"></div>
+    </div>
     <script type="text/javascript" src="js/libs.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/fluid.js" async=""></script>
     <script src="js/scripts.js"></script>
+    <script>
+    $(document).ready(function() {
+        var flag = true;
+        $(document).on('scroll', function() {
+            if (flag) {
+                console.log(1);
+                flag = 0;
+            } else {
+                console.log(2);
+                flag = 1;
+            }
+        })
+    });
+    </script>
 </body>
 
 </html>

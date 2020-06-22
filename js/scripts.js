@@ -27,7 +27,7 @@ $(window).on('load', function() {
         }
     })
 }).on('scroll', function() {
-    ftrHdrAnim();
+    // ftrHdrAnim();
 });
 
 function ftrHdrAnim() {

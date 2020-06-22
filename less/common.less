@@ -116,15 +116,96 @@ a {
         }
     }
 }
+@keyframes grainAnimation{
+    0%{-webkit-transform:translate(0,0);transform:translate(0,0)}
+    10%{-webkit-transform:translate(-5%,-5%);transform:translate(-5%,-5%)}
+    20%{-webkit-transform:translate(-10%,5%);transform:translate(-10%,5%)}
+    30%{-webkit-transform:translate(5%,-10%);transform:translate(5%,-10%)}
+    40%{-webkit-transform:translate(-5%,15%);transform:translate(-5%,15%)}
+    50%{-webkit-transform:translate(-10%,5%);transform:translate(-10%,5%)}
+    60%{-webkit-transform:translate(15%,0);transform:translate(15%,0)}
+    70%{-webkit-transform:translate(0,10%);transform:translate(0,10%)}
+    80%{-webkit-transform:translate(-15%,0);transform:translate(-15%,0)}
+    90%{-webkit-transform:translate(10%,5%);transform:translate(10%,5%)}
+    100%{-webkit-transform:translate(5%,0);transform:translate(5%,0)}
+}
 
+.grain{
+    position:fixed;
+    pointer-events:none;
+    -webkit-animation:grainAnimation 1s steps(4) infinite;
+    animation:grainAnimation 1s steps(4) infinite;
+    background-image:url(../images/grain.png);
+    height:180%;
+    left:-40%;
+    top:-40%;
+    width:180%;
+}
 .scrollDownArr {
-/*    border: 2px solid #000;*/
+    /*    border: 2px solid #000;*/
     width: 25px;
     height: 25px;
     /*border-width: 0 0 2px 2px;*/
     transform: translate(0, 100px);
     /*margin: 0;*/
 }
+
+.grid {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: table;
+    z-index: 10;
+    pointer-events: none;
+    .col1 {
+        display: table-cell;
+        width: 8%;
+        /*min-width: 210px;*/
+        height: 100%;
+        /*border-right: 1px solid rgba(187,187,187,.3);*/
+    }
+
+    .col2 {
+        display: table-cell;
+        position: relative;
+        height: 100%;
+        &:before {
+            content: "";
+            display: block;
+            width: 33.3333%;
+            height: 100%;
+            position: absolute;
+            border-right: 1px solid rgba(187,187,187,.3);
+            border-left: 1px solid rgba(187,187,187,.3);
+            top: 0;
+            left: 33.3333%;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            background: rgba(187,187,187,.3);
+            top: 50%;
+        }
+    }
+
+
+    .col3 {
+        display: table-cell;
+        width: 8%;
+        height: 100%;
+        /*border-left: 1px solid rgba(187,187,187,.3);*/
+        /*background: #fff;*/
+    }
+}
+
 
 section {
     margin: 0 auto;
@@ -175,7 +256,7 @@ section {
 .lftHeader,
 .rgtHeader {
     display: flex;
-    border-right: 1px solid #707070;
+    border-right: 1px solid rgba(187,187,187,.3);
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
@@ -191,8 +272,8 @@ section {
 .rgtHeader {
     left: unset;
     right: 0;
-    border-left: 1px solid #707070;
-    border-right: 0px solid #707070;
+    border-left: 1px solid  rgba(187,187,187,.3);
+    border-right: 0px solid  rgba(187,187,187,.3);
 
     nav {
         .hamburger {
@@ -222,7 +303,7 @@ section {
             flex-wrap: wrap;
             height: 100%;
             left: 8%;
-            padding: 10% 0;
+            padding: 5% 0;
             position: fixed;
             top: -200%;
             width: calc(100% - 16%);
@@ -230,14 +311,15 @@ section {
 
             >li {
                 height: 50%;
-                padding: 5px;
-                width: 33%;
+                padding: 5px 15px;
+                width: 33.33%;
                 position: relative;
                 overflow: hidden;
+
                 &:before {
                     /*background:#f00;*/
                     content: '';
-                    display:block;
+                    display: block;
                     width: 100%;
                     height: 100%;
                     position: absolute;
@@ -258,36 +340,43 @@ section {
                     height: 100%;
                     z-index: 2;
                 }
+
                 &:nth-child(1) {
-                    &:before{
+                    &:before {
                         background: #0ab0ea;
                     }
                 }
+
                 &:nth-child(2) {
-                    &:before{
+                    &:before {
                         background: #ee7984;
                     }
                 }
+
                 &:nth-child(3) {
-                    &:before{
+                    &:before {
                         background: #65c24a;
                     }
                 }
+
                 &:nth-child(4) {
-                    &:before{
+                    &:before {
                         background: #ffff59;
                     }
                 }
+
                 &:nth-child(5) {
-                    &:before{
+                    &:before {
                         background: #59b9fa;
                     }
                 }
+
                 &:nth-child(6) {
-                    &:before{
+                    &:before {
                         background: #ff0c0c;
                     }
                 }
+
                 >a {
                     color: #000000;
                     display: inline-block;
@@ -313,6 +402,7 @@ section {
                 >ul {
                     position: relative;
                     z-index: 3;
+
                     >li {
                         margin: 10% 0 0 18%;
 
@@ -334,7 +424,8 @@ section {
                             width: 30%;
                         }
                     }
-                    &:before{
+
+                    &:before {
                         top: 0;
                     }
                 }
@@ -801,6 +892,7 @@ section.pagination {
         width: 50%;
         border-right: 1px solid #818181;
         padding: 50px;
+
         a {
             text-align: center;
             font-family: @os;
@@ -974,6 +1066,7 @@ section.team {
         display: flex;
         flex-direction: row;
         justify-content: center;
+
         >div {
             /*width: 50%;*/
             display: flex;
@@ -1006,14 +1099,17 @@ section.team {
             }
 
         }
+
         &:nth-child(odd) {
             flex-direction: row-reverse;
-            > div {
+
+            >div {
                 &.name {
                     margin: 0 10% 0 0;
                 }
             }
         }
+
         &:nth-child(4) {
             justify-content: end;
             padding: 0 0 0 10%;
@@ -1034,7 +1130,7 @@ section.team {
     .row {
         display: flex;
         margin: 0 10%;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: center;
 
         .prjTitle {
@@ -1075,6 +1171,9 @@ section.team {
         }
 
         .prjImg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 60%;
 
             &.mobileVerticle {
@@ -1087,7 +1186,7 @@ section.team {
         }
 
         &:nth-child(2n) {
-            flex-direction: row-reverse;
+            flex-direction: row;
 
             .prjTitle {
                 .btn {
@@ -1114,6 +1213,14 @@ section.team {
                 }
             }
         }
+
+        &:nth-child(4) {
+            .prjImg {
+                img {
+                    width: 80%;
+                }
+            }
+        }
     }
 }
 
@@ -1125,7 +1232,7 @@ section.logoSection {
     .row {
         display: flex;
         width: 70%;
-        border: 1px solid #BBBBBB;
+        /*border: 1px solid #BBBBBB;*/
         padding: 0;
         justify-content: space-around;
         height: 140px;
@@ -1163,6 +1270,7 @@ section.content {
             margin: 0 0 200px;
             width: 50%;
         }
+
         &:nth-child(2) .contentBox {
             margin: 0 0 200px 35%;
         }
@@ -1185,6 +1293,7 @@ section.aemContact {
     border-top: 0.25px solid #BBBBBB;
     border-bottom: 0.25px solid #BBBBBB;
     padding: 80px 0;
+
     .text {
         display: flex;
         flex-direction: column;
@@ -1193,10 +1302,12 @@ section.aemContact {
         font: Bold 20px/34px Karla;
         font-family: @ka;
         line-height: 34px;
+
         a {
             color: #000;
             line-height: 1;
             margin: 0 0 30px;
+
             &:last-child {
                 margin: 0;
             }

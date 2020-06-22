@@ -124,13 +124,13 @@ function Goo() {
 
     function l(n) {
         TweenMax.killAll(),
-        // console.log(.10 * view.size.width); 
-        // console.log($('.rgtHeader').outerWidth(true)); 
-        // i = ismobile ? 0 : .16 * view.size.width > 211 ? Math.floor(.16 * view.size.width) : 211,
-        i = $('.rgtHeader').outerWidth(true),
-        end = ismobile ? 50 : $('.rgtHeader').outerWidth(true),
-        t = ismobile ? Math.ceil((view.size.width - i - end) / 2) : Math.ceil((view.size.width - i - end) / 3), 
-        o = ismobile ? Math.ceil(view.size.height / 3) : Math.ceil(.5 * view.size.height);
+            // console.log(.10 * view.size.width); 
+            // console.log($('.rgtHeader').outerWidth(true)); 
+            // i = ismobile ? 0 : .16 * view.size.width > 211 ? Math.floor(.16 * view.size.width) : 211,
+            i = $('.rgtHeader').outerWidth(true),
+            end = ismobile ? 50 : $('.rgtHeader').outerWidth(true),
+            t = ismobile ? Math.ceil((view.size.width - i - end) / 2) : Math.ceil((view.size.width - i - end) / 3),
+            o = ismobile ? Math.ceil(view.size.height / 3) : Math.ceil(.5 * view.size.height);
         var a = "down" == n ? o : 0;
         s = [
             [0, a],
@@ -199,22 +199,26 @@ var s, w, h, os, mainvideo, myScroll, isScrolling = !1,
     m99 = {
         init: function() {
             var e = this;
-            os = $(window).scrollTop(), $(window).resize(function() { e.resize() }).resize(), $(window).scroll(function() { e.scroll() }).scroll(), e.activate(), /*e.menu.init(), $("body").removeClass("hold"),
-            $(".up").click(function() { window.scrollTo(0, 200), $("html, body").stop().animate({ scrollTop: 0 }, 333, "swing") }),*/  window.onpopstate = function() { e.open({ url: document.location.href, title: "", ID: "" }) }
+            os = $(window).scrollTop(), $(window).resize(function() { e.resize() }).resize(), $(window).scroll(function() { e.scroll() }).scroll(), e.activate(),
+                /*e.menu.init(), $("body").removeClass("hold"),
+                           $(".up").click(function() { window.scrollTo(0, 200), $("html, body").stop().animate({ scrollTop: 0 }, 333, "swing") }),*/
+                window.onpopstate = function() { e.open({ url: document.location.href, title: "", ID: "" }) }
         },
         resize: function() { w = window.innerWidth, h = window.innerHeight, this.adjust() },
-        adjust: function() { mobile.detect() ? (
-        	$(".project .visual > div div.video-perspective").css({ perspective: $(".project").outerWidth() - 30, height: .75 * $(".project").outerWidth() })
-        	// $(".grid").css("height", h), 
-        	// $("footer").css("height", .66667 * h)
-        ) : (
-        	$(".project").css({ height: h })
-        	// $(".project .visual").css({ width: .6666 * $(".project").outerWidth(), bottom: .5 * h - .5 * $(".project").outerWidth() * .7 + .5 * $(".project").outerWidth() * .3, "margin-left": .3333 * $(".project").outerWidth() }), 
-        	// $(".project .visual > div div.video-perspective").css({ perspective: .6666 * $(".project").outerWidth() - 30, height: .6666 * $(".project").outerWidth() * .75 }), 
-        	// $(".cover").css("height", h), 
-        	// $("footer, .cover-wrapper, .intro").css("height", .5 * h), 
-        	// $(".grid").css("height", "")
-        )},
+        adjust: function() {
+            mobile.detect() ? (
+                $(".project .visual > div div.video-perspective").css({ perspective: $(".project").outerWidth() - 30, height: .75 * $(".project").outerWidth() })
+                // $(".grid").css("height", h), 
+                // $("footer").css("height", .66667 * h)
+            ) : (
+                $(".project").css({ height: h })
+                // $(".project .visual").css({ width: .6666 * $(".project").outerWidth(), bottom: .5 * h - .5 * $(".project").outerWidth() * .7 + .5 * $(".project").outerWidth() * .3, "margin-left": .3333 * $(".project").outerWidth() }), 
+                // $(".project .visual > div div.video-perspective").css({ perspective: .6666 * $(".project").outerWidth() - 30, height: .6666 * $(".project").outerWidth() * .75 }), 
+                // $(".cover").css("height", h), 
+                // $("footer, .cover-wrapper, .intro").css("height", .5 * h), 
+                // $(".grid").css("height", "")
+            )
+        },
         scroll: function() {
             var e = this;
             s = $(window).scrollTop(), 0 == isScrolling && null == int && (isScrolling = !0, int = window.requestAnimationFrame(loop)), e.glide(), clearTimeout($.data(this, "scrollCheck")), $.data(this, "scrollCheck", setTimeout(function() { isScrolling = !1, os = $(window).scrollTop(), e.halt() }, 11))
@@ -222,10 +226,9 @@ var s, w, h, os, mainvideo, myScroll, isScrolling = !1,
         halt: function() { window.cancelAnimationFrame(int), int = null, int = null, $(".skew").css("transform", "skewY(0deg)"), $(".skew canvas").css("transform", "translateY(0)") },
         glide: function() {
             if (
-            	s > os + 40 ? $("body").addClass("asce").removeClass("desc") : $("body").addClass("desc").removeClass("asce"), 
-            	s > 200 ? $("header .up").addClass("show") : $("header .up").removeClass("show"), 
-            	detectEl($(".random")) && $(".random > li").each(function() { s > $(this).offset().top - h + 200 && $(this).addClass("on") }), !mobile.detect()) 
-            {
+                s > os + 40 ? $("body").addClass("asce").removeClass("desc") : $("body").addClass("desc").removeClass("asce"),
+                s > 200 ? $("header .up").addClass("show") : $("header .up").removeClass("show"),
+                detectEl($(".random")) && $(".random > li").each(function() { s > $(this).offset().top - h + 200 && $(this).addClass("on") }), !mobile.detect()) {
                 var e = os - s > 200 ? 200 : os - s < -200 ? -200 : os - s;
                 if ($("body:not(.hold) .skew").css("transform", "skewY(" + -.1 * e + "deg)"), $(".cap").each(function() { s > $(this).offset().top - 80 && s < $(this).offset().top + $(this).outerHeight() - 80 ? $(this).addClass("focused") : $(this).removeClass("focused") }), $(".media").each(function() { s > $(this).offset().top - h + 200 && !$(this).hasClass("on") && revealMedia($(this), $(this).index("body .media")) }), detectEl($(".parallel")))
                     if (s > $(".parallel").offset().top - .5 * h && s < $(".parallel").offset().top + $(".parallel").outerHeight()) {
@@ -237,9 +240,11 @@ var s, w, h, os, mainvideo, myScroll, isScrolling = !1,
                     i = $(this).offset().top + $(this).outerHeight() - h,
                     t = $(this).attr("color");
                 if (s > e && s < i) {
-                    $(this).hasClass("focused") || ($(".home .inner").css("background-image", "url('/app/src/main/assets/grid-" + $(this).attr("pattern") + ".svg')"), focused = $(this).index(), null != goo && goo.flow(t, "in", $(this).hasClass("up") ? "up" : "down"), $(this).removeClass("up down").addClass("focused"), $("video", this).length > 0 && $("video", this)[0].play());
+                    $(this).hasClass("focused") || (focused = $(this).index(), null != goo && goo.flow(t, "in", $(this).hasClass("up") ? "up" : "down"), $(this).removeClass("up down").addClass("focused"), $("video", this).length > 0 && $("video", this)[0].play());
                     var o = (s - e) / (i - e);
-                    $(".visual", this).css({ transform: "translateY(" + (70 - 30 * o) + "%)" }), s >= $(this).offset().top ? $(this).addClass("half") : $(this).removeClass("half")
+                    $(".visual", this).css({
+                        transform: "translateY(" + (70 - 30 * o) + "%)"
+                    }), s >= $(this).offset().top ? $(this).addClass("half") : $(this).removeClass("half")
                 } else s < e ? ($(this).index() == focused && $(this).hasClass("focused") && null != goo && goo.flow(null, "out", "down"), $(this).removeClass("focused up half").addClass("down"), $(".visual", this).css({ transform: "translateY(70%)" })) : ($(this).index() == focused && $(this).hasClass("focused") && null != goo && goo.flow(null, "out", "up"), $(this).removeClass("focused down half").addClass("up"), $(".visual", this).css({ transform: "translateY(40%)" }))
             }) : $(".project").each(function() {
                 var e = $(this).offset().top - .6666 * h,
@@ -343,7 +348,7 @@ var registerHistory = function(e, i) {
         mobiles: ["midp", "240x320", "blackberry", "netfront", "nokia", "panasonic", "portalmmm", "sharp", "sie-", "sonyericsson", "symbian", "windows ce", "benq", "mda", "mot-", "opera mini", "philips", "pocket pc", "sagem", "samsung", "sda", "sgh-", "vodafone", "xda", "palm", "iphone", "ipod", "android", "ipad"]
     },
     detectEl = function(e) { return e.length > 0 };
-	m99.init(),
+m99.init(),
     function(e) {
         e(function() {
             var i = e("#output");
