@@ -80,10 +80,10 @@
             </div>
             <div class="">
                 <div class="projects">
-                    <div class="row project" color="#e00909">
+                    <div class="row project" color="#f5d9bf">
                         <div class="prjTitle">
-                            <p class="title">Who Ate All The Pies</p>
-                            <a href="javascript:;" class="btn">
+                            <p class="title">Leona Munro</p>
+                            <a href="/prj_leona_munro.html" class="btn">
                                 <span class="btn__content-wrap">
                                     <span class="btn__content">
                                         VIEW PROJECT
@@ -91,12 +91,12 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="prjImg"><img src="videos/WAATP/hm.png" alt=""></div>
+                        <div class="prjImg"><img src="videos/Leona/hm.png" alt=""></div>
                     </div>
-                    <div class="row project" color="#00b0f0">
+                    <div class="row project" color="#02e2be">
                         <div class="prjTitle">
                             <p class="title">Mossy Bees</p>
-                            <a href="javascript:;" class="btn">
+                            <a href="/prj_mossybees.html" class="btn">
                                 <span class="btn__content-wrap">
                                     <span class="btn__content">
                                         VIEW PROJECT
@@ -106,10 +106,23 @@
                         </div>
                         <div class="prjImg"><img src="videos/MossyBees/hm.png" alt=""></div>
                     </div>
+                    <div class="row project" color="#d71921">
+                        <div class="prjTitle">
+                            <p class="title">Who Ate All The Pies</p>
+                            <a href="/prj_waatp.html" class="btn">
+                                <span class="btn__content-wrap">
+                                    <span class="btn__content">
+                                        VIEW PROJECT
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="prjImg"><img src="videos/WAATP/hm.png" alt=""></div>
+                    </div>
                     <div class="row project" color="#ffffff">
                         <div class="prjTitle">
                             <p class="title">Bacon Buttie</p>
-                            <a href="javascript:;" class="btn">
+                            <a href="/prj_baconbuttiestation.html" class="btn">
                                 <span class="btn__content-wrap">
                                     <span class="btn__content">
                                         VIEW PROJECT
@@ -119,10 +132,10 @@
                         </div>
                         <div class="prjImg"><video src="videos/BaconButtie/hm.mp4" controls="0" autoplay="true" loop="true" width="100%"></video></div>
                     </div>
-                    <div class="row project" color="#fd5e0f">
+                    <div class="row project" color="#e2e2e9">
                         <div class="prjTitle">
                             <p class="title">Debtorinfo</p>
-                            <a href="javascript:;" class="btn">
+                            <a href="/prj_debtorinfo.html" class="btn">
                                 <span class="btn__content-wrap">
                                     <span class="btn__content">
                                         VIEW PROJECT
@@ -237,14 +250,15 @@
     <script>
     $(document).ready(function() {
         var flag = true;
-        $(document).on('scroll', function() {
-            if (flag) {
-                console.log(1);
-                flag = 0;
-            } else {
-                console.log(2);
-                flag = 1;
-            }
+        $(window).on('scroll', function(e) {
+            // e.stopPropogation();
+            // e.preventDefault();
+            // if (flag) {
+            //     console.log(1);
+            // } else {
+            //     console.log(2);
+            // }
+            // flag = false;
         })
     });
     </script>

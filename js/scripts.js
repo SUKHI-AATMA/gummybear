@@ -7,6 +7,8 @@ $(document).ready(function() {
         pgNames = pgName[0].split(".");
     $('body').attr('data-page', pgNames.length > 1 ? pgNames[0] : 'home');
 
+
+    $('.banner.work').css({height: $(window).outerHeight()})
     // console.log(123);
     // var waypoints = $('#footer').waypoint({
     //     handler: function(direction) {
