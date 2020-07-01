@@ -131,6 +131,7 @@ a {
 }
 
 .grain{
+    display: none;
     position:fixed;
     pointer-events:none;
     -webkit-animation:grainAnimation 1s steps(4) infinite;
@@ -163,7 +164,7 @@ a {
     pointer-events: none;
     .col1 {
         display: table-cell;
-        width: 8%;
+        width: 10%;
         /*min-width: 210px;*/
         height: 100%;
         /*border-right: 1px solid rgba(187,187,187,.3);*/
@@ -208,9 +209,9 @@ a {
 
 
 section {
-    margin: 0 auto;
+    margin: 0 8% 0 10%;
     position: relative;
-    width: 84%;
+    width: 82%;
     z-index: 1;
 }
 
@@ -269,8 +270,11 @@ section {
     width: 8%;
     z-index: 10;
     transition: height linear 0.3s;
+    margin: 0;
 }
-
+.lftHeader {
+    width: 10%;
+}
 .rgtHeader {
     left: unset;
     right: 0;
@@ -304,11 +308,11 @@ section {
             display: flex;
             flex-wrap: wrap;
             height: 100%;
-            left: 8%;
+            left: 10%;
             padding: 5% 0;
             position: fixed;
             top: -200%;
-            width: calc(100% - 16%);
+            width: calc(100% - 18%);
             transition: top linear 0.3s;
 
             >li {
@@ -885,14 +889,14 @@ section.gallery_type2 {
 
 section.pagination {
     display: flex;
-    margin: 380px auto 0;
+    margin: 380px 8% 0 10%;
     padding: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid rgba(187,187,187,.3);
 
     .bttn {
         /*border-bottom: 1px solid #818181;*/
         width: 50%;
-        border-right: 1px solid #818181;
+        border-right: 1px solid rgba(187,187,187,.3);
         padding: 50px;
 
         a {

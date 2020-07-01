@@ -127,8 +127,13 @@ function Goo() {
             // console.log(.10 * view.size.width); 
             // console.log($('.rgtHeader').outerWidth(true)); 
             // i = ismobile ? 0 : .16 * view.size.width > 211 ? Math.floor(.16 * view.size.width) : 211,
-            i = $('.rgtHeader').outerWidth(true),
+
+            //Start Point
+            i = $('.lftHeader').outerWidth(true),
+            //End Point
             end = ismobile ? 50 : $('.rgtHeader').outerWidth(true),
+
+            
             t = ismobile ? Math.ceil((view.size.width - i - end) / 2) : Math.ceil((view.size.width - i - end) / 3),
             o = ismobile ? Math.ceil(view.size.height / 3) : Math.ceil(.5 * view.size.height);
         var a = "down" == n ? o : 0;
