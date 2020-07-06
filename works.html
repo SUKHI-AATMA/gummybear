@@ -25,6 +25,7 @@
 </head>
 
 <body>
+    <div class="grain" style="display: block;"></div>
     <section class="lftHeader">
         <div class="logo"><a href="/"><img src="images/svg/gummy-logo-red.svg" alt="Gummy Bear"></a></div>
     </section>
@@ -42,7 +43,7 @@
                                 <path class="navHamburger" d="M1.94,48.353,7.751,21.811a33.837,33.837,0,0,1,2.66-7.127c2.125-4,4.7-6.9,7.185-7.633,3.137-.94,9.628-1.59,18.764-.4L40.278,5.5l1.388-.4L45.9,3.755l5.421,2.038L59,5.1l1.388-2.241a.437.437,0,0,1,.607-.159.555.555,0,0,1,.159.159l.9,1.5,6,3.874,1.3,2.862,5.1,2.486-1.634,3.094-6.491,2.573-7.59,1.677L48.215,31.743l-.4,1.1c1.272,5.869,2.284,9.05,2.819,11.377l3.9,4.062H45.164L40.51,41.819l-.9-10.828a38.6,38.6,0,0,0-15.541,6.361c-6.563,4.684-13.95,8.818-14.529,9.223s.824.708,2.5,1.778ZM65.027,11.171c-.4,0-.492.289-.492.578v.043a.578.578,0,0,0,.607.535c.4,0,.853-.289.853-.564C66.01,11.461,65.432,11.171,65.027,11.171Z" transform="translate(-1.94 -2.635)" />
                             </g>
                         </g>
-                    </svg><span>MENU</span></a></div>
+                    </svg><span>M<br>E<br>N<br>U</span></a></div>
             <ul>
                 <li><a href="solutions.html">Solutions</a></li>
                 <li><a href="capabilities.html">CAPABILITIES</a></li>
@@ -80,10 +81,10 @@
             </div>
             <div class="">
                 <div class="projects">
-                    <div class="row project" color="#f5d9bf">
+                    <div class="row project" color="#ffd435">
                         <div class="prjTitle">
-                            <p class="title">Leona Munro</p>
-                            <a href="/prj_leona_munro.html" class="btn">
+                            <p class="title">Who Ate All The Pies</p>
+                            <a href="/prj_waatp.html" class="btn">
                                 <span class="btn__content-wrap">
                                     <span class="btn__content">
                                         VIEW PROJECT
@@ -91,7 +92,7 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="prjImg"><img src="videos/Leona/hm.png" alt=""></div>
+                        <div class="prjImg"><img src="videos/WAATP/hm.png" alt=""></div>
                     </div>
                     <div class="row project" color="#02e2be">
                         <div class="prjTitle">
@@ -104,12 +105,14 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="prjImg"><img src="videos/MossyBees/hm.png" alt=""></div>
+                        <!-- <div class="prjImg"><img src="videos/MossyBees/hm.png" alt=""></div> -->
+                        <div class="prjImg"><div style="padding:0 0 0;position:relative; width: 100%; height: 100%;"><iframe src="https://player.vimeo.com/video/358703481?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div>
                     </div>
-                    <div class="row project" color="#d71921">
+                    
+                    <div class="row project" color="#f5d9bf">
                         <div class="prjTitle">
-                            <p class="title">Who Ate All The Pies</p>
-                            <a href="/prj_waatp.html" class="btn">
+                            <p class="title">Leona Munro</p>
+                            <a href="/prj_leona_munro.html" class="btn">
                                 <span class="btn__content-wrap">
                                     <span class="btn__content">
                                         VIEW PROJECT
@@ -117,7 +120,7 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="prjImg"><img src="videos/WAATP/hm.png" alt=""></div>
+                        <div class="prjImg"><img src="videos/Leona/hm.png" alt=""></div>
                     </div>
                     <div class="row project" color="#ffffff">
                         <div class="prjTitle">
@@ -246,21 +249,21 @@
     <script type="text/javascript" src="js/libs.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/fluid.js" async=""></script>
+
+<!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
+<!-- <script type="text/javascript" src="vendors/scrolloverflow.min.js"></script> -->
+
+<!-- <script type="text/javascript" src="js/jquery.ba-throttle-debounce.min.js"></script> -->
     <script src="js/scripts.js"></script>
     <script>
+    function text_2(){
+
+    }
     $(document).ready(function() {
         var flag = true;
-        $(window).on('scroll', function(e) {
-            // e.stopPropogation();
-            // e.preventDefault();
-            // if (flag) {
-            //     console.log(1);
-            // } else {
-            //     console.log(2);
-            // }
-            // flag = false;
-        })
+        // $(window).keyup(  ); // This is the line you want!
     });
+        // $(window).on('scroll', $.debounce( 250, console.log(1) ))
     </script>
 </body>
 

@@ -116,32 +116,77 @@ a {
         }
     }
 }
-@keyframes grainAnimation{
-    0%{-webkit-transform:translate(0,0);transform:translate(0,0)}
-    10%{-webkit-transform:translate(-5%,-5%);transform:translate(-5%,-5%)}
-    20%{-webkit-transform:translate(-10%,5%);transform:translate(-10%,5%)}
-    30%{-webkit-transform:translate(5%,-10%);transform:translate(5%,-10%)}
-    40%{-webkit-transform:translate(-5%,15%);transform:translate(-5%,15%)}
-    50%{-webkit-transform:translate(-10%,5%);transform:translate(-10%,5%)}
-    60%{-webkit-transform:translate(15%,0);transform:translate(15%,0)}
-    70%{-webkit-transform:translate(0,10%);transform:translate(0,10%)}
-    80%{-webkit-transform:translate(-15%,0);transform:translate(-15%,0)}
-    90%{-webkit-transform:translate(10%,5%);transform:translate(10%,5%)}
-    100%{-webkit-transform:translate(5%,0);transform:translate(5%,0)}
+
+@keyframes grainAnimation {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+
+    10% {
+        -webkit-transform: translate(-5%, -5%);
+        transform: translate(-5%, -5%)
+    }
+
+    20% {
+        -webkit-transform: translate(-10%, 5%);
+        transform: translate(-10%, 5%)
+    }
+
+    30% {
+        -webkit-transform: translate(5%, -10%);
+        transform: translate(5%, -10%)
+    }
+
+    40% {
+        -webkit-transform: translate(-5%, 15%);
+        transform: translate(-5%, 15%)
+    }
+
+    50% {
+        -webkit-transform: translate(-10%, 5%);
+        transform: translate(-10%, 5%)
+    }
+
+    60% {
+        -webkit-transform: translate(15%, 0);
+        transform: translate(15%, 0)
+    }
+
+    70% {
+        -webkit-transform: translate(0, 10%);
+        transform: translate(0, 10%)
+    }
+
+    80% {
+        -webkit-transform: translate(-15%, 0);
+        transform: translate(-15%, 0)
+    }
+
+    90% {
+        -webkit-transform: translate(10%, 5%);
+        transform: translate(10%, 5%)
+    }
+
+    100% {
+        -webkit-transform: translate(5%, 0);
+        transform: translate(5%, 0)
+    }
 }
 
-.grain{
+.grain {
     display: none;
-    position:fixed;
-    pointer-events:none;
-    -webkit-animation:grainAnimation 1s steps(4) infinite;
-    animation:grainAnimation 1s steps(4) infinite;
-    background-image:url(../images/grain.png);
-    height:180%;
-    left:-40%;
-    top:-40%;
-    width:180%;
+    position: fixed;
+    pointer-events: none;
+    -webkit-animation: grainAnimation 1s steps(4) infinite;
+    animation: grainAnimation 1s steps(4) infinite;
+    background-image: url(../images/grain.png);
+    height: 180%;
+    left: -40%;
+    top: -40%;
+    width: 180%;
 }
+
 .scrollDownArr {
     /*    border: 2px solid #000;*/
     width: 25px;
@@ -162,6 +207,7 @@ a {
     display: table;
     z-index: 10;
     pointer-events: none;
+
     .col1 {
         display: table-cell;
         width: 10%;
@@ -174,14 +220,15 @@ a {
         display: table-cell;
         position: relative;
         height: 100%;
+
         &:before {
             content: "";
             display: block;
             width: 33.3333%;
             height: 100%;
             position: absolute;
-            border-right: 1px solid rgba(187,187,187,.3);
-            border-left: 1px solid rgba(187,187,187,.3);
+            border-right: 1px solid rgba(187, 187, 187, .3);
+            border-left: 1px solid rgba(187, 187, 187, .3);
             top: 0;
             left: 33.3333%;
         }
@@ -192,7 +239,7 @@ a {
             width: 100%;
             height: 1px;
             position: absolute;
-            background: rgba(187,187,187,.3);
+            background: rgba(187, 187, 187, .3);
             top: 50%;
         }
     }
@@ -210,9 +257,10 @@ a {
 
 section {
     margin: 0 8% 0 10%;
+    overflow: hidden;
     position: relative;
     width: 82%;
-    z-index: 1;
+    z-index: 11;
 }
 
 .title {
@@ -259,7 +307,7 @@ section {
 .lftHeader,
 .rgtHeader {
     display: flex;
-    border-right: 1px solid rgba(187,187,187,.3);
+    border-right: 1px solid rgba(187, 187, 187, .3);
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
@@ -268,21 +316,25 @@ section {
     position: fixed;
     top: 0;
     width: 8%;
-    z-index: 10;
+    z-index: 12;
     transition: height linear 0.3s;
     margin: 0;
 }
+
 .lftHeader {
     width: 10%;
 }
+
 .rgtHeader {
     left: unset;
     right: 0;
-    border-left: 1px solid  rgba(187,187,187,.3);
-    border-right: 0px solid  rgba(187,187,187,.3);
+    padding: 2% 0;
+    border-left: 1px solid rgba(187, 187, 187, .3);
+    border-right: 0px solid rgba(187, 187, 187, .3);
 
     nav {
         .hamburger {
+
             margin: 0 auto;
             position: relative;
             text-align: left;
@@ -298,8 +350,22 @@ section {
                 color: @gbRed;
                 font-family: @ro;
                 font-size: 22px;
+                font-size: 12px;
                 font-weight: 600;
                 transition: color linear 0.3s;
+
+                /**/
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                svg {
+                    width: 90%;
+                }
+                span {
+                    margin: 0 0 0 10px;
+
+                }
+                /**/
             }
 
         }
@@ -466,6 +532,7 @@ section {
             color: #707070;
             display: none;
         }
+
         .mktLine {
             display: none;
         }
@@ -483,7 +550,7 @@ body {
         top: -100%;
         transition: top linear 0.3s;
         width: 100%;
-        z-index: 9;
+        z-index: 12;
     }
 
     &.active {
@@ -512,6 +579,8 @@ body {
 
 footer {
     background: #484848;
+    position: relative;
+    z-index: 11;
 
     .row {
         display: flex;
@@ -668,6 +737,14 @@ footer {
             height: 600px;
         }
     }
+    &.work {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .container {
+            margin: 0 10% 100px;
+        }
+    }
 }
 
 section.quicklinks {
@@ -759,9 +836,9 @@ section.featuredArea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #ccc;
-    border-top: 1px solid #ccc;
-    padding: 50px 0 80px;
+    /*border-bottom: 1px solid #ccc;*/
+    /*border-top: 1px solid #ccc;*/
+    padding: 100px 0 100px;
 
     .text {
         width: 40%;
@@ -784,7 +861,7 @@ section.gallery_type1 {
             width: 50%;
 
             img {
-                box-shadow: 0px 0px 55px 0px rgba(0, 0, 0, 0.36);
+                /*box-shadow: 0px 0px 55px 0px rgba(0, 0, 0, 0.36);*/
                 width: 100%;
             }
         }
@@ -891,12 +968,12 @@ section.pagination {
     display: flex;
     margin: 380px 8% 0 10%;
     padding: 0;
-    border-top: 1px solid rgba(187,187,187,.3);
+    /*border-top: 1px solid rgba(187,187,187,.3);*/
 
     .bttn {
         /*border-bottom: 1px solid #818181;*/
         width: 50%;
-        border-right: 1px solid rgba(187,187,187,.3);
+        /*border-right: 1px solid rgba(187,187,187,.3);*/
         padding: 50px;
 
         a {
@@ -1135,7 +1212,7 @@ section.team {
 
     .row {
         display: flex;
-        margin: 0 10%;
+        margin: 0 0%;
         flex-direction: row-reverse;
         justify-content: center;
 
@@ -1146,6 +1223,7 @@ section.team {
             justify-content: center;
             position: relative;
             z-index: 1;
+            padding: 0;
 
             .btn {
                 font: Regular 32px/47px Oswald;
@@ -1193,6 +1271,7 @@ section.team {
             img {
                 width: 100%;
             }
+
             video {
                 width: 160%;
             }
@@ -1202,6 +1281,7 @@ section.team {
             flex-direction: row;
 
             .prjTitle {
+                padding: 0 0 0 10%;
                 .btn {
                     color: #E9BD27;
 
@@ -1226,8 +1306,21 @@ section.team {
                 }
             }
         }
-
-        &:nth-child(4) {
+        &:nth-child(1) {
+            .prjImg {
+                img {
+                    width: 80%;
+                }
+            }
+        }
+        &:nth-child(3) {
+            .prjImg {
+                img {
+                    width: 80%;
+                }
+            }
+        }
+        &:nth-child(5) {
             .prjImg {
                 img {
                     width: 80%;
@@ -1254,6 +1347,11 @@ section.logoSection {
         a {
             width: auto;
             height: 40%;
+
+            &:last-child{
+                height: 60%;
+
+            }
         }
 
         img {
