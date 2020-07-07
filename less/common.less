@@ -8,6 +8,7 @@ a {
     text-decoration: none;
 }
 
+
 .btn {
     border: none;
     background-color: inherit;
@@ -358,13 +359,16 @@ section {
                 display: flex;
                 flex-direction: row;
                 width: 100%;
+
                 svg {
                     width: 90%;
                 }
+
                 span {
                     margin: 0 0 0 10px;
 
                 }
+
                 /**/
             }
 
@@ -508,7 +512,57 @@ section {
             list-style: none;
         }
 
+        /*New Hamburger*/
+        button {
+            font-family: "Space Mono";
+            width: 90px;
+            height: 180px;
+            padding: 0;
+            border: none;
+            background: transparent;
+            position: fixed;
+            right: calc((8% - 90px) / 2);
+            top: 0;
+            cursor: pointer;
+            outline: none;
+            z-index: 11
+        }
 
+        button::after,
+        button::before {
+            transition: all .3s cubic-bezier(1, 0, .275, 1.195);
+            content: "";
+            display: block;
+            width: 23px;
+            height: 5px;
+            background: repeating-linear-gradient(90deg, #000, #000 5px, transparent 5px, transparent 9px);
+            position: absolute
+        }
+
+        button::after {
+            left: 34px;
+            top: 48px
+        }
+
+        button::before {
+            left: 34px;
+            top: 40px
+        }
+
+        button i {
+            position: absolute;
+            font-size: 14px;
+            font-style: normal;
+            text-align: right;
+            transform: rotate(-90deg) translateX(-20px) translateY(-36px);
+            width: 70px
+        }
+
+        button i span.open {
+            display: none
+        }
+
+        /*New Hamburger*/
     }
 
     .btmCopy {
@@ -563,7 +617,26 @@ body {
                 top: 0%;
             }
 
-            .hamburger {
+            button::after {
+                top: 44px;
+                background: repeating-linear-gradient(90deg, #000, #000 23px, transparent 5px, transparent 9px)
+            }
+
+            button::before {
+                top: 40px;
+                left: 90px;
+                opacity: 0
+            }
+
+            button i span.open {
+                display: block
+            }
+
+            button i span.closed {
+                display: none
+            }
+
+            /*.hamburger {
                 .navHamburger {
                     fill: #646464;
                 }
@@ -571,7 +644,7 @@ body {
                 a {
                     color: #646464;
                 }
-            }
+            }*/
         }
     }
 
@@ -737,10 +810,12 @@ footer {
             height: 600px;
         }
     }
+
     &.work {
         display: flex;
         justify-content: center;
         align-items: center;
+
         .container {
             margin: 0 10% 100px;
         }
@@ -1282,6 +1357,7 @@ section.team {
 
             .prjTitle {
                 padding: 0 0 0 10%;
+
                 .btn {
                     color: #E9BD27;
 
@@ -1306,6 +1382,7 @@ section.team {
                 }
             }
         }
+
         &:nth-child(1) {
             .prjImg {
                 img {
@@ -1313,6 +1390,7 @@ section.team {
                 }
             }
         }
+
         &:nth-child(3) {
             .prjImg {
                 img {
@@ -1320,6 +1398,7 @@ section.team {
                 }
             }
         }
+
         &:nth-child(5) {
             .prjImg {
                 img {
@@ -1348,7 +1427,7 @@ section.logoSection {
             width: auto;
             height: 40%;
 
-            &:last-child{
+            &:last-child {
                 height: 60%;
 
             }
