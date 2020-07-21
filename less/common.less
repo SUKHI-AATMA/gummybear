@@ -8,6 +8,10 @@ a {
     text-decoration: none;
 }
 
+.hide {
+    display: none !important;
+}
+
 .loader {
     background: #fff;
     display: block;
@@ -276,6 +280,7 @@ section {
     &.intro {
         margin: 0 0% 0 0%;
     }
+
     &.fpage {
         overflow: visible;
     }
@@ -296,9 +301,9 @@ section {
     font-family: @lg;
     font-size: 80px;
     font-weight: 400;
-    transform: skewY(10deg);
+    /*transform: skewY(10deg);
     transform-origin: 0 0;
-    transition: all 0.3s linear;
+    transition: all 0.3s linear;*/
 }
 
 .text {
@@ -575,7 +580,10 @@ section {
             font-style: normal;
             text-align: right;
             transform: rotate(-90deg) translateX(-20px) translateY(-36px);
-            width: 70px
+            width: 70px;
+            .closed {
+                letter-spacing: 1px;
+            }
         }
 
         button i span.open {
@@ -653,7 +661,7 @@ body {
             }
 
             button i span.closed {
-                display: none
+                display: none;
             }
 
             /*.hamburger {
@@ -673,14 +681,51 @@ body {
 footer {
     background: #484848;
     position: relative;
+    padding: 0 8% 0 10%;
     z-index: 11;
+    width: 100%;
+    overflow: hidden;
+
+    &:before {
+        background: #484848;
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 200%;
+        height: 100%;
+        transform: translate(-50%, 0);
+        z-index: 0;
+    }
 
     .row {
         display: flex;
         padding: 0 10%;
+        position: relative;
+        z-index: 1;
 
         &:first-child {
-            padding: 3% 10% 5%;
+            flex-direction: row;
+            padding: 3% 5% 10%;
+
+            span {
+                width: 50%;
+            }
+        }
+
+        &:last-child {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 0 8% 0 9%;
+            padding: 0 5%;
+            width: 100%;
+            height: auto;
+
+            .col.copy {
+                padding: 10px 0;
+            }
         }
 
         .col {
@@ -713,7 +758,7 @@ footer {
                 span {
                     display: flex;
                     flex-direction: column;
-                    width: 34%;
+                    width: 50%;
                 }
             }
 
@@ -732,6 +777,19 @@ footer {
     }
 }
 
+[data-page] {
+    .rgtHeader {
+        .btmCopy {
+            .mktLine {
+                display: none;
+            }
+
+            a {
+                display: block;
+            }
+        }
+    }
+}
 [data-page="home"],
 [data-page="contact"] {
     .rgtHeader {
@@ -754,18 +812,19 @@ footer {
     font-weight: 100;
     font: ExtraLight 30px/52px Oswald;
     line-height: 52px;
-    margin: 0 0 15%;
-    /*position: absolute;*/
+    margin: 0;
+    position: absolute;
     text-align: left;
     text-transform: uppercase;
-    /*top: 10%;*/
+    top: 10%;
+
 
     a {
         align-items: center;
         color: #000;
         display: flex;
-        transform: skewY(10deg);
-        transform-origin: 0 0;
+        /*transform: skewY(10deg);*/
+        /*transform-origin: 0 0;*/
         /*opacity: 0;*/
     }
 
@@ -794,9 +853,9 @@ footer {
         display: flex;
         flex-direction: column;
         height: 1000px;
-        justify-content: center;
         margin: 0 6%;
         position: relative;
+        justify-content: center;
 
         .row {
             display: flex;
@@ -807,6 +866,9 @@ footer {
             display: inline-block;
             /*margin: 0 0 0 5%;*/
             width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
 
             .title {}
 
@@ -847,6 +909,7 @@ footer {
 
 section.quicklinks {
     display: flex;
+    display: none;
     justify-content: center;
     margin: 50px auto;
 
@@ -869,6 +932,7 @@ section.quicklinks {
 
 section.statistics {
     display: flex;
+    display: none;
     justify-content: center;
     margin: 100px auto;
     flex-wrap: wrap;
@@ -939,8 +1003,9 @@ section.featuredArea {
     padding: 100px 0 100px;
 
     .text {
-        width: 40%;
+        font-style: italic;
         text-align: center;
+        width: 40%;
     }
 }
 
@@ -1065,7 +1130,7 @@ section.gallery_type2 {
 
 section.pagination {
     display: flex;
-    margin: 380px 8% 0 10%;
+    margin: 50px 8% 0 10%;
     padding: 0;
     /*border-top: 1px solid rgba(187,187,187,.3);*/
 
@@ -1265,7 +1330,7 @@ section.team {
             }
 
             &.name {
-                margin: 0 0 0 10%;
+                margin: 0 10%;
             }
 
             >div {
@@ -1287,7 +1352,7 @@ section.team {
 
             >div {
                 &.name {
-                    margin: 0 10% 0 0;
+                    /*margin: 0 10% 0 0;*/
                 }
             }
         }
@@ -1295,11 +1360,17 @@ section.team {
         &:nth-child(4) {
             justify-content: end;
             padding: 0 0 0 10%;
+            .name {
+                /*margin: 0 10% 0 10%;*/
+            }
         }
 
         &:nth-child(5) {
             justify-content: start;
             padding: 0 10% 0 0;
+            .name {
+                /*margin: 0 10% 0 10%;*/
+            }
         }
     }
 }
@@ -1327,7 +1398,7 @@ section.team {
                 padding: 0 0 0 5%;
                 opacity: 0;
                 transform-origin: 0 0;
-                transition: opacity .3s 0.2s ease,  transform 1s cubic-bezier(.215, .61, .355, 1);
+                transition: opacity .3s 0.2s ease, transform 1s cubic-bezier(.215, .61, .355, 1);
 
                 .btn {
                     font: Regular 32px/47px Oswald;
@@ -1422,9 +1493,16 @@ section.team {
                 }
             }
         }
+        &:nth-child(2) {
+            .prjImg {
+                /*position: static;*/
+            }
+        }
 
         &:nth-child(3) {
             .prjImg {
+                position: relative;
+                transition: all ease-in-out 0.3s;
                 img {
                     width: 80%;
                 }
@@ -1454,16 +1532,20 @@ section.team {
             transform: skewY(-10deg);
             opacity: 0;
         }
+
         &.logoSection {
             width: 100%;
+
             .row {
                 margin: 0 15%;
                 padding: 60px 0;
                 width: 70%;
+
                 a {
                     height: 50px;
                     text-align: center;
                     width: 25%;
+
                     &:nth-child(4) {
                         height: 80px;
                     }
@@ -1471,7 +1553,10 @@ section.team {
             }
         }
     }
+
     footer.section {
+        overflow: visible;
+        padding: 0;
         &:before {
             background: #484848;
             display: block;
@@ -1484,16 +1569,20 @@ section.team {
             transform: translate(-50%, 0);
             z-index: 0;
         }
+
         .row {
             position: relative;
             z-index: 1;
+
             &:first-child {
                 flex-direction: row;
                 padding: 3% 5% 10%;
+
                 span {
                     width: 50%;
                 }
             }
+
             &:last-child {
                 position: absolute;
                 bottom: 0;
@@ -1502,6 +1591,7 @@ section.team {
                 padding: 0 5%;
                 width: 100%;
                 height: auto;
+
                 .col.copy {
                     padding: 10px 0;
                 }

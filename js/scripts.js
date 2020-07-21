@@ -6,12 +6,11 @@ $(document).ready(function() {
     var pgName = location.href.split("/").slice(-1),
         pgNames = pgName[0].split(".");
     $('body').attr('data-page', (pgNames.length > 1) ? pgNames[0] : 'home');
-    if (pgNames[0] == 'index-new')
-    {
+    if (pgNames[0] == 'index-new') {
         $('body').attr('data-page', 'home');
     }
 
-    $('.banner.work').css({height: $(window).outerHeight()})
+    $('.banner.work').css({ height: $(window).outerHeight() })
     // console.log(123);
     // var waypoints = $('#footer').waypoint({
     //     handler: function(direction) {
@@ -36,17 +35,17 @@ $(window).on('load', function() {
 });
 
 function ftrHdrAnim() {
-    var scrltp = docHei - winHei - ftHei,
-        headerHei = $(document).scrollTop() - scrltp;
-    // console.log(headerHei);
-    if ($(document).scrollTop() > scrltp && !$('body').hasClass('active')) {
-        $('.lftHeader,.rgtHeader').css({ height: winHei - headerHei });
-    } else {
-        $('.lftHeader,.rgtHeader').css({ height: '100%' });
-    }
+    // var scrltp = docHei - winHei - ftHei,
+    //     headerHei = $(document).scrollTop() - scrltp;
+    // // console.log(headerHei);
+    // if ($(document).scrollTop() > scrltp && !$('body').hasClass('active')) {
+    //     $('.lftHeader,.rgtHeader').css({ height: winHei - headerHei });
+    // } else {
+    //     $('.lftHeader,.rgtHeader').css({ height: '100%' });
+    // }
 }
 window.addEventListener("scroll", function() { onScrollDiv() });
-window.addEventListener("DOMContentLoaded", function() { setTimeout(function(){onScrollDiv()},0); });
+window.addEventListener("DOMContentLoaded", function() { setTimeout(function() { onScrollDiv() }, 0); });
 
 function onScrollDiv() {
     var images = document.querySelectorAll('.lazyload');
@@ -84,23 +83,35 @@ function onScrollDiv() {
 
 new fullpage('#fullpage', {
     //options here
-    autoScrolling:true,
+    autoScrolling: true,
     scrollHorizontally: true,
-    onLeave: function(origin, destination, direction){
-        // console.log(destination.item);
-        (direction == 'down')
-        ? ($(origin.item).removeClass('down up').addClass('up'), $(destination.item).removeClass('down up').addClass('focused')) 
-        : ($(origin.item).removeClass('down up').addClass('down'), $(destination.item).removeClass('down up').addClass('focused'));
+    onLeave: function(origin, destination, direction) {
+        if (destination.index == 7) {
+            $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) - $('footer').outerHeight(true) }, 100, 'linear');
+        } else {
+            $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) }, 100, 'linear');
+        }
+        (direction == 'down') ?
+        ($(origin.item).removeClass('down up').addClass('up'), $(destination.item).removeClass('down up').addClass('focused')) :
+        ($(origin.item).removeClass('down up').addClass('down'), $(destination.item).removeClass('down up').addClass('focused'));
         goo.flow($(origin.item).attr('color'), "out", "up");
-        setTimeout(function(){
+        setTimeout(function() {
             goo.flow($(destination.item).attr('color'), "in", "down");
-        },500);
-        setTimeout(function(){
+        }, 500);
+        setTimeout(function() {
             goo.flow($(destination.item).attr('color'), "out", "up");
-        },900);
+        }, 900);
     },
-    afterLoad: function(origin, destination, direction){
-        // console.log(direction);
+    afterLoad: function(origin, destination, direction) {
+        console.log(destination.index);
         onScrollDiv();
+        // console.log($('.fp-completely').hasClass('video'));
+        if (destination.index == 2) {
+            // var lft = $('.section.video.active').offset().left - $('.section.video.active').find('.prjImg').position().left;
+            var lft = $(window).width() - $('.section.video.active').find('.prjImg').position().left - $('.section.video.active .prjImg iframe').outerWidth(true);
+            // $('.section.video.active').find('iframe').css({ width: $('.section.video.active').outerWidth(true), height: $('.section.video.active').outerHeight(true), top: 0, left: lft })
+        } else { 
+            $('.video').find('iframe').css({ width: '100%', height: '100%', top: 0, left: 0 }) 
+        }
     },
 });
