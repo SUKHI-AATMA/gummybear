@@ -114,7 +114,7 @@ new fullpage('#fullpage', {
             $('.section.video.active .prjTitle').animate({ opacity: 0 }, 300, '', function() {
                 setTimeout(function() {
                     $('.section.video.active .prjTitle').animate({ width: 0, padding: 0 }, 500);
-                    $('.section.video.active .prjImg').css({ width: '100%', position: 'sticky', top: 0, left: 0, height: $(window).height() });
+                    $('.section.video.active .prjImg').css({ width: '100%', position: 'sticky', top: 0, left: 0, height: $(window).height() }).find('video').css({width:'60%'});
                     $('.grain').fadeOut(300);
                     $('.lftHeader').animate({ left: '-10%' }, 300);
                     $('.rgtHeader').animate({ right: '-10%' }, 300);
@@ -135,7 +135,7 @@ new fullpage('#fullpage', {
                 $('section.fpage').animate({ margin: '0 8% 0 10%', width: '82%' }, 300);
                 $('.rgtHeader').animate({ right: '0' }, 300);
                 $('.lftHeader').animate({ left: '0' }, 300);
-                $('.section.video.active .prjImg').css({ width: '60%', position: 'static', top: 0, left: 0, height: 'unset' });
+                $('.section.video.active .prjImg').css({ width: '60%', position: 'static', top: 0, left: 0, height: 'unset' }).find('video').css({width:'160%'});
                 $('.section.video.active .prjTitle').animate({ width: '40%', padding: '0 0 0 5%' }, 500);
                 $('.section.video.active .prjTitle').animate({ opacity: 1 }, 300);
                 $('.grain').fadeIn(300);
