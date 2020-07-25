@@ -357,10 +357,10 @@ section {
     padding: 2% 0;
     border-left: 1px solid rgba(187, 187, 187, .3);
     border-right: 0px solid rgba(187, 187, 187, .3);
+    padding: 0 0 2%;
 
     nav {
         .hamburger {
-
             margin: 0 auto;
             position: relative;
             text-align: left;
@@ -545,8 +545,8 @@ section {
             padding: 0;
             border: none;
             background: transparent;
-            position: fixed;
-            right: calc((8% - 90px) / 2);
+            position: relative;
+            right: 0;
             top: 0;
             cursor: pointer;
             outline: none;
@@ -581,6 +581,7 @@ section {
             text-align: right;
             transform: rotate(-90deg) translateX(-20px) translateY(-36px);
             width: 70px;
+
             .closed {
                 letter-spacing: 1px;
             }
@@ -790,6 +791,7 @@ footer {
         }
     }
 }
+
 [data-page="home"],
 [data-page="contact"] {
     .rgtHeader {
@@ -970,6 +972,34 @@ section.statistics {
         }
     }
 }
+
+.video {
+    .close {
+        display: none;
+        top: 10px;
+        right: 10px;
+        position: absolute;
+        background: #000;
+        padding: 10px 15px;
+        color: #fff;
+        font-family: 'Oswald', sans-serif;
+        cursor: pointer;
+
+        &:before {
+            border: 1px solid #000;
+            border-color: #fff #000 #000 #fff;
+            content: '';
+            display: inline-block;
+            height: 10px;
+            margin: 0;
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            width: 10px;
+        }
+    }
+}
+
 
 section.solution_box {
     display: flex;
@@ -1360,6 +1390,7 @@ section.team {
         &:nth-child(4) {
             justify-content: end;
             padding: 0 0 0 10%;
+
             .name {
                 /*margin: 0 10% 0 10%;*/
             }
@@ -1368,6 +1399,7 @@ section.team {
         &:nth-child(5) {
             justify-content: start;
             padding: 0 10% 0 0;
+
             .name {
                 /*margin: 0 10% 0 10%;*/
             }
@@ -1493,6 +1525,7 @@ section.team {
                 }
             }
         }
+
         &:nth-child(2) {
             .prjImg {
                 /*position: static;*/
@@ -1503,6 +1536,7 @@ section.team {
             .prjImg {
                 position: relative;
                 transition: all ease-in-out 0.3s;
+
                 img {
                     width: 80%;
                 }
@@ -1557,6 +1591,7 @@ section.team {
     footer.section {
         overflow: visible;
         padding: 0;
+
         &:before {
             background: #484848;
             display: block;

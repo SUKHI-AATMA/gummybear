@@ -101,17 +101,48 @@ new fullpage('#fullpage', {
         setTimeout(function() {
             goo.flow($(destination.item).attr('color'), "out", "up");
         }, 900);
+        $('.section.video.active .close').trigger('click');
     },
     afterLoad: function(origin, destination, direction) {
         console.log(destination.index);
         onScrollDiv();
         // console.log($('.fp-completely').hasClass('video'));
-        if (destination.index == 2) {
+        if (destination.index == 2 || destination.index == 4) {
+            var iframe = document.querySelector('iframe');
+            var player = new Vimeo.Player(iframe);
+
+            $('.section.video.active .prjTitle').animate({ opacity: 0 }, 300, '', function() {
+                setTimeout(function() {
+                    $('.section.video.active .prjTitle').animate({ width: 0, padding: 0 }, 500);
+                    $('.section.video.active .prjImg').css({ width: '100%', position: 'sticky', top: 0, left: 0, height: $(window).height() });
+                    $('.grain').fadeOut(300);
+                    $('.lftHeader').animate({ left: '-10%' }, 300);
+                    $('.rgtHeader').animate({ right: '-10%' }, 300);
+                    $('section.fpage').animate({ margin: '0%', width: '100%' }, 300);
+                    $('.section.video.active .close').fadeIn(300);
+                    if(destination.index == 2)
+                    {
+                        player.play();
+                    }
+                }, 500)
+            });
+            $('.section.video.active .close').on('click', function() {
+                if(destination.index == 2)
+                {
+                    player.pause();
+                }
+                $('.section.video.active .close').fadeOut(300);
+                $('section.fpage').animate({ margin: '0 8% 0 10%', width: '82%' }, 300);
+                $('.rgtHeader').animate({ right: '0' }, 300);
+                $('.lftHeader').animate({ left: '0' }, 300);
+                $('.section.video.active .prjImg').css({ width: '60%', position: 'static', top: 0, left: 0, height: 'unset' });
+                $('.section.video.active .prjTitle').animate({ width: '40%', padding: '0 0 0 5%' }, 500);
+                $('.section.video.active .prjTitle').animate({ opacity: 1 }, 300);
+                $('.grain').fadeIn(300);
+            });
             // var lft = $('.section.video.active').offset().left - $('.section.video.active').find('.prjImg').position().left;
-            var lft = $(window).width() - $('.section.video.active').find('.prjImg').position().left - $('.section.video.active .prjImg iframe').outerWidth(true);
+            // var lft = $(window).width() - $('.section.video.active').find('.prjImg').position().left - $('.section.video.active .prjImg iframe').outerWidth(true);
             // $('.section.video.active').find('iframe').css({ width: $('.section.video.active').outerWidth(true), height: $('.section.video.active').outerHeight(true), top: 0, left: lft })
-        } else { 
-            $('.video').find('iframe').css({ width: '100%', height: '100%', top: 0, left: 0 }) 
         }
     },
 });
