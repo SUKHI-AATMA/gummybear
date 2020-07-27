@@ -285,7 +285,12 @@ section {
         overflow: visible;
     }
 }
-
+.textAnim {
+    transition: opacity 0.3s ease-in-out, transform 0.3s 0.1s ease-in-out;
+    opacity: 1;
+    transform: skewY(0);
+    transform-origin: 0 0;
+}
 .title {
     text-align: left;
     color: #000000;
@@ -294,6 +299,7 @@ section {
     font-weight: 600;
     line-height: 1;
     margin: 0 0 50px 0;
+   &:extend(.textAnim);
 }
 
 .mainTitle {
@@ -301,6 +307,7 @@ section {
     font-family: @lg;
     font-size: 80px;
     font-weight: 400;
+    transition: opacity 0.3s ease-in-out, transform 0.3s 0.2s ease-in-out;
     /*transform: skewY(10deg);
     transform-origin: 0 0;
     transition: all 0.3s linear;*/
@@ -312,6 +319,7 @@ section {
     font-size: 20px;
     line-height: 34px;
     text-align: left;
+    &:extend(.textAnim);
 
     ul {
         display: flex;
@@ -819,7 +827,7 @@ footer {
     text-align: left;
     text-transform: uppercase;
     top: 10%;
-
+    &:extend(.textAnim);
 
     a {
         align-items: center;
@@ -1780,6 +1788,24 @@ section.team {
             transform: skewY(-10deg)
         }
     }
+}
+
+.downTxt {
+    opacity: 0;
+    transform: skewY(10deg);
+    transform-origin: 0 0;
+}
+
+.focusedTxt {
+    opacity: 1;
+    transform: skewY(0);
+    transform-origin: 0 0;
+}
+
+.upTxt {
+    opacity: 0;
+    transform: skewY(-10deg);
+    transform-origin: 0 0;
 }
 
 section.logoSection {
