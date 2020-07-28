@@ -22,6 +22,15 @@ a {
     width: 100%;
     z-index: 50;
 }
+img {
+    transform: translate(0, 50px);
+    opacity: 0;
+    transition: transform 0.3s 0.1s ease-in-out, opacity 0.3s ease-in-out;
+    &.animate {
+        transform: translate(0, 0);
+        opacity: 1;    
+    }
+}
 
 .btn {
     border: none;
@@ -209,6 +218,10 @@ a {
     /*border-width: 0 0 2px 2px;*/
     transform: translate(0, 100px);
     /*margin: 0;*/
+    img {
+        opacity: 1;
+        transform: translate(0,0);
+    }
 }
 
 .grid {
@@ -311,6 +324,7 @@ section {
     /*transform: skewY(10deg);
     transform-origin: 0 0;
     transition: all 0.3s linear;*/
+    /*&:extend(.textAnim);*/
 }
 
 .text {
@@ -938,6 +952,9 @@ section.quicklinks {
             margin: 0;
         }
     }
+    &.aem {
+        display: flex;
+    }
 }
 
 section.statistics {
@@ -1380,6 +1397,7 @@ section.team {
                     text-transform: uppercase;
                     font-family: @os;
                     font-size: 34px;
+                    &:extend(.textAnim);
                 }
             }
 
@@ -1484,6 +1502,8 @@ section.team {
                 }
 
                 img {
+                    opacity: 1;
+                    transform: translate(0,0);
                     width: 80%;
                 }
 
@@ -1662,7 +1682,7 @@ section.team {
             position: relative;
             z-index: 1;
             padding: 0;
-            opacity: 0;
+            opacity: 1;
             transform-origin: 0 0;
             transition: opacity .3s ease, background 1s linear, transform 1s 0.2s cubic-bezier(.215, .61, .355, 1);
 
@@ -1803,9 +1823,9 @@ section.team {
 }
 
 .upTxt {
-    opacity: 0;
-    transform: skewY(-10deg);
-    transform-origin: 0 0;
+    opacity: 0 !important;
+    transform: skewY(-10deg) !important;
+    transform-origin: 0 0 !important;
 }
 
 section.logoSection {
@@ -1838,6 +1858,8 @@ section.logoSection {
             /* display: inline-block; */
             filter: grayscale(1);
             transition: filter linear 0.3s;
+            opacity: 1;
+            transform: translate(0, 0);
 
             &:hover {
                 filter: grayscale(0);
