@@ -105,7 +105,7 @@ if($('#fullpage').length)
                     // setTimeout(function() {
                         $(destination.item).find('.prjTitle').animate({ width: 0, padding: 0 }, 500);
                         if(destination.index == 2) {
-                            $(destination.item).find('.prjImg').css({ width: '100%', position: 'sticky', top: 0, left: 0, height: $(window).height() }).find('video').css({width:'70%'});
+                            $(destination.item).find('.prjImg').css({ width: '100%', position: 'sticky', top: 0, left: 0, height: $(window).height() }).find('video').css({width:'100%'});
                         } else {
                             $(destination.item).find('.prjImg').css({ width: '100%', position: 'sticky', top: 0, left: 0, height: $(window).height() }).find('video').css({width:'60%'});
                         }
