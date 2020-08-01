@@ -73,7 +73,7 @@ if($('#fullpage').length)
         scrollHorizontally: true,
         onLeave: function(origin, destination, direction) {
             console.log($(destination.item).hasClass('video'))
-            if (destination.index == 7) {
+            if (destination.index == ($('.section').length-1)) {
                 $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) - $('footer').outerHeight(true) }, 100, 'linear');
             } else {
                 $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) }, 100, 'linear');

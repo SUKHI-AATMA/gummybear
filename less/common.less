@@ -386,11 +386,14 @@ section {
     margin: 0 0 50px 0;
     &:extend(.textAnim);
 }
-
+.noMar {
+    margin: 0;
+}
 .mainTitle {
     &:extend(.title);
     font-family: @lg;
     font-size: 80px;
+    line-height: 1.2;
     font-weight: 400;
     transition: opacity 0.3s ease-in-out, transform 0.3s 0.2s ease-in-out;
     /*transform: skewY(10deg);
@@ -1556,7 +1559,7 @@ section.team {
         .row {
             display: flex;
             height: 100%;
-            flex-direction: row;
+            flex-direction: row-reverse;
 
             .prjTitle {
                 width: 40%;
@@ -1627,7 +1630,7 @@ section.team {
 
         &:nth-child(2n) {
             .row {
-                flex-direction: row-reverse;
+                flex-direction: row;
 
                 .prjTitle {
                     padding: 0 0 0 5%;
