@@ -72,6 +72,7 @@ if($('#fullpage').length)
         autoScrolling: true,
         scrollHorizontally: true,
         onLeave: function(origin, destination, direction) {
+            console.log($(destination.item).hasClass('video'))
             if (destination.index == 7) {
                 $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) - $('footer').outerHeight(true) }, 100, 'linear');
             } else {
@@ -87,49 +88,61 @@ if($('#fullpage').length)
             setTimeout(function() {
                 goo.flow($(destination.item).attr('color'), "out", "up");
             }, 900);
-            $('.section.video.active .close').trigger('click');
-        },
-        afterLoad: function(origin, destination, direction) {
-            console.log(destination.index);
-            onScrollDiv();
-            // console.log($('.fp-completely').hasClass('video'));
-            if (destination.index == 2 || destination.index == 4) {
-                var iframe = document.querySelector('iframe');
-                var player = new Vimeo.Player(iframe);
+            if (!$(destination.item).hasClass('video')) {
+                $('.section.video.active .close').trigger('click');
+            }
+            if ($(destination.item).hasClass('video')) {
+                var player;
+                if(destination.index == 2){
+                    player = document.getElementById('section2');
+                }
+                else
+                {
+                    player = document.getElementById('section4');
+                }
 
-                $('.section.video.active .prjTitle').animate({ opacity: 0 }, 300, '', function() {
-                    setTimeout(function() {
-                        $('.section.video.active .prjTitle').animate({ width: 0, padding: 0 }, 500);
-                        $('.section.video.active .prjImg').css({ width: '100%', position: 'sticky', top: 0, left: 0, height: $(window).height() }).find('video').css({width:'60%'});
-                        $('.grain').fadeOut(300);
+                $(destination.item).find('.prjTitle').animate({ opacity: 0 }, 300, '', function() {
+                    // setTimeout(function() {
+                        $(destination.item).find('.prjTitle').animate({ width: 0, padding: 0 }, 500);
+                        if(destination.index == 2) {
+                            $(destination.item).find('.prjImg').css({ width: '100%', position: 'sticky', top: 0, left: 0, height: $(window).height() }).find('video').css({width:'100%'});
+                        } else {
+                            $(destination.item).find('.prjImg').css({ width: '100%', position: 'sticky', top: 0, left: 0, height: $(window).height() }).find('video').css({width:'60%'});
+                        }
+                        $('.grain,.grid').fadeOut(300);
                         $('.lftHeader').animate({ left: '-10%' }, 300);
                         $('.rgtHeader').animate({ right: '-10%' }, 300);
                         $('section.fpage').animate({ margin: '0%', width: '100%' }, 300);
-                        $('.section.video.active .close').fadeIn(300);
-                        if(destination.index == 2)
-                        {
+                        $(destination.item).find('.close').fadeIn(300);
+                        // if(destination.index == 2)
+                        // {
                             player.play();
-                        }
-                    }, 500)
+                        // }
+                    // }, 500)
                 });
-                $('.section.video.active .close').on('click', function() {
-                    if(destination.index == 2)
-                    {
+                $(destination.item).find('.close').on('click', function() {
+                    // if(destination.index == 2)
+                    // {
                         player.pause();
-                    }
-                    $('.section.video.active .close').fadeOut(300);
+                    // }
+                    $(destination.item).find('.close').fadeOut(300);
                     $('section.fpage').animate({ margin: '0 8% 0 10%', width: '82%' }, 300);
                     $('.rgtHeader').animate({ right: '0' }, 300);
                     $('.lftHeader').animate({ left: '0' }, 300);
-                    $('.section.video.active .prjImg').css({ width: '60%', position: 'static', top: 0, left: 0, height: 'unset' }).find('video').css({width:'160%'});
-                    $('.section.video.active .prjTitle').animate({ width: '40%', padding: '0 0 0 5%' }, 500);
-                    $('.section.video.active .prjTitle').animate({ opacity: 1 }, 300);
-                    $('.grain').fadeIn(300);
+                    $(destination.item).find('.prjImg').css({ width: '60%', position: 'static', top: 0, left: 0, height: 'unset' }).find('video').css({width:'160%'});
+                    $(destination.item).find('.prjTitle').animate({ width: '40%', padding: '0 0 0 5%' }, 500);
+                    $(destination.item).find('.prjTitle').animate({ opacity: 1 }, 300);
+                    $('.grain,.grid').fadeIn(300);
                 });
                 // var lft = $('.section.video.active').offset().left - $('.section.video.active').find('.prjImg').position().left;
                 // var lft = $(window).width() - $('.section.video.active').find('.prjImg').position().left - $('.section.video.active .prjImg iframe').outerWidth(true);
                 // $('.section.video.active').find('iframe').css({ width: $('.section.video.active').outerWidth(true), height: $('.section.video.active').outerHeight(true), top: 0, left: lft })
             }
+        },
+        afterLoad: function(origin, destination, direction) {
+            console.log(destination.index);
+            onScrollDiv();
+            // console.log($('.fp-completely').hasClass('video'));
         },
     });
 }
