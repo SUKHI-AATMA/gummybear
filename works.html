@@ -21,7 +21,8 @@
     <meta name="og:url" content="https://gummybear.co.nz/">
     <meta name="og:site_name" content="GUMMY BEAR">
     <meta name="og:type" content="website">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    
 </head>
 
 <body data-page="home">
@@ -66,7 +67,7 @@
                             </div> -->
                             <div class="row">
                                 <div class="lftSec">
-                                    <div class="mainTitle animate skew" data-delay="600" data-anime="">No time to explain,<br>hop on!</div>
+                                    <div class="mainTitle">No time to explain,<br>hop on!</div>
                                     <!-- <div class="title">(People behind the sins)</div> -->
                                     <div class="scrollDownArr"><img class="lazyload" data-src="images/svg/arrow-down.svg" alt=""></div>
                                 </div>
@@ -74,16 +75,16 @@
                         </div>
                     </div>
                 </section>
-                <section class="project section">
+                <section class="project section intro2">
                     <div class="banner work">
-                    <div class="container">
-                        <div class="row">
-                            <div class="lftSec">
-                                <div class="title">Digital Transformation is a Cliché.</div>
-                                <div class="title noMar">Let's solve your real Marketing problems, together.</div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="lftSec">
+                                    <div class="mainTitle">Digital Transformation is a Cliché.</div>
+                                    <div class="mainTitle noMar">Let's solve your real Marketing problems, together.</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </section>
                 <section class="project section" color="#ffd435">
@@ -101,7 +102,7 @@
                         <div class="prjImg"><img class="lazyload" data-src="videos/WAATP/hm.png" alt=""></div>
                     </div>
                 </section>
-                <section class="project video section" color="#02e2be">
+                <section class="project video section mossyBees" color="#02e2be">
                     <div class="row">
                         <div class="prjTitle">
                             <p class="title animate" data-delay="500" data-anime="">Mossy Bees</p>
@@ -115,7 +116,7 @@
                         </div>
                         <!-- <div class="prjImg"><img class="lazyload" data-src="videos/MossyBees/hm.png" alt=""></div> -->
                         <div class="prjImg">
-                             <video width="100%" muted="" loop="" id="section2" preload="auto">
+                            <video width="100%" muted="" loop="" id="mossy" preload="auto">
                                 <source src="videos/MossyBees/hm.mp4" type="video/mp4">
                                 <source src="videos/MossyBees/hm.webp" type="video/webp">
                             </video>
@@ -153,7 +154,7 @@
                             </a>
                         </div>
                         <div class="prjImg">
-                            <video width="100%" muted="" loop="" id="section4" preload="auto">
+                            <video width="100%" muted="" loop="" id="bbs" preload="auto">
                                 <source src="videos/BaconButtie/hm.mp4" type="video/mp4">
                             </video>
                             <!-- <video src="videos/BaconButtie/hm.mp4" controls="0" autoplay="true" loop="true"></video> -->
@@ -224,6 +225,13 @@
     <script type="text/javascript" src="js/fluid.js" async=""></script>
     <script type="text/javascript" src="js/fullpage.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+        var link = $("<link />",{
+            rel: "stylesheet",
+            type: "text/css",
+            href: 'css/style.css?v=' + Date.now()
+        })
+        $('head').append(link);
+    </script>
 </body>
-
 </html>

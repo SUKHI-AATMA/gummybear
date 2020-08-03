@@ -9,17 +9,13 @@ $(document).ready(function() {
     var pgName = location.href.split("/").slice(-1),
         pgNames = pgName[0].split(".");
     $('body').attr('data-page', (pgNames.length > 1) ? pgNames[0] : 'home');
-    if (pgNames[0] == 'index-new') {
-        $('body').attr('data-page', 'home');
-    }
+    // if (pgNames[0] == 'index-new') {
+    //     $('body').attr('data-page', 'home');
+    // }
 
-    $('.banner.work').css({ height: $(window).outerHeight() })
-    // console.log(123);
-    // var waypoints = $('#footer').waypoint({
-    //     handler: function(direction) {
-    //         notify(this.element.id + ' hit')
-    //     }
-    // })
+    
+    // console.log(pgName[0].indexOf('prj_'));
+    (pgName[0].indexOf('prj_') >= 0) ? $('.banner .container').css({ height: winHei }) : $('.banner.work').css({ height: $(window).outerHeight() });
 });
 
 function inViewport($el) {
@@ -113,33 +109,33 @@ if ($('#fullpage').length) {
             }
             if ($(destination.item).hasClass('video')) {
                 var player;
-                if (destination.index == 3) {
-                    player = document.getElementById('section2');
+                if ($(destination.item).hasClass('mossyBees')) {
+                    player = document.getElementById('mossy');
                 } else {
-                    player = document.getElementById('section4');
+                    player = document.getElementById('bbs');
                 }
 
                 $(destination.item).find('.prjTitle').animate({ opacity: 0 }, 300, '', function() {
                     // setTimeout(function() {
                     $(destination.item).find('.prjTitle').animate({ width: 0, padding: 0 }, 500);
-                    if (destination.index == 3) {
+                    if ($(destination.item).hasClass('mossyBees')) {
                         $(destination.item).find('.prjImg').css({ width: '100%', position: 'sticky', top: 0, left: 0, height: $(window).height() }).find('video').css({ width: '100%' });
                     } else {
                         $(destination.item).find('.prjImg').css({ width: '100%', position: 'sticky', top: 0, left: 0, height: $(window).height() }).find('video').css({ width: '60%' });
                     }
                     $('.grain,.grid').fadeOut(300);
-                    $('.lftHeader').animate({ left: '-10%' }, 300);
+                    $('.lftHeader').animate({ left: '-11%' }, 300);
                     $('.rgtHeader').animate({ right: '-10%' }, 300);
                     $('section.fpage').animate({ margin: '0%', width: '100%' }, 300);
                     $(destination.item).find('.close').fadeIn(300);
-                    // if(destination.index == 3)
+                    // if($(destination.item).hasClass('mossyBees'))
                     // {
                     player.play();
                     // }
                     // }, 500)
                 });
                 $(destination.item).find('.close').on('click', function() {
-                    // if(destination.index == 3)
+                    // if($(destination.item).hasClass('mossyBees'))
                     // {
                     player.pause();
                     // }
@@ -155,6 +151,14 @@ if ($('#fullpage').length) {
                 // var lft = $('.section.video.active').offset().left - $('.section.video.active').find('.prjImg').position().left;
                 // var lft = $(window).width() - $('.section.video.active').find('.prjImg').position().left - $('.section.video.active .prjImg iframe').outerWidth(true);
                 // $('.section.video.active').find('iframe').css({ width: $('.section.video.active').outerWidth(true), height: $('.section.video.active').outerHeight(true), top: 0, left: lft })
+            }
+            if ($(destination.item).attr('id') == "footer") {
+                $('.grid').css({ height: (winHei - $(destination.item).outerHeight()) })
+                $('.grid').css({height:  $(window).height() - $('footer').outerHeight(true)});
+                // alert(1);
+            } else
+            {
+                $('.grid').css({ height: '100%' })
             }
         },
         afterLoad: function(origin, destination, direction) {
