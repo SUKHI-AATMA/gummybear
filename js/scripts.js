@@ -1,4 +1,5 @@
 var docHei = $(document).height(),
+    winWid = $(window).width(),
     winHei = $(window).height(),
     ftHei = $('footer').outerHeight(true);
 $(document).ready(function() {
@@ -139,11 +140,19 @@ if ($('#fullpage').length) {
                     // {
                     player.pause();
                     // }
+                    if(winWid >= 1366)
+                    {
+                        vidWidth = $(destination.item).hasClass('mossyBees') ? '100%' : '160%';
+                    }
+                    else
+                    {
+                        vidWidth = '100%';
+                    }
                     $(destination.item).find('.close').fadeOut(300);
                     $('section.fpage').animate({ margin: '0 8% 0 10%', width: '82%' }, 300);
                     $('.rgtHeader').animate({ right: '0' }, 300);
                     $('.lftHeader').animate({ left: '0' }, 300);
-                    $(destination.item).find('.prjImg').css({ width: '60%', position: 'static', top: 0, left: 0, height: 'unset' }).find('video').css({ width: '160%' });
+                    $(destination.item).find('.prjImg').css({ width: '60%', position: 'static', top: 0, left: 0, height: 'unset' }).find('video').css({ width: vidWidth });
                     $(destination.item).find('.prjTitle').animate({ width: '40%', padding: '0 0 0 5%' }, 500);
                     $(destination.item).find('.prjTitle').animate({ opacity: 1 }, 300);
                     $('.grain,.grid').fadeIn(300);

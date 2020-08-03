@@ -886,79 +886,6 @@ footer {
     }
 }
 
-[data-page] {
-    .rgtHeader {
-        .btmCopy {
-            .mktLine {
-                display: none;
-            }
-
-            a {
-                display: block;
-            }
-        }
-    }
-}
-
-[data-page="home"] {
-    .pageSubTitle {
-        top: 0;
-    }
-
-    .mainTitle {
-        margin: 0;
-    }
-
-    .banner.work {
-        background: none;
-
-        .container {
-            margin: 0 10%;
-
-            .lftSec {
-                position: relative;
-
-                .scrollDownArr {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    transform: none;
-                }
-            }
-        }
-    }
-
-}
-
-[data-page="about"] {
-    .banner {
-        background: none;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .container {
-            height: 600px;
-        }
-    }
-}
-
-[data-page="home"],
-[data-page="contact"] {
-    .rgtHeader {
-        .btmCopy {
-            .mktLine {
-                display: block;
-            }
-
-            a {
-                display: none;
-            }
-        }
-    }
-}
-
 .pageSubTitle {
     color: #000000;
     font-family: @os;
@@ -1204,8 +1131,6 @@ section.featuredArea {
     }
 }
 
-
-
 section.gallery_type1 {
     display: flex;
     flex-direction: column;
@@ -1253,7 +1178,6 @@ section.gallery_type1 {
         }*/
     }
 }
-
 
 section.textArea {
     display: flex;
@@ -1382,9 +1306,6 @@ section.pagination {
         }
     }
 }
-
-
-
 
 section.form {
     display: flex;
@@ -2066,6 +1987,79 @@ section.aemContact {
 
             &:last-child {
                 margin: 0;
+            }
+        }
+    }
+}
+[data-page] {
+    .rgtHeader {
+        .btmCopy {
+            .mktLine {
+                display: none;
+            }
+
+            a {
+                display: block;
+            }
+        }
+    }
+}
+
+[data-page="home"],
+[data-page="works"] {
+    .pageSubTitle {
+        top: 0;
+    }
+
+    .mainTitle {
+        margin: 0;
+    }
+
+    .banner.work {
+        background: none;
+
+        .container {
+            margin: 0 10%;
+
+            .lftSec {
+                position: relative;
+
+                .scrollDownArr {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transform: none;
+                }
+            }
+        }
+    }
+
+}
+
+[data-page="about"] {
+    .banner {
+        background: none;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .container {
+            height: 600px;
+        }
+    }
+}
+
+[data-page="home"],
+[data-page="contact"] {
+    .rgtHeader {
+        .btmCopy {
+            .mktLine {
+                display: block;
+            }
+
+            a {
+                display: none;
             }
         }
     }
