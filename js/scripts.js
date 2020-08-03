@@ -92,7 +92,7 @@ if ($('#fullpage').length) {
         autoScrolling: true,
         scrollHorizontally: true,
         onLeave: function(origin, destination, direction) {
-            console.log($(destination.item).hasClass('video'))
+            // console.log(destination.index)
             if (destination.index == ($('.section').length - 1)) {
                 $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) - $('footer').outerHeight(true) }, 100, 'linear');
             } else {
@@ -113,7 +113,7 @@ if ($('#fullpage').length) {
             }
             if ($(destination.item).hasClass('video')) {
                 var player;
-                if (destination.index == 2) {
+                if (destination.index == 3) {
                     player = document.getElementById('section2');
                 } else {
                     player = document.getElementById('section4');
@@ -122,7 +122,7 @@ if ($('#fullpage').length) {
                 $(destination.item).find('.prjTitle').animate({ opacity: 0 }, 300, '', function() {
                     // setTimeout(function() {
                     $(destination.item).find('.prjTitle').animate({ width: 0, padding: 0 }, 500);
-                    if (destination.index == 2) {
+                    if (destination.index == 3) {
                         $(destination.item).find('.prjImg').css({ width: '100%', position: 'sticky', top: 0, left: 0, height: $(window).height() }).find('video').css({ width: '100%' });
                     } else {
                         $(destination.item).find('.prjImg').css({ width: '100%', position: 'sticky', top: 0, left: 0, height: $(window).height() }).find('video').css({ width: '60%' });
@@ -132,14 +132,14 @@ if ($('#fullpage').length) {
                     $('.rgtHeader').animate({ right: '-10%' }, 300);
                     $('section.fpage').animate({ margin: '0%', width: '100%' }, 300);
                     $(destination.item).find('.close').fadeIn(300);
-                    // if(destination.index == 2)
+                    // if(destination.index == 3)
                     // {
                     player.play();
                     // }
                     // }, 500)
                 });
                 $(destination.item).find('.close').on('click', function() {
-                    // if(destination.index == 2)
+                    // if(destination.index == 3)
                     // {
                     player.pause();
                     // }
@@ -158,7 +158,7 @@ if ($('#fullpage').length) {
             }
         },
         afterLoad: function(origin, destination, direction) {
-            console.log(destination.index);
+            // console.log(destination.index);
             onScrollDiv();
             // console.log($('.fp-completely').hasClass('video'));
         },
