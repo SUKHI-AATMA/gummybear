@@ -5,6 +5,11 @@
     padding: 0;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 .logo {
     &:hover img {
         animation: shake 0.5s;
@@ -386,9 +391,11 @@ section {
     margin: 0 0 50px 0;
     &:extend(.textAnim);
 }
+
 .noMar {
     margin: 0;
 }
+
 .mainTitle {
     &:extend(.title);
     font-family: @lg;
@@ -500,11 +507,11 @@ section {
             display: flex;
             flex-wrap: wrap;
             height: 100%;
-            left: 10%;
+            left: 11%;
             padding: 5% 0;
             position: fixed;
             top: -200%;
-            width: calc(100% - 18%);
+            width: calc(100% - 19%);
             transition: top linear 0.3s;
 
             >li {
@@ -920,6 +927,20 @@ footer {
 
 }
 
+[data-page="about"] {
+    .banner {
+        background: none;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .container {
+            height: 600px;
+        }
+    }
+}
+
 [data-page="home"],
 [data-page="contact"] {
     .rgtHeader {
@@ -982,7 +1003,7 @@ footer {
         /*align-items: center;*/
         display: flex;
         flex-direction: column;
-        height: 1000px;
+        /*height: 1000px;*/
         margin: 0 6%;
         position: relative;
         justify-content: center;
@@ -1133,6 +1154,7 @@ section.statistics {
             left: 50%;
             transform: translate(-50%, -50%) rotate(45deg);
         }
+
         &:before {
             transform: translate(-50%, -50%) rotate(-45deg);
         }
