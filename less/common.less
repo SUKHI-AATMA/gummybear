@@ -1512,6 +1512,7 @@ section.team {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                align-items: flex-start;
                 position: relative;
                 z-index: 1;
                 padding: 0 0 0 5%;
@@ -1523,10 +1524,10 @@ section.team {
                     font: Regular 32px/47px Oswald;
                     font-family: @os;
                     font-size: 32px;
-                    line-height: 47px;
+                    /*line-height: 47px;*/
                     letter-spacing: 2.88px;
                     padding: 10px 20px;
-                    width: 245px;
+                    /*width: 245px;*/
                     color: #DC3226;
 
                     &::before,
@@ -1958,6 +1959,9 @@ section.content {
 
         &:nth-child(4) .contentBox {
             margin: 0 0 200px 20%;
+        }
+        &:nth-child(5) .contentBox {
+            margin: 0 0 200px 35%;
         }
     }
 }
