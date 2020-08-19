@@ -14,9 +14,9 @@ $(document).ready(function() {
     //     $('body').attr('data-page', 'home');
     // }
 
-    
+
     // console.log(pgName[0].indexOf('prj_'));
-    (pgName[0].indexOf('prj_') >= 0) ? $('.banner .container').css({ height: winHei }) : $('.banner.work').css({ height: $(window).outerHeight() });
+    (pgName[0].indexOf('prj_') >= 0) ? $('.banner .container').css({ height: winHei }): $('.banner.work').css({ height: $(window).outerHeight() });
 });
 
 function inViewport($el) {
@@ -65,6 +65,12 @@ function onScrollDiv() {
             }
         }
     }
+
+    if ($(window).scrollTop() < 100) {
+        $('.logo .a').css({ fill: '#e00909' })
+    } else {
+        $('.logo .a').css({ fill: '#FFCF31' })
+    }
     // for (var i = 0, nbs = anim.length; i < nbs; i++) {
     //     var animELe = anim[i];
     //     var rect = animELe.getBoundingClientRect();
@@ -89,6 +95,11 @@ if ($('#fullpage').length) {
         autoScrolling: true,
         scrollHorizontally: true,
         onLeave: function(origin, destination, direction) {
+            if (destination.index == 0) {
+                $('.logo .a').css({ fill: '#e00909' })
+            } else {
+                $('.logo .a').css({ fill: '#FFCF31' })
+            }
             // console.log(destination.index)
             if (destination.index == ($('.section').length - 1)) {
                 $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) - $('footer').outerHeight(true) }, 100, 'linear');
@@ -140,12 +151,9 @@ if ($('#fullpage').length) {
                     // {
                     player.pause();
                     // }
-                    if(winWid >= 1366)
-                    {
+                    if (winWid >= 1366) {
                         vidWidth = $(destination.item).hasClass('mossyBees') ? '100%' : '160%';
-                    }
-                    else
-                    {
+                    } else {
                         vidWidth = '100%';
                     }
                     $(destination.item).find('.close').fadeOut(300);
@@ -163,10 +171,9 @@ if ($('#fullpage').length) {
             }
             if ($(destination.item).attr('id') == "footer") {
                 $('.grid').css({ height: (winHei - $(destination.item).outerHeight()) })
-                $('.grid').css({height:  $(window).height() - $('footer').outerHeight(true)});
+                $('.grid').css({ height: $(window).height() - $('footer').outerHeight(true) });
                 // alert(1);
-            } else
-            {
+            } else {
                 $('.grid').css({ height: '100%' })
             }
         },
