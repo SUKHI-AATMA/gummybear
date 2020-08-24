@@ -28,8 +28,10 @@ function inViewport($el) {
     var fvh = Math.max(0, t > 0 ? Math.min(elH, H - t) : Math.min(b, H));
     if (!$('body').hasClass('active')) {
         $('.lftHeader,.rgtHeader').css({ height: $(window).height() - fvh });
+        $('.btmCopy').fadeOut();
     } else {
         $('.lftHeader,.rgtHeader').css({ height: '100%' });
+        $('.btmCopy').delay(100).fadeIn();
     }
 }
 // function ftrHdrAnim() {
@@ -65,28 +67,13 @@ function onScrollDiv() {
             }
         }
     }
-
-    if ($(window).scrollTop() < 100) {
-        $('.logo .a').css({ fill: '#e00909' })
-    } else {
-        $('.logo .a').css({ fill: '#FFCF31' })
+    if ($('#fullpage').length == 0) {
+        if ($(window).scrollTop() < 100) {
+            $('.logo .a').css({ fill: '#e00909' })
+        } else {
+            $('.logo .a').css({ fill: '#FFCF31' })
+        }
     }
-    // for (var i = 0, nbs = anim.length; i < nbs; i++) {
-    //     var animELe = anim[i];
-    //     var rect = animELe.getBoundingClientRect();
-    //     var isVisible = ((rect.top - window.innerHeight) < 0 && (rect.bottom) > -50) ? true : false;
-
-    //     // console.log(isVisible);
-    //     if (isVisible) {
-    //         if (animELe.hasAttribute('data-anime')) {
-    //             var classL = animELe.getAttribute('data-anime');
-    //             var dataDelay = animELe.getAttribute('data-delay');
-    //             animELe.classList.add(classL);
-    //             animELe.classList.add('delay-'+dataDelay);
-    //             // animELe.removeAttribute('data-anime');
-    //         }
-    //     }
-    // }
 }
 
 if ($('#fullpage').length) {
@@ -95,7 +82,7 @@ if ($('#fullpage').length) {
         autoScrolling: true,
         scrollHorizontally: true,
         onLeave: function(origin, destination, direction) {
-            if (destination.index == 0) {
+            if (destination.index < 2) {
                 $('.logo .a').css({ fill: '#e00909' })
             } else {
                 $('.logo .a').css({ fill: '#FFCF31' })
@@ -103,8 +90,10 @@ if ($('#fullpage').length) {
             // console.log(destination.index)
             if (destination.index == ($('.section').length - 1)) {
                 $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) - $('footer').outerHeight(true) }, 100, 'linear');
+                $('.btmCopy').fadeOut();
             } else {
                 $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) }, 100, 'linear');
+                $('.btmCopy').delay(100).fadeIn();
             }
             (direction == 'down') ?
             ($(origin.item).removeClass('down up').addClass('up'), $(destination.item).removeClass('down up').addClass('focused')) :
