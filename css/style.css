@@ -1255,6 +1255,9 @@ section.team .row > div > div.position,
     transition: all 0.3s linear;*/
   /*&:extend(.textAnim);*/
 }
+.mainTitle i {
+  opacity: 0;
+}
 .text {
   color: #000000;
   font-family: 'Karla', sans-serif;
