@@ -2563,8 +2563,8 @@ section.team .row:nth-child(5) .name {
 #fullpage .section .row .prjTitle.overlayTitle {
   background: rgba(255, 255, 255, 0.5);
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 10px;
+  left: 10px;
   z-index: 100;
   opacity: 1 !important;
   width: auto !important;
