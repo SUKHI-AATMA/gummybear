@@ -290,10 +290,13 @@
     <script>
     $(window).on('load', function() {
         var d = 100;
-        $('.mainTitle i').map(function() {
-            $(this).delay(d).animate({ opacity: 1 }, 0);
-            d = d + 100;
-        });
+        setTimeout(function(){
+            $('.mainTitle i').map(function() {
+                $(this).delay(d).animate({ opacity: 1 }, 0);
+                d = d + 100;
+            });
+            
+        },500);
     });
     </script>
 </body>
