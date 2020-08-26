@@ -1257,6 +1257,7 @@ section.team .row > div > div.position,
 }
 .mainTitle i {
   opacity: 0;
+  font-style: normal;
 }
 .text {
   color: #000000;
