@@ -69,9 +69,11 @@ function onScrollDiv() {
     }
     if ($('#fullpage').length == 0) {
         if ($(window).scrollTop() < 100) {
-            $('.logo .a').css({ fill: '#e00909' })
+            $('.logo .a').css({ fill: '#e00909'});
+            $('.btmCopy i').css({ color: '#e00909' });
         } else {
-            $('.logo .a').css({ fill: '#FFCF31' })
+            $('.logo .a').css({ fill: '#FFCF31' });
+            $('.btmCopy i').css({ color: '#FFCF31' });
         }
     }
 }
@@ -84,8 +86,10 @@ if ($('#fullpage').length) {
         onLeave: function(origin, destination, direction) {
             if (destination.index < 2) {
                 $('.logo .a').css({ fill: '#e00909' })
+                $('.btmCopy i').css({ color: '#e00909' })
             } else {
                 $('.logo .a').css({ fill: '#FFCF31' })
+                $('.btmCopy i').css({ color: '#FFCF31' })
             }
             // console.log(destination.index)
             if (destination.index == ($('.section').length - 1)) {
@@ -133,10 +137,10 @@ if ($('#fullpage').length) {
                     // {
                     player.play();
                     $(destination.item).find('.prjTitle').addClass('overlayTitle');
-    //                 position: fixed !important;
-    // opacity: 1 !important;
-    // z-index: 100 !important;
-    // width: auto !important;
+                    //                 position: fixed !important;
+                    // opacity: 1 !important;
+                    // z-index: 100 !important;
+                    // width: auto !important;
                     // }
                     // }, 500)
                 });
@@ -291,10 +295,11 @@ $(window).on('load', function() {
         }
     })
     setTimeout(function() { onScrollDiv() }, 0);
-    animateText();
+    setTimeout(function() { animateText(); }, 500);
+    
 }).on('scroll', function() {
     onScrollDiv()
-    animateText();
+    setTimeout(function() { animateText(); }, 500);
     if ($('body').attr('data-page') != 'home') {
         inViewport($('footer'));
     }
