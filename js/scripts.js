@@ -208,7 +208,7 @@ if ($('#fullpage').length) {
 //     });
 // }
 function animateText() {
-    var clList = ['.title', '.pageSubTitle', '.text', 'img', '.mainTitle', '.position']
+    var clList = ['.title', '.pageSubTitle', '.text', 'img', '.mainTitle', '.position','.desc']
     clList.forEach(function(item, index) {
         var anim = document.querySelectorAll(item);
         for (var i = 0, nbs = anim.length; i < nbs; i++) {
@@ -287,13 +287,13 @@ function animateText() {
     // }
 }
 $(window).on('load', function() {
-    $('.position').each(function() {
-        if ($(this).outerWidth() < $(this).siblings('.title').outerWidth()) {
-            $(this).css({ width: $(this).siblings('.title').outerWidth() }).parents('.name').css({ width: $(this).siblings('.title').outerWidth() })
-        } else {
-            $(this).siblings('.title').css({ width: $(this).outerWidth() }).parents('.name').css({ width: $(this).outerWidth() })
-        }
-    })
+    // $('.position').each(function() {
+    //     if ($(this).outerWidth() < $(this).siblings('.title').outerWidth()) {
+    //         $(this).css({ width: $(this).siblings('.title').outerWidth() }).parents('.name').css({ width: $(this).siblings('.title').outerWidth() })
+    //     } else {
+    //         $(this).siblings('.title').css({ width: $(this).outerWidth() }).parents('.name').css({ width: $(this).outerWidth() })
+    //     }
+    // })
     setTimeout(function() { onScrollDiv() }, 0);
     setTimeout(function() { animateText(); }, 500);
     
