@@ -26,6 +26,7 @@
         font-size: 30px;
     }
 }
+
 @media only screen and (max-width: 1440px) {
     .pageSubTitle {
         font-size: 25px;
@@ -148,5 +149,56 @@
 
     .rgtHeader nav>ul>li>ul>li>a {
         font-size: 22px;
+    }
+}
+
+@media only screen and (device-width: 1024px) and (device-height: 768px) {
+    #fullpage .section .row .prjTitle.overlayTitle {
+        height: auto;
+        padding: 0 20px !important;
+        bottom: -30px;
+    }
+
+    .btn,
+    #fullpage .section .row .prjTitle .btn {
+
+        padding: 7px 10px;
+        width: 172px;
+
+        &::before,
+        &::after {
+            transform: translate3D(0, 0, 0);
+            transition: transform 200ms linear;
+            transition-delay: 200ms;
+        }
+
+        .btn__content {
+            &::after {
+                right: 1%;
+                left: 1%;
+                transition: left 200ms linear,
+                    right 200ms linear;
+            }
+
+            &-wrap {
+
+                &::before,
+                &::after {
+                    transform: translate3D(0, 0, 0);
+                    transition: transform 200ms linear;
+                    /* double delayed time for transition */
+                    transition-delay: 400ms;
+                }
+            }
+        }
+    }
+
+    [data-page=home] .banner.work .container,
+    [data-page=works] .banner.work .container {
+        margin: 0 5%;
+    }
+
+    #fullpage .section:nth-child(2) .mainTitle {
+        font-size: 42px;
     }
 }
