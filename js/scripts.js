@@ -1,4 +1,5 @@
 var docHei = $(document).height(),
+    docWid = $(document).width(),
     winWid = $(window).width(),
     winHei = $(window).height(),
     ftHei = $('footer').outerHeight(true);
@@ -13,10 +14,31 @@ $(document).ready(function() {
     // if (pgNames[0] == 'index-new') {
     //     $('body').attr('data-page', 'home');
     // }
-
+    var d = 100;
+    setTimeout(function() {
+        $('.mainTitle i').map(function() {
+            $(this).delay(d).animate({ opacity: 1 }, 0);
+            d = d + 100;
+        });
+    }, 1000);
 
     // console.log(pgName[0].indexOf('prj_'));
-    (pgName[0].indexOf('prj_') >= 0) ? $('.banner .container').css({ height: winHei }): $('.banner.work').css({ height: $(window).outerHeight() });
+    if (winWid > 767) {
+        (pgName[0].indexOf('prj_') >= 0) ? $('.banner .container').css({ height: winHei }): $('.banner.work').css({ height: winHei });
+    } else {
+        //First section height without top margin
+        $('#fullpage .intro').css({height: winHei - parseInt($('#fullpage').css('marginTop')) });
+
+        //Auto play video
+        $('video').attr('autoplay',true);
+
+        if($('#fullpage').length == 0)
+        {
+            $('section.banner').css({height: winHei - parseInt($('section.banner').css('marginTop'))  });
+        }
+       
+    }
+
 });
 
 function inViewport($el) {
@@ -68,18 +90,38 @@ function onScrollDiv() {
             }
         }
     }
-    if ($('#fullpage').length == 0) {
-        if ($(window).scrollTop() < 100) {
-            $('.logo .a').css({ fill: '#e00909'});
+    if ($('#fullpage').length == 0  || ($('#fullpage').length > 0 && winWid < 768) ) {
+        if ($(window).scrollTop() < 200) {
+            $('.logo .a').css({ fill: '#e00909' });
             $('.btmCopy i').css({ color: '#e00909' });
         } else {
             $('.logo .a').css({ fill: '#FFCF31' });
             $('.btmCopy i').css({ color: '#FFCF31' });
         }
     }
+    if(winWid < 768)
+    {
+        if($(document).scrollTop() > 200)
+        {
+            $('body').addClass('pageScrolled');
+        }
+        else
+        {
+            $('body').removeClass('pageScrolled');
+        }
+        if($(document).scrollTop() > 20)
+        {
+            $('.tagLine').fadeOut();
+        }
+        else
+        {
+            $('.tagLine').fadeIn();
+        }
+
+    }
 }
 
-if ($('#fullpage').length) {
+if ($('#fullpage').length && winWid > 767) {
     new fullpage('#fullpage', {
         //options here
         autoScrolling: true,
@@ -102,12 +144,12 @@ if ($('#fullpage').length) {
                 $('.rgtHeader, .lftHeader, .grid').animate({ height: $(window).outerHeight(true) - $('footer').outerHeight(true) }, 100, 'linear');
                 $('.btmCopy').fadeOut();
             } else if (destination.index == ($('.section').length - 2) && direction == 'up') {
-                console.log(2);
+                // console.log(2);
                 // inViewport($('footer'));
                 $('.rgtHeader, .lftHeader, .grid').animate({ height: $('.logoSection').outerHeight(true) }, 100, 'linear');
                 $('.btmCopy').fadeOut();
             } else {
-                console.log(3);
+                // console.log(3);
                 // $('.grid').css({ height: '100%' })
                 $('.rgtHeader, .lftHeader, .grid').animate({ height: $(window).outerHeight(true) }, 100, 'linear');
                 $('.btmCopy').delay(100).fadeIn();
@@ -214,32 +256,34 @@ if ($('#fullpage').length) {
 //     });
 // }
 function animateText() {
-    var clList = ['.title', '.pageSubTitle', '.text', 'img', '.mainTitle', '.position','.desc']
-    clList.forEach(function(item, index) {
-        var anim = document.querySelectorAll(item);
-        for (var i = 0, nbs = anim.length; i < nbs; i++) {
-            var animELe = anim[i];
-            var rect = animELe.getBoundingClientRect();
-            var isVisible = ((rect.top - window.innerHeight) < 0 && (rect.bottom) > -50) ? true : false;
+    // if (winWid > 767) {
+        var clList = ['.title', '.pageSubTitle', '.text', 'img', '.mainTitle', '.position', '.desc']
+        clList.forEach(function(item, index) {
+            var anim = document.querySelectorAll(item);
+            for (var i = 0, nbs = anim.length; i < nbs; i++) {
+                var animELe = anim[i];
+                var rect = animELe.getBoundingClientRect();
+                var isVisible = ((rect.top - window.innerHeight) < 0 && (rect.bottom) > -50) ? true : false;
 
-            // console.log(isVisible);
-            if (isVisible) {
-                // if (animELe.hasAttribute('data-anime')) {
-                // var classL = animELe.getAttribute('data-anime');
-                // var dataDelay = animELe.getAttribute('data-delay');
-                if (index != 3) {
-                    animELe.classList.remove('upTxt');
-                    animELe.classList.remove('downTxt');
-                } else {
-                    animELe.classList.add('animate');
+                // console.log(isVisible);
+                if (isVisible) {
+                    // if (animELe.hasAttribute('data-anime')) {
+                    // var classL = animELe.getAttribute('data-anime');
+                    // var dataDelay = animELe.getAttribute('data-delay');
+                    if (index != 3) {
+                        animELe.classList.remove('upTxt');
+                        animELe.classList.remove('downTxt');
+                    } else {
+                        animELe.classList.add('animate');
+                    }
+                    // animELe.classList.add('focusedTxt');
+                    // animELe.removeAttribute('data-anime');
+                    // }
                 }
-                // animELe.classList.add('focusedTxt');
-                // animELe.removeAttribute('data-anime');
-                // }
             }
-        }
 
-    });
+        });
+    // }
     // for (var i = 0, nbs = animT.length; i < nbs; i++) {
     //     var animELe = animT[i];
     //     var rect = animELe.getBoundingClientRect();
@@ -302,13 +346,16 @@ $(window).on('load', function() {
     // })
     setTimeout(function() { onScrollDiv() }, 0);
     setTimeout(function() { animateText(); }, 500);
-    
+
 }).on('scroll', function() {
     onScrollDiv()
     setTimeout(function() { animateText(); }, 500);
-    if ($('body').attr('data-page') != 'home') {
-        inViewport($('footer'));
+    if ($('#fullpage').length == 0) {
+        if(winWid > 767)
+        {
+            inViewport($('footer'));
+        }
     }
-}).on('resize', function(){
+}).on('resize', function() {
     // if(data-page == home)
 });

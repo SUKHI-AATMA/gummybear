@@ -771,6 +771,10 @@ section {
     }
 }
 
+.tagLine {
+    display: none;
+}
+
 body {
 
     &:before {
@@ -1301,7 +1305,7 @@ section.featuredArea {
 section.gallery_type1 {
     display: flex;
     flex-direction: column;
-    margin: 100px auto;
+    margin: 100px 8% 100px 11%;
 
     .row {
         display: flex;
@@ -1454,6 +1458,10 @@ section.pagination {
                 border-color: #fff #000 #000 #fff;
                 display: none;
                 margin: 0 0 0 10px;
+            }
+            &.disabled {
+                opacity: 0.1;
+                cursor: not-allowed;
             }
         }
 
@@ -2315,7 +2323,7 @@ section.aemContact {
 }
 
 [data-page="home"],
-[data-page="works"] {
+[data-page="work"] {
     .pageSubTitle {
         top: 0;
     }

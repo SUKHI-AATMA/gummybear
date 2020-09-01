@@ -26,19 +26,7 @@
 </head>
 
 <body data-page="home">
-    <div class="orentationPopup">
-        <div class="iconContainer">
-            <div class="phone"><i><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80.429px" height="80.428px" viewBox="0 0 80.429 80.428" style="enable-background:new 0 0 80.429 80.428;" xml:space="preserve">
-                        <g>
-                            <path d="M37.242,2.971c14.689,0,27.651,8.476,33.688,21.325l4.201-8.719l5.298,2.552l-8.721,18.102L53.605,27.51l2.553-5.298
-        l9.43,4.542C60.494,15.964,49.594,8.853,37.242,8.853C19.95,8.853,5.88,22.921,5.88,40.214s14.07,31.362,31.362,31.362
-        c10.183,0,19.769-4.975,25.647-13.307l4.805,3.391c-6.979,9.892-18.361,15.797-30.452,15.797C16.707,77.458,0,60.75,0,40.214
-        S16.707,2.971,37.242,2.971z" />
-                        </g>
-                    </svg></i></div>
-            <p>Rotate your device!</p>
-        </div>
-    </div>
+    <!-- <div class="loader"></div> -->
     <div class="grain" style="display: block;"></div>
     <section class="lftHeader">
         <div class="logo">
@@ -106,16 +94,15 @@
                             </div> -->
                             <div class="row">
                                 <div class="lftSec">
-                                    <div class="mainTitle"><i>No</i> <i>time</i> <i>to</i> <i>explain,</i><br><span><i>hop</i> <i>on!</i></span></div>
+                                    <div class="mainTitle"><i>Things</i> <i>we</i> <i>didn't</i> <i>screw!</i></div>
                                     <!-- <div class="title">(People behind the sins)</div> -->
                                     <div class="scrollDownArr"><img class="lazyload" data-src="images/svg/arrow-down.svg" alt=""></div>
                                 </div>
                             </div>
-                            <div class="tagLine"><span class="mktLine">Delicious. <i>Marketing.</i> Agency.</span></div>
                         </div>
                     </div>
                 </section>
-                <section class="project section intro2">
+                <!-- <section class="project section intro2">
                     <div class="banner work">
                         <div class="container">
                             <div class="row">
@@ -126,8 +113,8 @@
                             </div>
                         </div>
                     </div>
-                </section>
-                <section class="project section" color="#e60000">
+                </section> -->
+                <section class="project section" color="#ffd435">
                     <div class="row rowRev">
                         <div class="prjTitle">
                             <p class="title animate" data-delay="500" data-anime="">Connor Jones</p>
@@ -159,7 +146,7 @@
                         <div class="prjImg"><img class="lazyload" data-src="videos/WAATP/hm.png" alt=""></div>
                     </div>
                 </section>
-                <section class="project video section mossyBees" color="#ffffff">
+                <section class="project video section mossyBees" color="">
                     <div class="row rowRev">
                         <div class="prjTitle">
                             <p class="title animate" data-delay="500" data-anime="">Mossy Bees</p>
@@ -240,7 +227,6 @@
                 </section>
                 <section class="logoSection section fp-auto-height" color=rgba(0,0,0,0)>
                     <div class="row">
-                        <a href="https://leonamunro.co.nz/" target="_blank"><img class="lazyload" data-src="images/clients-logo/leona-munro-logo-rust.png" alt=""></a>
                         <a href="https://connorjones.co.nz/" target="_blank"><img class="lazyload" data-src="images/clients-logo/connor-constructions.png" alt=""></a>
                         <a href="https://www.baconbuttiestation.com/" target="_blank"><img class="lazyload" data-src="images/clients-logo/bacon-buttie-station@2x.png" alt=""></a>
                         <a href="https://www.debtorinfo.com/#/home" target="_blank"><img class="lazyload" data-src="images/clients-logo/debtorinf logo@2x.png" alt=""></a>
@@ -324,7 +310,14 @@
     </script> -->
     <script>
     $(window).on('load', function() {
-        
+        var d = 100;
+        setTimeout(function() {
+            $('.mainTitle i').map(function() {
+                $(this).delay(d).animate({ opacity: 1 }, 0);
+                d = d + 100;
+            });
+
+        }, 1000);
     });
     </script>
 </body>
