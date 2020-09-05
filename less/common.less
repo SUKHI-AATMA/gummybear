@@ -1,4 +1,5 @@
 * {
+
     cursor: url("/images/svg/paw_red.png"), auto;
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +13,7 @@ body {
 }
 
 .a {
-    fill: #e00909;
+    fill: rgba(224,9,9,0);
     transition: fill 0.3s ease-in-out;
 }
 
@@ -288,6 +289,7 @@ img {
     height: 25px;
     /*border-width: 0 0 2px 2px;*/
     transform: translate(0, 100px);
+    display: none;
 
     /*margin: 0;*/
     img {
@@ -308,8 +310,8 @@ img {
     z-index: 10;
     pointer-events: none;
     will-change: height;
-    transition: height 0.3s ease-in-out;
-
+    opacity: 0;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
     .col1 {
         display: table-cell;
         width: 11%;
@@ -363,7 +365,7 @@ section {
     position: relative;
     width: 81%;
     z-index: 11;
-
+    opacity: 0;
     &.intro {
         margin: 0 0% 0 0%;
     }

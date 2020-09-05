@@ -2,14 +2,11 @@ var docHei = $(document).height(),
     docWid = $(document).width(),
     winWid = $(window).width(),
     winHei = $(window).height(),
-    ftHei = $('footer').outerHeight(true),
-    d = 100;
+    ftHei = $('footer').outerHeight(true);
 $(document).ready(function() {
     $('nav .hamburger').on('click', function() {
         $('body').toggleClass('active');
-        if(winWid > 768) {
-            inViewport($('footer'));
-        }
+        inViewport($('footer'));
     });
     var pgName = location.href.split("/").slice(-1),
         pgNames = pgName[0].split(".");
@@ -17,8 +14,12 @@ $(document).ready(function() {
     // if (pgNames[0] == 'index-new') {
     //     $('body').attr('data-page', 'home');
     // }
+    var d = 100;
     setTimeout(function() {
-        firstLoad();
+        $('.mainTitle i').map(function() {
+            $(this).delay(d).animate({ opacity: 1 }, 0);
+            d = d + 100;
+        });
     }, 1000);
 
     // console.log(pgName[0].indexOf('prj_'));
@@ -26,15 +27,16 @@ $(document).ready(function() {
         (pgName[0].indexOf('prj_') >= 0) ? $('.banner .container').css({ height: winHei }): $('.banner.work').css({ height: winHei });
     } else {
         //First section height without top margin
-        $('#fullpage .intro').css({ height: winHei - parseInt($('#fullpage').css('marginTop')) });
+        $('#fullpage .intro').css({height: winHei - parseInt($('#fullpage').css('marginTop')) });
 
         //Auto play video
-        $('video').attr('autoplay', true);
+        $('video').attr('autoplay',true);
 
-        if ($('#fullpage').length == 0) {
-            $('section.banner').css({ height: winHei - parseInt($('section.banner').css('marginTop')) });
+        if($('#fullpage').length == 0)
+        {
+            $('section.banner').css({height: winHei - parseInt($('section.banner').css('marginTop'))  });
         }
-
+       
     }
 
 });
@@ -88,7 +90,7 @@ function onScrollDiv() {
             }
         }
     }
-    if ($('#fullpage').length == 0 || ($('#fullpage').length > 0 && winWid < 768)) {
+    if ($('#fullpage').length == 0  || ($('#fullpage').length > 0 && winWid < 768) ) {
         if ($(window).scrollTop() < 200) {
             $('.logo .a').css({ fill: '#e00909' });
             $('.btmCopy i').css({ color: '#e00909' });
@@ -97,15 +99,22 @@ function onScrollDiv() {
             $('.btmCopy i').css({ color: '#FFCF31' });
         }
     }
-    if (winWid < 768) {
-        if ($(document).scrollTop() > 200) {
+    if(winWid < 768)
+    {
+        if($(document).scrollTop() > 200)
+        {
             $('body').addClass('pageScrolled');
-        } else {
+        }
+        else
+        {
             $('body').removeClass('pageScrolled');
         }
-        if ($(document).scrollTop() > 60) {
+        if($(document).scrollTop() > 20)
+        {
             $('.tagLine').fadeOut();
-        } else {
+        }
+        else
+        {
             $('.tagLine').fadeIn();
         }
 
@@ -248,32 +257,32 @@ if ($('#fullpage').length && winWid > 767) {
 // }
 function animateText() {
     // if (winWid > 767) {
-    var clList = ['.title', '.pageSubTitle', '.text', 'img', '.mainTitle', '.position', '.desc']
-    clList.forEach(function(item, index) {
-        var anim = document.querySelectorAll(item);
-        for (var i = 0, nbs = anim.length; i < nbs; i++) {
-            var animELe = anim[i];
-            var rect = animELe.getBoundingClientRect();
-            var isVisible = ((rect.top - window.innerHeight) < 0 && (rect.bottom) > -50) ? true : false;
+        var clList = ['.title', '.pageSubTitle', '.text', 'img', '.mainTitle', '.position', '.desc']
+        clList.forEach(function(item, index) {
+            var anim = document.querySelectorAll(item);
+            for (var i = 0, nbs = anim.length; i < nbs; i++) {
+                var animELe = anim[i];
+                var rect = animELe.getBoundingClientRect();
+                var isVisible = ((rect.top - window.innerHeight) < 0 && (rect.bottom) > -50) ? true : false;
 
-            // console.log(isVisible);
-            if (isVisible) {
-                // if (animELe.hasAttribute('data-anime')) {
-                // var classL = animELe.getAttribute('data-anime');
-                // var dataDelay = animELe.getAttribute('data-delay');
-                if (index != 3) {
-                    animELe.classList.remove('upTxt');
-                    animELe.classList.remove('downTxt');
-                } else {
-                    animELe.classList.add('animate');
+                // console.log(isVisible);
+                if (isVisible) {
+                    // if (animELe.hasAttribute('data-anime')) {
+                    // var classL = animELe.getAttribute('data-anime');
+                    // var dataDelay = animELe.getAttribute('data-delay');
+                    if (index != 3) {
+                        animELe.classList.remove('upTxt');
+                        animELe.classList.remove('downTxt');
+                    } else {
+                        animELe.classList.add('animate');
+                    }
+                    // animELe.classList.add('focusedTxt');
+                    // animELe.removeAttribute('data-anime');
+                    // }
                 }
-                // animELe.classList.add('focusedTxt');
-                // animELe.removeAttribute('data-anime');
-                // }
             }
-        }
 
-    });
+        });
     // }
     // for (var i = 0, nbs = animT.length; i < nbs; i++) {
     //     var animELe = animT[i];
@@ -342,27 +351,11 @@ $(window).on('load', function() {
     onScrollDiv()
     setTimeout(function() { animateText(); }, 500);
     if ($('#fullpage').length == 0) {
-        if (winWid > 767) {
+        if(winWid > 767)
+        {
             inViewport($('footer'));
         }
     }
 }).on('resize', function() {
     // if(data-page == home)
 });
-
-function firstLoad() {
-    $('section,.grid').animate({opacity: 1},300);
-    setTimeout(function(){
-        $('.mainTitle i').map(function() {
-            $(this).delay(d).animate({ opacity: 1 }, 0);
-            d = d + 100;
-        });
-        setTimeout(function() {
-            if(!$('.banner').hasClass('about'))
-            {
-                $('.scrollDownArr').fadeIn();
-            }
-            $('.a').css({fill: 'rgba(224,9,9,1)'});
-        }, 100)
-    },300)
-}
