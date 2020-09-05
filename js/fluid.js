@@ -235,7 +235,7 @@ var s, w, h, os, mainvideo, myScroll, isScrolling = !1,
                 s > 200 ? $("header .up").addClass("show") : $("header .up").removeClass("show"),
                 detectEl($(".random")) && $(".random > li").each(function() { s > $(this).offset().top - h + 200 && $(this).addClass("on") }), !mobile.detect()) {
                 var e = os - s > 200 ? 200 : os - s < -200 ? -200 : os - s;
-                if ($("body:not(.hold) .skew").css("transform", "skewY(" + -.1 * e + "deg)"), $(".cap").each(function() { s > $(this).offset().top - 80 && s < $(this).offset().top + $(this).outerHeight() - 80 ? $(this).addClass("focused") : $(this).removeClass("focused") }), $(".media").each(function() { s > $(this).offset().top - h + 200 && !$(this).hasClass("on") && revealMedia($(this), $(this).index("body .media")) }), detectEl($(".parallel")))
+                if ($("body:not(.hold) .skew").css("transform", "skewY(" + -.1 * e + "deg)"), $(".cap").each(function() { s > $(this).offset().top - 80 && s < $(this).offset().top + $(this).outerHeight() - 80 ? $(this).addClass("focusedS") : $(this).removeClass("focusedS") }), $(".media").each(function() { s > $(this).offset().top - h + 200 && !$(this).hasClass("on") && revealMedia($(this), $(this).index("body .media")) }), detectEl($(".parallel")))
                     if (s > $(".parallel").offset().top - .5 * h && s < $(".parallel").offset().top + $(".parallel").outerHeight()) {
                         var i = (s - $(".parallel").offset().top + .5 * h) / ($(".parallel").outerHeight() + .5 * h);
                         $(".parallel > li:eq(0)").css("transform", "translateY(-" + 100 * i + "px)"), $(".parallel > li:eq(1)").css("transform", "translateY(" + 100 * i + "px)")
@@ -245,16 +245,16 @@ var s, w, h, os, mainvideo, myScroll, isScrolling = !1,
                     i = $(this).offset().top + $(this).outerHeight() - h,
                     t = $(this).attr("color");
                 if (s > e && s < i) {
-                    $(this).hasClass("focused") || (focused = $(this).index(), null != goo && goo.flow(t, "in", $(this).hasClass("up") ? "up" : "down"), $(this).removeClass("up down").addClass("focused"), $("video", this).length > 0 && $("video", this)[0].play());
+                    $(this).hasClass("focusedS") || (focused = $(this).index(), null != goo && goo.flow(t, "in", $(this).hasClass("up") ? "up" : "down"), $(this).removeClass("up down").addClass("focusedS"), $("video", this).length > 0 && $("video", this)[0].play());
                     var o = (s - e) / (i - e);
                     $(".visual", this).css({
                         transform: "translateY(" + (70 - 30 * o) + "%)"
                     }), s >= $(this).offset().top ? $(this).addClass("half") : $(this).removeClass("half")
-                } else s < e ? ($(this).index() == focused && $(this).hasClass("focused") && null != goo && goo.flow(null, "out", "down"), $(this).removeClass("focused up half").addClass("down"), $(".visual", this).css({ transform: "translateY(70%)" })) : ($(this).index() == focused && $(this).hasClass("focused") && null != goo && goo.flow(null, "out", "up"), $(this).removeClass("focused down half").addClass("up"), $(".visual", this).css({ transform: "translateY(40%)" }))
+                } else s < e ? ($(this).index() == focused && $(this).hasClass("focusedS") && null != goo && goo.flow(null, "out", "down"), $(this).removeClass("focused up half").addClass("down"), $(".visual", this).css({ transform: "translateY(70%)" })) : ($(this).index() == focused && $(this).hasClass("focusedS") && null != goo && goo.flow(null, "out", "up"), $(this).removeClass("focused down half").addClass("up"), $(".visual", this).css({ transform: "translateY(40%)" }))
             }) : $(".project").each(function() {
                 var e = $(this).offset().top - .6666 * h,
                     i = $(this).offset().top;
-                s > e && s < i ? $(this).addClass("focused") : $(this).removeClass("focused")
+                s > e && s < i ? $(this).addClass("focusedS") : $(this).removeClass("focusedS")
             })
         },
         // menu: {

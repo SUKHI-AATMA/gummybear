@@ -80,9 +80,9 @@
         font-size: 18px;
     }
 
-    section.content .row:nth-child(3) .contentBox {
+    /*section.content .row:nth-child(3) .contentBox {
         margin: 0 0 200px 4%;
-    }
+    }*/
 
     section.quicklinks a {
         font-size: 28px;
@@ -366,6 +366,7 @@
         width: 100%;
 
         &.work {
+
             .container {
                 height: auto;
                 margin: 0;
@@ -801,10 +802,11 @@
         margin: 30% 0;
         padding: 0;
 
-        .row {
+        .row, .row.rowRev {
+            flex-direction: column;
             .contentBox {
-                margin: 0 5% 30%;
-                width: 90%;
+                margin: 0 10% 30%;
+                width: 80%;
 
                 .title {
                     text-align: left;
@@ -834,14 +836,17 @@
                     }
                 }
             }
-
-            &:nth-child(2),
+            .img {
+                margin: 0 auto;
+                width: 80%;
+            }
+            /*&:nth-child(2),
             &:nth-child(4),
             &:nth-child(5) {
                 .contentBox {
                     margin: 0 5% 30%;
                 }
-            }
+            }*/
         }
     }
 

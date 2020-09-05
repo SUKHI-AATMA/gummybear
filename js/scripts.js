@@ -146,8 +146,8 @@ if ($('#fullpage').length && winWid > 767) {
                 $('.btmCopy').delay(100).fadeIn();
             }
             (direction == 'down') ?
-            ($(origin.item).removeClass('down up').addClass('up'), $(destination.item).removeClass('down up').addClass('focused')) :
-            ($(origin.item).removeClass('down up').addClass('down'), $(destination.item).removeClass('down up').addClass('focused'));
+            ($(origin.item).removeClass('down up').addClass('up').removeClass('focused'), $(destination.item).removeClass('down up').addClass('focused')) :
+            ($(origin.item).removeClass('down up').addClass('down').removeClass('focused'), $(destination.item).removeClass('down up').addClass('focused'));
             goo.flow($(origin.item).attr('color'), "out", "up");
             setTimeout(function() {
                 goo.flow($(destination.item).attr('color'), "in", "down");
@@ -248,24 +248,30 @@ if ($('#fullpage').length && winWid > 767) {
 // }
 function animateText() {
     // if (winWid > 767) {
-    var clList = ['.title', '.pageSubTitle', '.text', 'img', '.mainTitle', '.position', '.desc']
+    var clList = ['.title', '.pageSubTitle', '.text', 'img', '.mainTitle', '.position', '.desc', 'section.content .row .img svg']
     clList.forEach(function(item, index) {
         var anim = document.querySelectorAll(item);
+        // console.log(anim);
         for (var i = 0, nbs = anim.length; i < nbs; i++) {
             var animELe = anim[i];
             var rect = animELe.getBoundingClientRect();
             var isVisible = ((rect.top - window.innerHeight) < 0 && (rect.bottom) > -50) ? true : false;
 
-            // console.log(isVisible);
             if (isVisible) {
+            // console.log( animELe+ '--' +isVisible);
                 // if (animELe.hasAttribute('data-anime')) {
                 // var classL = animELe.getAttribute('data-anime');
                 // var dataDelay = animELe.getAttribute('data-delay');
-                if (index != 3) {
+                if (index == 3) {
+                    console.log(1)
+                    animELe.classList.add('animate');
+                } else if(index == 7){
+                    console.log(2)
+                    animELe.classList.add('animate');
+                } else {
+                    // console.log(3)
                     animELe.classList.remove('upTxt');
                     animELe.classList.remove('downTxt');
-                } else {
-                    animELe.classList.add('animate');
                 }
                 // animELe.classList.add('focusedTxt');
                 // animELe.removeAttribute('data-anime');
