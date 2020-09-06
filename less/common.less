@@ -317,13 +317,15 @@ img {
     will-change: height;
     opacity: 0;
     transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    /*border-right: 1px solid rgba(187, 187, 187, .3);
+    border-left: 1px solid rgba(187, 187, 187, .3);*/
 
     .col1 {
         display: table-cell;
         width: 11%;
         /*min-width: 210px;*/
         height: 100%;
-        /*border-right: 1px solid rgba(187,187,187,.3);*/
+        border-right: 1px solid rgba(187, 187, 187, .3);
     }
 
     .col2 {
@@ -359,7 +361,7 @@ img {
         display: table-cell;
         width: 8%;
         height: 100%;
-        /*border-left: 1px solid rgba(187,187,187,.3);*/
+        border-left: 1px solid rgba(187, 187, 187, .3);
         /*background: #fff;*/
     }
 }
@@ -453,7 +455,7 @@ section {
 .lftHeader,
 .rgtHeader {
     display: flex;
-    border-right: 1px solid rgba(187, 187, 187, .3);
+    /*border-right: 1px solid rgba(187, 187, 187, .3);*/
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
@@ -475,8 +477,8 @@ section {
     left: unset;
     right: 0;
     padding: 2% 0;
-    border-left: 1px solid rgba(187, 187, 187, .3);
-    border-right: 0px solid rgba(187, 187, 187, .3);
+    /*border-left: 1px solid rgba(187, 187, 187, .3);
+    border-right: 0px solid rgba(187, 187, 187, .3);*/
     padding: 0 0 2%;
 
     nav {
@@ -846,21 +848,22 @@ body {
 }
 
 footer {
-    background: #1c1c1c;
+    background: #FFCF31;
     position: relative;
     padding: 0 8% 0 10%;
     z-index: 11;
     width: 100%;
-    overflow: hidden;
+    margin: 4.6% 0 0;
+    /*overflow-x: hidden;*/
 
     &:before {
-        background: #1c1c1c;
+        background: #FFCF31;
         display: block;
         content: '';
         position: absolute;
         bottom: 0;
         left: 50%;
-        width: 200%;
+        width: 100%;
         height: 100%;
         transform: translate(-50%, 0);
         z-index: 0;
@@ -919,13 +922,13 @@ footer {
             }
         }
 
-        &:last-child {
+        &:nth-child(3) {
             position: absolute;
             bottom: 0;
             left: 0;
             margin: 0 8% 0 9%;
             padding: 0 5%;
-            width: 100%;
+            width: 73%;
             height: auto;
 
             .col.copy {
@@ -1005,7 +1008,8 @@ footer {
             }
 
             &.copy {
-                color: #7E7E7E;
+                /*color: #7E7E7E;*/
+                color: #fff;
                 /*font-family: @os;*/
                 font-family: @ls;
                 font-size: 18px;
@@ -1017,6 +1021,14 @@ footer {
                 width: 100%;
             }
         }
+    }
+
+    .ftrWave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translate(0, -80%);
     }
 }
 
@@ -1371,6 +1383,7 @@ section.gallery_type1 {
     &.singleImg {
         .row {
             display: table-column;
+
             .col {
                 width: 100%;
             }
@@ -1933,26 +1946,24 @@ section.team {
 
         &:nth-child(2).intro2 {
             .row {
-                .prjTitle {
-                    padding: 0;
-                    width: 100%;
 
-                    .mainTitle {
-                        font-size: 70px;
-                        color: #FFCF31;
-                        /*&:nth-child(1) {
+
+                .mainTitle {
+                    font-size: 70px;
+                    color: #FFCF31;
+                    /*&:nth-child(1) {
                             margin: 0 0 20px;
                         }*/
 
-                        &:first-child {
-                            margin: 30px 0 0;
-                        }
+                    &:first-child {
+                        margin: 30px 0 0;
+                    }
 
-                        &:last-child {
-                            transform: translate(0px, 55px);
-                        }
+                    &:last-child {
+                        transform: translate(0px, 55px);
                     }
                 }
+
             }
         }
 
@@ -2053,11 +2064,12 @@ section.team {
     }
 
     footer.section {
+        margin: 10% 0 0;
         overflow: visible;
         padding: 0;
 
         &:before {
-            background: #1c1c1c;
+            background: #FFCF31;
             display: block;
             content: '';
             position: absolute;
@@ -2084,7 +2096,7 @@ section.team {
                 }
             }
 
-            &:last-child {
+            &.ftrCopy {
                 position: absolute;
                 bottom: 0;
                 left: 0;
@@ -2097,6 +2109,11 @@ section.team {
                     padding: 10px 0;
                 }
             }
+        }
+        .ftrWave {
+          width: 125%;
+          transform: translate(-11%, -80%);
+          left: 0;
         }
     }
 }

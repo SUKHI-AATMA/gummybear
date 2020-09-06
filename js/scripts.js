@@ -48,10 +48,10 @@ function inViewport($el) {
     var fvh = Math.max(0, t > 0 ? Math.min(elH, H - t) : Math.min(b, H));
     // console.log(fvh);
     if (!$('body').hasClass('active')) {
-        $('.lftHeader,.rgtHeader, .grid').css({ height: $(window).height() - fvh });
+        $('.lftHeader,.rgtHeader').css({ height: $(window).height() - fvh });
         $('.btmCopy').fadeOut();
     } else {
-        $('.lftHeader,.rgtHeader, .grid').css({ height: '100%' });
+        $('.lftHeader,.rgtHeader').css({ height: '100%' });
         $('.btmCopy').delay(100).fadeIn();
     }
 }
@@ -126,23 +126,29 @@ if ($('#fullpage').length && winWid > 767) {
                 $('.btmCopy i').css({ color: '#FFCF31' })
             }
             // console.log(destination.index)
+            if ($(destination.item).hasClass('intro2')) {
+                $('.mainTitle i').map(function() {
+                    $(this).delay(d).animate({ opacity: 1 }, 0);
+                    d = d + 100;
+                });
+            }
             // if ($(destination.item).attr('id') == "footer") {
             // } else {
             // }
             if (destination.index == ($('.section').length - 1) && direction == 'down') {
                 // console.log(1);
                 // $('.grid').css({ height: (winHei - $(destination.item).outerHeight()) })
-                $('.rgtHeader, .lftHeader, .grid').animate({ height: $(window).outerHeight(true) - $('footer').outerHeight(true) }, 100, 'linear');
+                $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) - $('footer').outerHeight(true) }, 100, 'linear');
                 $('.btmCopy').fadeOut();
             } else if (destination.index == ($('.section').length - 2) && direction == 'up') {
                 // console.log(2);
                 // inViewport($('footer'));
-                $('.rgtHeader, .lftHeader, .grid').animate({ height: $('.logoSection').outerHeight(true) }, 100, 'linear');
+                $('.rgtHeader, .lftHeader').animate({ height: $('.logoSection').outerHeight(true) }, 100, 'linear');
                 $('.btmCopy').fadeOut();
             } else {
                 // console.log(3);
                 // $('.grid').css({ height: '100%' })
-                $('.rgtHeader, .lftHeader, .grid').animate({ height: $(window).outerHeight(true) }, 100, 'linear');
+                $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) }, 100, 'linear');
                 $('.btmCopy').delay(100).fadeIn();
             }
             (direction == 'down') ?
@@ -359,7 +365,7 @@ $(window).on('load', function() {
 function firstLoad() {
     $('section,.grid').animate({opacity: 1},300);
     setTimeout(function(){
-        $('.mainTitle i').map(function() {
+        $('.intro .mainTitle i').map(function() {
             $(this).delay(d).animate({ opacity: 1 }, 0);
             d = d + 100;
         });
