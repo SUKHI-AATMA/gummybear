@@ -7,7 +7,7 @@ var docHei = $(document).height(),
 $(document).ready(function() {
     $('nav .hamburger').on('click', function() {
         $('body').toggleClass('active');
-        if(winWid > 768) {
+        if (winWid > 768) {
             inViewport($('footer'));
         }
     });
@@ -49,10 +49,10 @@ function inViewport($el) {
     // console.log(fvh);
     if (!$('body').hasClass('active')) {
         $('.lftHeader,.rgtHeader').css({ height: $(window).height() - fvh });
-        $('.btmCopy').fadeOut();
+        // $('.btmCopy').fadeOut();
     } else {
         $('.lftHeader,.rgtHeader').css({ height: '100%' });
-        $('.btmCopy').delay(100).fadeIn();
+        // $('.btmCopy').delay(100).fadeIn();
     }
 }
 // function ftrHdrAnim() {
@@ -264,14 +264,14 @@ function animateText() {
             var isVisible = ((rect.top - window.innerHeight) < 0 && (rect.bottom) > -50) ? true : false;
 
             if (isVisible) {
-            // console.log( animELe+ '--' +isVisible);
+                // console.log( animELe+ '--' +isVisible);
                 // if (animELe.hasAttribute('data-anime')) {
                 // var classL = animELe.getAttribute('data-anime');
                 // var dataDelay = animELe.getAttribute('data-delay');
                 if (index == 3) {
                     console.log(1)
                     animELe.classList.add('animate');
-                } else if(index == 7){
+                } else if (index == 7) {
                     console.log(2)
                     animELe.classList.add('animate');
                 } else {
@@ -363,18 +363,26 @@ $(window).on('load', function() {
 });
 
 function firstLoad() {
-    $('section,.grid').animate({opacity: 1},300);
-    setTimeout(function(){
+    $('section,.grid').animate({ opacity: 1 }, 300);
+    setTimeout(function() {
         $('.intro .mainTitle i').map(function() {
             $(this).delay(d).animate({ opacity: 1 }, 0);
             d = d + 100;
         });
         setTimeout(function() {
-            if(!$('.banner').hasClass('about'))
-            {
+            if (!$('.banner').hasClass('about')) {
                 $('.scrollDownArr').fadeIn();
             }
-            $('.a').css({fill: 'rgba(224,9,9,1)'});
+            $('.a').css({ fill: 'rgba(224,9,9,1)' });
         }, 100)
-    },300)
+    }, 300)
+}
+if($('.prjCarousel').length && winWid > 768){
+    $('.prjCarousel').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"><span></span></button>',
+        nextArrow: '<button type="button" class="slick-next"><span></span></button>',
+    });
 }

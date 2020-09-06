@@ -915,7 +915,7 @@ footer {
 
         &:nth-child(2) {
             flex-direction: row;
-            padding: 3% 5% 10%;
+            padding: 3% 5% 5%;
 
             span {
                 width: 50%;
@@ -1073,8 +1073,8 @@ footer {
 }
 
 .banner {
-    background: url(/images/mockups-1@2x.png) no-repeat 96% center;
-    background-size: 50%;
+    /*background: url(/images/mockups-1@2x.png) no-repeat 96% center;*/
+    /*background-size: 50%;*/
 
     .container {
         /*align-items: center;*/
@@ -1162,7 +1162,6 @@ footer {
                 }
             }
         }
-
     }
 
     &.work {
@@ -1174,6 +1173,20 @@ footer {
         .container {
             height: 600px;
             margin: 0 10% 100px;
+        }
+    }
+
+    &.project {
+        .container {
+            .lftSec {
+                width: 45%;
+                .text {
+                    width: 80%;
+                }
+            }
+            .rgtSec {
+                width: 55%;
+            }
         }
     }
 }
@@ -1464,6 +1477,7 @@ section.pagination {
     display: flex;
     margin: 50px 8% 0 10%;
     padding: 0;
+    z-index: 100;
     /*border-top: 1px solid rgba(187,187,187,.3);*/
 
     .bttn {
@@ -2110,10 +2124,11 @@ section.team {
                 }
             }
         }
+
         .ftrWave {
-          width: 125%;
-          transform: translate(-11%, -80%);
-          left: 0;
+            width: 125%;
+            transform: translate(-11%, -80%);
+            left: 0;
         }
     }
 }
@@ -2526,6 +2541,67 @@ section.aemContact {
             a {
                 display: none;
             }
+        }
+    }
+}
+
+.prjCarousel {
+    margin: 10% 8% 10% 11%;
+    padding: 0 10%;
+    position: relative;
+    height: 700px;
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translate(0, -50%);
+        border: none;
+        background: #e00909;
+        font-size: 0px;
+        padding: 0;
+        border-radius: 50px;
+        /*position: relative;*/
+        width: 60px;
+        height: 60px;
+        span {
+            border: 3px solid #fff;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(120%, -50%) rotate(-45deg);
+            width: 35%;
+            height: 35%;
+            border-color: #fff transparent transparent #fff;
+        }
+        &.slick-next {
+            left: unset;
+            right: 5%;
+            span {
+                transform: translate(70%, -50%) rotate(-45deg);
+                border-color: transparent #fff #fff transparent;
+            }
+        }
+    }
+
+    .slick-track {
+        height: 100%;
+    }
+
+    .slick-list {
+        height: 100%;
+        /*width: 80%;*/
+        /*margin: 0 auto;*/
+    }
+
+    .slick-slide {
+        width: 100%;
+
+        img {
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+            width: auto;
         }
     }
 }
