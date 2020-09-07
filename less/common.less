@@ -1181,10 +1181,12 @@ footer {
         .container {
             .lftSec {
                 width: 45%;
+
                 .text {
                     width: 80%;
                 }
             }
+
             .rgtSec {
                 width: 55%;
             }
@@ -2562,6 +2564,7 @@ section.aemContact {
         /*position: relative;*/
         width: 60px;
         height: 60px;
+
         span {
             border: 3px solid #fff;
             position: absolute;
@@ -2572,9 +2575,11 @@ section.aemContact {
             height: 35%;
             border-color: #fff transparent transparent #fff;
         }
+
         &.slick-next {
             left: unset;
             right: 5%;
+
             span {
                 transform: translate(70%, -50%) rotate(-45deg);
                 border-color: transparent #fff #fff transparent;
@@ -2602,4 +2607,31 @@ section.aemContact {
             width: auto;
         }
     }
+}
+
+.termsPage {
+    font-family: @ka;
+
+    section,
+    .grid {
+        opacity: 1;
+    }
+
+    section#content {
+        padding: 5% 5%;
+    }
+
+    .a {
+        fill: #e00909;
+    }
+
+    .rgtHeader .btmCopy .mktLine {
+        display: block;
+    }
+
+    p {
+        font-size: 24px;
+        margin: 0 0 25px;
+    }
+
 }
