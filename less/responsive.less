@@ -28,6 +28,25 @@
 }
 
 @media only screen and (max-width: 1440px) {
+    .prjCarousel {
+        padding: 0 7%;
+
+        .slick-arrow {
+            left: 2%;
+
+            &.slick-next {
+                right: 2%;
+            }
+        }
+
+        .slick-slide {
+            img {
+                margin: 5% auto;
+                height: 90%;
+            }
+        }
+    }
+
     .pageSubTitle {
         font-size: 25px;
     }
@@ -94,6 +113,11 @@
 }
 
 @media only screen and (max-width: 1366px) {
+    .prjCarousel .slick-arrow {
+        width: 50px;
+        height: 50px;
+    }
+
     .title {
         font-size: 35px;
         margin: 0 0 30px;
@@ -213,7 +237,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-    
+
     .lftHeader,
     .rgtHeader {
         border: none;
@@ -355,7 +379,7 @@
             }
 
             ul {
-                top: 60%;
+                top: 50%;
                 transform: translate(0, -50%);
             }
         }
@@ -415,16 +439,20 @@
                 }
             }
         }
+
         &.project {
             .container {
                 .row {
                     flex-direction: column;
+
                     .lftSec {
                         width: 100%;
+
                         .scrollDownArr {
                             display: none !important;
                         }
                     }
+
                     .rgtSec {
                         margin: 50px 0 0;
                         width: 100%;
@@ -536,7 +564,7 @@
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            margin: 30% 0%;
+            margin: 30% 0% 0;
             /*min-height: 600px;*/
             text-align: center;
             width: 100%;
@@ -551,16 +579,28 @@
             &.intro2 {
                 padding: 0 5%;
 
-                .mainTitle {
-                    font-size: 30px;
+                .row {
+                    .mainTitle {
+                        font-size: 30px;
 
-                    &:first-child {
-                        margin: 0;
+                        &:first-child {
+                            margin: 0;
+                        }
+
+                        &:last-child {
+                            transform: translate(0, 0);
+                            margin: 55px 0 0;
+                        }
                     }
+                }
 
-                    &:last-child {
-                        transform: translate(0, 0);
-                        margin: 55px 0 0;
+                &.focused {
+                    .row {
+                        .mainTitle {
+                            i {
+                                opacity: 1;
+                            }
+                        }
                     }
                 }
             }
@@ -576,6 +616,9 @@
                     a {
                         margin: 30px 0;
                         width: 100%;
+                        img {
+                            opacity: 1;
+                        }
                     }
                 }
             }
@@ -646,10 +689,14 @@
         }
 
         footer.section {
-            margin: 0;
-            overflow: hidden;
+            margin: 12% 0 0;
+            /*overflow: hidden;*/
             padding: 50px 0 0;
             width: 100%;
+
+            &:before {
+                width: 100%;
+            }
 
             .row {
                 flex-direction: column;
@@ -713,24 +760,31 @@
                     }
                 }
 
-                &:last-child {
-                    padding: 0;
-                    text-align: center;
-                    border-top: 1px solid rgba(255, 255, 255, 0.3);
-                    margin: 30px 0 0;
+
+                &.ftrCopy {
+                    border-top: 1px solid #fff;
                     position: relative;
+                    margin: 10px 0 0;
 
                     .col {
                         justify-content: center;
                     }
                 }
+
+
+
+            }
+
+            .ftrWave {
+                transform: translate(0, -80%);
+                width: 100%;
             }
         }
     }
 
     footer {
-        margin: 0;
-        overflow: hidden;
+        margin: 12% 0 0;
+        /*overflow: hidden;*/
         padding: 50px 0 0;
         width: 100%;
 
@@ -800,17 +854,23 @@
                 }
             }
 
-            &:last-child {
-                padding: 0;
-                text-align: center;
-                border-top: 1px solid rgba(255, 255, 255, 0.3);
-                margin: 30px 0 0;
+            &.ftrCopy {
+                border-top: 1px solid #fff;
                 position: relative;
+                margin: 10px 0 0;
+                width: 100%;
 
                 .col {
                     justify-content: center;
                 }
             }
+
+            .ftrWave {
+                transform: translate(0, -80%);
+                width: 100%;
+            }
+
+
         }
     }
 
@@ -822,10 +882,12 @@
         margin: 30% 0;
         padding: 0;
 
-        .row, .row.rowRev {
+        .row,
+        .row.rowRev {
             flex-direction: column;
+
             .contentBox {
-                margin: 0 10% 30%;
+                margin: 20% 10% 0;
                 width: 80%;
 
                 .title {
@@ -856,10 +918,12 @@
                     }
                 }
             }
+
             .img {
-                margin: 0 auto;
+                margin: 50px auto 0;
                 width: 80%;
             }
+
             /*&:nth-child(2),
             &:nth-child(4),
             &:nth-child(5) {
@@ -1149,19 +1213,23 @@
             .col {
                 text-align: center !important;
                 width: 100%;
+
                 img {
                     width: 80% !important;
                 }
             }
         }
     }
+
     .prjCarousel {
         width: 100%;
         height: auto;
         margin: 0;
+
+        img {
+            margin: 20px 0;
+            width: 100%;
+        }
     }
 
-    .prjCarousel img {
-        width: 100%;
-    }
 }

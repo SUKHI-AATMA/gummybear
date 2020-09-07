@@ -269,10 +269,10 @@ function animateText() {
                 // var classL = animELe.getAttribute('data-anime');
                 // var dataDelay = animELe.getAttribute('data-delay');
                 if (index == 3) {
-                    console.log(1)
+                    // console.log(1)
                     animELe.classList.add('animate');
                 } else if (index == 7) {
-                    console.log(2)
+                    // console.log(2)
                     animELe.classList.add('animate');
                 } else {
                     // console.log(3)
