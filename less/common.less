@@ -98,8 +98,6 @@ a {
 }
 
 img {
-    display: block;
-    height: auto;
     transform: translate(0, 50px);
     opacity: 0;
     transition: transform 0.3s 0.1s ease-in-out, opacity 0.3s ease-in-out;
@@ -1146,6 +1144,7 @@ footer {
                 .rgtSec {
                     display: flex;
                     justify-content: flex-end;
+                    align-items: flex-start; /* new */
                     width: 100%;
 
                     img {
