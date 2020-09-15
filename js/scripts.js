@@ -4,6 +4,7 @@ var docHei = $(document).height(),
     winHei = $(window).height(),
     ftHei = $('footer').outerHeight(true),
     d = 100;
+    
 $(document).ready(function() {
     $('nav .hamburger').on('click', function() {
         $('body').toggleClass('active');
@@ -139,17 +140,17 @@ if ($('#fullpage').length && winWid > 767) {
                 // console.log(1);
                 // $('.grid').css({ height: (winHei - $(destination.item).outerHeight()) })
                 $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) - $('footer').outerHeight(true) }, 100, 'linear');
-                $('.btmCopy').fadeOut();
+                $('.btmCopy,  .lftHeader .social').fadeOut();
             } else if (destination.index == ($('.section').length - 2) && direction == 'up') {
                 // console.log(2);
                 // inViewport($('footer'));
                 $('.rgtHeader, .lftHeader').animate({ height: $('.logoSection').outerHeight(true) }, 100, 'linear');
-                $('.btmCopy').fadeOut();
+                $('.btmCopy,  .lftHeader .social').fadeOut();
             } else {
                 // console.log(3);
                 // $('.grid').css({ height: '100%' })
                 $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) }, 100, 'linear');
-                $('.btmCopy').delay(100).fadeIn();
+                $('.btmCopy,  .lftHeader .social').delay(100).fadeIn();
             }
             (direction == 'down') ?
             ($(origin.item).removeClass('down up').addClass('up').removeClass('focused'), $(destination.item).removeClass('down up').addClass('focused')) :
