@@ -1,77 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://gummybear.co.nz/</loc>
-  <lastmod>2020-09-06T05:10:59+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://gummybear.co.nz/capabilities.html</loc>
-  <lastmod>2020-09-06T05:10:59+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://gummybear.co.nz/work.html</loc>
-  <lastmod>2020-09-06T05:10:59+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://gummybear.co.nz/aem-websites.html</loc>
-  <lastmod>2020-09-06T05:10:59+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://gummybear.co.nz/about.html</loc>
-  <lastmod>2020-09-06T05:10:59+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://gummybear.co.nz/contact.html</loc>
-  <lastmod>2020-09-06T05:10:59+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://gummybear.co.nz/prj_connorjones.html</loc>
-  <lastmod>2020-09-06T05:10:59+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://gummybear.co.nz/prj_waatp.html</loc>
-  <lastmod>2020-09-06T05:10:59+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://gummybear.co.nz/prj_mossybees.html</loc>
-  <lastmod>2020-09-06T05:10:59+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://gummybear.co.nz/prj_leona_munro.html</loc>
-  <lastmod>2020-09-06T05:10:59+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://gummybear.co.nz/prj_baconbuttiestation.html</loc>
-  <lastmod>2020-09-06T05:10:59+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://gummybear.co.nz/prj_debtorinfo.html</loc>
-  <lastmod>2020-09-06T05:10:59+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://gummybear.co.nz/adobe-tech-stacks.html</loc>
-  <lastmod>2020-09-06T05:10:59+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>https://gummybear.co.nz/</loc>
+        <lastmod>2020-09-15T09:28:23+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://gummybear.co.nz/capabilities.html</loc>
+        <lastmod>2020-09-15T09:28:23+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://gummybear.co.nz/work.html</loc>
+        <lastmod>2020-09-15T09:28:23+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://gummybear.co.nz/aem-websites.html</loc>
+        <lastmod>2020-09-15T09:28:23+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://gummybear.co.nz/about.html</loc>
+        <lastmod>2020-09-15T09:28:23+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://gummybear.co.nz/contact.html</loc>
+        <lastmod>2020-09-15T09:28:23+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://gummybear.co.nz/prj_waatp.html</loc>
+        <lastmod>2020-09-15T09:28:23+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://gummybear.co.nz/prj_connorjones.html</loc>
+        <lastmod>2020-09-15T09:28:23+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://gummybear.co.nz/prj_mossybees.html</loc>
+        <lastmod>2020-09-15T09:28:23+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://gummybear.co.nz/prj_leona_munro.html</loc>
+        <lastmod>2020-09-15T09:28:23+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://gummybear.co.nz/prj_baconbuttiestation.html</loc>
+        <lastmod>2020-09-15T09:28:23+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://gummybear.co.nz/prj_debtorinfo.html</loc>
+        <lastmod>2020-09-15T09:28:23+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://gummybear.co.nz/aem-technology-stack.html</loc>
+        <lastmod>2020-09-15T09:28:23+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
 </urlset>
