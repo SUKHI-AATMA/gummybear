@@ -18,6 +18,71 @@ body {
     transition: fill 0.3s ease-in-out;
 }
 
+.opPage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*background: #fff;*/
+    transition: all 1.2s;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    z-index: 1000;
+
+    &:before {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 1.2s 0.2s;
+        width: 0px;
+        height: 0px;
+        z-index: 1001;
+        content: '';
+        border-radius: 50%;
+        /*animation: grainAnimation 1s steps(4) infinite;*/
+        background: url(../images/grain.png) repeat #fff;
+    }
+
+    &.home {
+        background: #e00909;
+    }
+
+    &.about {
+        background: #FFCF31;
+    }
+
+    &.capabilities {
+        background: #00b0f0;
+    }
+
+    &.work {
+        background: #fd5e0f;
+    }
+
+    &.contact {
+        background: #ff0c0c;
+    }
+
+    &.aem-websites {
+        background: #65c24a;
+    }
+
+    &.active {
+        height: 5000px;
+        width: 5000px;
+
+        &:before {
+            width: 5000px;
+            height: 5000px;
+        }
+    }
+}
+
+
+
+
 .slideUpEl {
     opacity: 0;
     transform: translate(0, 100px);
@@ -1017,6 +1082,7 @@ footer {
                         }
                     }
                 }
+
                 .ftrContact {
                     display: flex;
                     flex-direction: column;
@@ -1026,12 +1092,14 @@ footer {
                     display: flex;
                     flex-direction: row;
                     margin: 0 0 15px;
+
                     svg {
                         width: 50px;
                         height: 40px;
                         margin: 0 15px 0 0;
                         fill: #e00909;
                     }
+
                     &:nth-child(2) svg {
                         height: 35px;
                         margin: 2px 15px 0 0;
@@ -1740,7 +1808,7 @@ section.form {
 
         select {
             appearance: none;
-            background: url(/images/svg/arrow-select.svg) no-repeat calc(100% - 20px) center;
+            background: url(/images/svg/arrow-select.svg) no-repeat calc(100% - 20px) center #fff;
             background-size: 6%;
         }
 
