@@ -4,16 +4,31 @@ var docHei = $(document).height(),
     winHei = $(window).height(),
     ftHei = $('footer').outerHeight(true),
     d = 100;
+    $('body').append('<div class="opPage"></div>');
 $(document).ready(function() {
+    var pgName = location.href.split("/").slice(-1),
+        pgNames = pgName[0].split(".");
+    $('body').attr('data-page', (pgNames.length > 1) ? pgNames[0] : 'home');
     $('nav .hamburger').on('click', function() {
         $('body').toggleClass('active');
         if (winWid > 768) {
             inViewport($('footer'));
         }
     });
-    var pgName = location.href.split("/").slice(-1),
-        pgNames = pgName[0].split(".");
-    $('body').attr('data-page', (pgNames.length > 1) ? pgNames[0] : 'home');
+    $('.rgtHeader nav > ul > li > a, .customLink').on('click',function(e){
+        e.preventDefault();
+        var hrefval2 = $(this).attr('href');
+        var spl = hrefval2.replace('/','').replace('.html','');
+        // var spl2 = spl[]
+        // alert(spl);
+        // $('body').addClass(hrefval[0])
+        $('.opPage').addClass(spl);
+        $('.opPage').addClass('active');
+        setTimeout(function() {
+            window.location.href = hrefval2;
+        }, 1000);
+        // $('body').append('<div class="pageChange"></div>');
+    });
     // if (pgNames[0] == 'index-new') {
     //     $('body').attr('data-page', 'home');
     // }
@@ -139,17 +154,17 @@ if ($('#fullpage').length && winWid > 767) {
                 // console.log(1);
                 // $('.grid').css({ height: (winHei - $(destination.item).outerHeight()) })
                 $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) - $('footer').outerHeight(true) }, 100, 'linear');
-                $('.btmCopy').fadeOut();
+                $('.btmCopy,  .lftHeader .social').fadeOut();
             } else if (destination.index == ($('.section').length - 2) && direction == 'up') {
                 // console.log(2);
                 // inViewport($('footer'));
                 $('.rgtHeader, .lftHeader').animate({ height: $('.logoSection').outerHeight(true) }, 100, 'linear');
-                $('.btmCopy').fadeOut();
+                $('.btmCopy,  .lftHeader .social').fadeOut();
             } else {
                 // console.log(3);
                 // $('.grid').css({ height: '100%' })
                 $('.rgtHeader, .lftHeader').animate({ height: $(window).outerHeight(true) }, 100, 'linear');
-                $('.btmCopy').delay(100).fadeIn();
+                $('.btmCopy,  .lftHeader .social').delay(100).fadeIn();
             }
             (direction == 'down') ?
             ($(origin.item).removeClass('down up').addClass('up').removeClass('focused'), $(destination.item).removeClass('down up').addClass('focused')) :

@@ -18,6 +18,71 @@ body {
     transition: fill 0.3s ease-in-out;
 }
 
+.opPage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*background: #fff;*/
+    transition: all 1.2s;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    z-index: 1000;
+
+    &:before {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 1.2s 0.2s;
+        width: 0px;
+        height: 0px;
+        z-index: 1001;
+        content: '';
+        border-radius: 50%;
+        /*animation: grainAnimation 1s steps(4) infinite;*/
+        background: url(../images/grain.png) repeat #fff;
+    }
+
+    &.home {
+        background: #e00909;
+    }
+
+    &.about {
+        background: #FFCF31;
+    }
+
+    &.capabilities {
+        background: #00b0f0;
+    }
+
+    &.work {
+        background: #fd5e0f;
+    }
+
+    &.contact {
+        background: #ff0c0c;
+    }
+
+    &.aem-websites {
+        background: #65c24a;
+    }
+
+    &.active {
+        height: 5000px;
+        width: 5000px;
+
+        &:before {
+            width: 5000px;
+            height: 5000px;
+        }
+    }
+}
+
+
+
+
 .slideUpEl {
     opacity: 0;
     transform: translate(0, 100px);
@@ -461,6 +526,43 @@ section {
 
 .lftHeader {
     width: 11%;
+
+    .social {
+        /*position: absolute;
+        bottom: 0;
+        left: 0;*/
+            margin: 0 -10% 35px;
+    width: 120%;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            text-align: center;
+            font-family: @os;
+            margin: 0 0 10px;
+        }
+
+        .icons {
+            display: flex;
+            width: 100%;
+            height: 40px;
+            margin: 0;
+            justify-content: center;
+
+            a {
+                width: 30%;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+            }
+
+            svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
 }
 
 .rgtHeader {
@@ -681,7 +783,8 @@ section {
 
         /*New Hamburger*/
         button {
-            font-family: "Space Mono";
+            font-family: @os;
+            /*font-family: "Space Mono";*/
             width: 100%;
             height: 180px;
             padding: 0;
@@ -722,9 +825,10 @@ section {
                 text-align: right;
                 transform: rotate(-90deg) translateX(-20px) translateY(-36px);
                 width: 70px;
+                    letter-spacing: 1px;
+                    /*letter-spacing: 1px;*/
 
                 .closed {
-                    letter-spacing: 1px;
                 }
 
                 .open {
@@ -910,6 +1014,8 @@ footer {
             span {
                 width: 50%;
             }
+
+
         }
 
         &:nth-child(3) {
@@ -976,6 +1082,29 @@ footer {
                             height: auto;
                             fill: #fff;
                         }
+                    }
+                }
+
+                .ftrContact {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                a {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0 0 15px;
+
+                    svg {
+                        width: 50px;
+                        height: 40px;
+                        margin: 0 15px 0 0;
+                        fill: #e00909;
+                    }
+
+                    &:nth-child(2) svg {
+                        height: 35px;
+                        margin: 2px 15px 0 0;
                     }
                 }
             }
@@ -1144,7 +1273,8 @@ footer {
                 .rgtSec {
                     display: flex;
                     justify-content: flex-end;
-                    align-items: flex-start; /* new */
+                    align-items: flex-start;
+                    /* new */
                     width: 100%;
 
                     img {
@@ -1680,7 +1810,7 @@ section.form {
 
         select {
             appearance: none;
-            background: url(/images/svg/arrow-select.svg) no-repeat calc(100% - 20px) center;
+            background: url(/images/svg/arrow-select.svg) no-repeat calc(100% - 20px) center #fff;
             background-size: 6%;
         }
 
@@ -2624,4 +2754,42 @@ section.aemContact {
         margin: 0 0 25px;
     }
 
+}
+
+
+[data-page="capabilities"] .banner .pageSubTitle a,
+[data-page="capabilities"] .banner .mainTitle,
+[data-page="capabilities"] .banner .title {
+    color: #00b0f0;
+}
+
+
+[data-page="work"] .banner .pageSubTitle a,
+[data-page="work"] .banner .mainTitle,
+[data-page="work"] .banner .title {
+    color: #fd5e0f;
+}
+
+[data-page="aem-websites"] .banner .pageSubTitle a,
+[data-page="aem-websites"] .banner .mainTitle,
+[data-page="aem-websites"] .banner .title {
+    color: #65c24a;
+}
+
+[data-page="aem-technology-stack"] .banner .pageSubTitle a,
+[data-page="aem-technology-stack"] .banner .mainTitle,
+[data-page="aem-technology-stack"] .banner .title {
+    color: #65c24a;
+}
+
+[data-page="about"] .banner .pageSubTitle a,
+[data-page="about"] .banner .mainTitle,
+[data-page="about"] .banner .title {
+    color: #FFCF31;
+}
+
+[data-page="contact"] .banner .pageSubTitle a,
+[data-page="contact"] .banner .mainTitle,
+[data-page="contact"] .banner .title {
+    color: #ff0c0c;
 }

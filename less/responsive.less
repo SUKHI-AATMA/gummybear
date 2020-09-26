@@ -255,6 +255,25 @@
     .lftHeader {
         width: 40%;
         padding: 5%;
+
+        
+        .social {
+            position: fixed;
+            bottom: -50px;
+            left: 0;
+            display: flex;
+            width: 50%;
+            margin: 0 25%;
+            transition: bottom 0.3s 0s linear;
+
+            .icons {
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+                height: auto;
+            }
+        }
     }
 
     .tagLine {
@@ -373,6 +392,7 @@
             z-index: 11;
         }
     }
+            
 
     body.active {
         nav {
@@ -391,6 +411,11 @@
                 transform: translate(0, -50%);
             }
         }
+        .social {
+            bottom: 5%;
+            transition: bottom 0.3s 0.3s linear;
+        }
+        
     }
 
     .banner {
@@ -732,7 +757,26 @@
                     flex-direction: row !important;
                     flex-wrap: wrap;
 
-                    .col {
+                    .ftrContact {
+                        padding: 0 5%;
+                        align-items: center;
+
+                        a {
+                            svg {
+                                width: 30px;
+                                height: 30px;
+                            }
+
+                            &:nth-child(2) {
+                                svg {
+                                    height: 25px;
+                                }
+                            }
+                        }
+                    }
+
+
+                    /*.col {
                         margin: 0;
                         width: 100%;
 
@@ -766,7 +810,7 @@
                         a {
                             text-align: center;
                         }
-                    }
+                    }*/
                 }
 
 
@@ -789,6 +833,7 @@
                 width: 100%;
             }
         }
+
     }
 
     footer {
