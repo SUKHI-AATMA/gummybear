@@ -3824,6 +3824,7 @@ section.aemContact .text a:last-child {
   width: 100%;
   height: 100%;
   position: relative;
+  padding: 20px;
 }
 .banner.teamDetail .container .row .teamGrid > *:nth-child(1) {
   -ms-grid-row: 1;
@@ -3927,21 +3928,25 @@ section.aemContact .text a:last-child {
 }
 .banner.teamDetail .container .row .teamGrid .name {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  bottom: 30px;
+  right: 30px;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
   padding: 30px;
   background: #fff;
   font-family: 'Londrina Solid', cursive;
   font-size: 50px;
+  font-weight: 600;
 }
 .banner.teamDetail .container .row .teamGrid .photo {
   background: #9e9797;
   min-width: 50px;
   min-height: 50px;
   overflow: hidden;
+  position: relative;
+  background-position: center;
+  background-size: cover;
 }
 .banner.teamDetail .container .row .teamGrid .photo img {
   width: 100%;
@@ -3969,14 +3974,14 @@ section.aemContact .text a:last-child {
 .banner.teamDetail .container .row .teamGrid .photo:nth-child(3) {
   -ms-grid-column: 1;
       grid-column-start: 1;
-  -ms-grid-column-span: 3;
-  grid-column-end: 4;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
   -ms-grid-row: 4;
       grid-row-start: 4;
   -ms-grid-row-span: 2;
   grid-row-end: 6;
 }
-.banner.teamDetail .container .row .teamGrid .photo:nth-child(4) {
+.banner.teamDetail .container .row .teamGrid .photo:nth-child(5) {
   -ms-grid-column: 4;
       grid-column-start: 4;
   -ms-grid-column-span: 2;
@@ -3984,6 +3989,16 @@ section.aemContact .text a:last-child {
   -ms-grid-row: 3;
       grid-row-start: 3;
   -ms-grid-row-span: 3;
+  grid-row-end: 6;
+}
+.banner.teamDetail .container .row .teamGrid .photo:nth-child(6) {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  -ms-grid-column-span: 0;
+  grid-column-end: 3;
+  -ms-grid-row: 4;
+      grid-row-start: 4;
+  -ms-grid-row-span: 2;
   grid-row-end: 6;
 }
 section.ques {
