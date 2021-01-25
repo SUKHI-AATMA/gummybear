@@ -189,6 +189,8 @@ img {
     font-family: @os;
     /*font-family: @ls;*/
     font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s linear;
 
     &::before,
     &::after {
@@ -280,6 +282,10 @@ img {
                 }
             }
         }
+    }
+
+    &.animate {
+        opacity: 1;
     }
 }
 

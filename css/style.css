@@ -1070,6 +1070,10 @@ img.animate {
   font-family: 'Oswald', sans-serif;
   /*font-family: @ls;*/
   font-size: 20px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
 }
 .btn::before,
 .btn::after {
@@ -1180,6 +1184,9 @@ img.animate {
   -webkit-transition-delay: 400ms;
        -o-transition-delay: 400ms;
           transition-delay: 400ms;
+}
+.btn.animate {
+  opacity: 1;
 }
 @-webkit-keyframes grainAnimation {
   0% {
