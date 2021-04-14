@@ -269,7 +269,7 @@ if ($('#fullpage').length && winWid > 767) {
 // }
 function animateText() {
     // if (winWid > 767) {
-    var clList = ['.title', '.pageSubTitle', '.text', 'img', '.mainTitle', '.position', '.desc', 'section.content .row .img svg']
+    var clList = ['.title', '.pageSubTitle', '.text', 'img', '.mainTitle', '.position', '.desc', 'section.content .row .img svg', '.btn']
     clList.forEach(function(item, index) {
         var anim = document.querySelectorAll(item);
         // console.log(anim);
@@ -283,11 +283,8 @@ function animateText() {
                 // if (animELe.hasAttribute('data-anime')) {
                 // var classL = animELe.getAttribute('data-anime');
                 // var dataDelay = animELe.getAttribute('data-delay');
-                if (index == 3) {
+                if (index == 3 || index == 7 || index == 8) {
                     // console.log(1)
-                    animELe.classList.add('animate');
-                } else if (index == 7) {
-                    // console.log(2)
                     animELe.classList.add('animate');
                 } else {
                     // console.log(3)
