@@ -4837,21 +4837,23 @@ section.ques p .desc {
 .orentationPopup .iconContainer .phone i svg {
     width: 60%;
 }
-section.team .row >.name .btn {
-        float: right;
-        width: 100%;
-        color: #e00909;
-        padding: 0 10%;
-        text-align: center;
-    }
 
-    section.team .row >.name .btn__content-wrap::before,
-    section.team .row >.name .btn__content-wrap::after,
-    section.team .row >.name .btn .btn__content::after,
-    section.team .row >.name .btn::before,
-    section.team .row >.name .btn::after {
-        display: none;
-    }
+section.team .row>.name .btn {
+    float: right;
+    width: 100%;
+    color: #e00909;
+    padding: 0 10%;
+    text-align: center;
+}
+
+section.team .row>.name .btn__content-wrap::before,
+section.team .row>.name .btn__content-wrap::after,
+section.team .row>.name .btn .btn__content::after,
+section.team .row>.name .btn::before,
+section.team .row>.name .btn::after {
+    display: none;
+}
+
 @media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
     .orentationPopup {
         display: block;
@@ -6478,6 +6480,7 @@ section.team .row >.name .btn {
     section.team .row:nth-child(odd)>div.name a {
         text-align: right;
     }
+
     section.team .row:nth-child(even)>div.name a {
         text-align: left;
     }
