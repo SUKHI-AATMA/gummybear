@@ -241,7 +241,6 @@
             margin: 0 !important;
         }
     }
-
 }
 
 @media only screen and (max-width: 767px) {
@@ -256,7 +255,7 @@
         width: 40%;
         padding: 5%;
 
-        
+
         .social {
             position: fixed;
             bottom: -50px;
@@ -267,10 +266,11 @@
             transition: bottom 0.3s 0s linear;
 
             .icons {
-            svg {
-                width: 30px;
-                height: 30px;
-            }
+                svg {
+                    width: 30px;
+                    height: 30px;
+                }
+
                 height: auto;
             }
         }
@@ -392,7 +392,7 @@
             z-index: 11;
         }
     }
-            
+
 
     body.active {
         nav {
@@ -411,11 +411,12 @@
                 transform: translate(0, -50%);
             }
         }
+
         .social {
             bottom: 5%;
             transition: bottom 0.3s 0.3s linear;
         }
-        
+
     }
 
     .banner {
@@ -1082,6 +1083,14 @@
                             width: 80%;
                         }
                     }
+
+                    .btn {
+                        width: 80%;
+                        text-align: left;
+                        margin: 0 10%;
+                        padding: 0;
+                        display: inline-block;
+                    }
                 }
             }
         }
@@ -1095,6 +1104,10 @@
                         &.position {
                             text-align: right;
                         }
+                    }
+
+                    .btn {
+                        text-align: right;
                     }
                 }
             }
@@ -1297,5 +1310,49 @@
 
     [data-page=aem-websites] .projects {
         margin: 0 auto 100px;
+    }
+
+    .banner.teamDetail {
+        height: unset !important;
+
+        .container {
+            .row {
+                height: unset;
+
+                .teamGrid {
+                    display: flex;
+                    flex-wrap: wrap;
+                    height: unset;
+                    justify-content: space-around;
+
+                    .photo {
+                        width: 40vw;
+                        height: 40vw;
+                    }
+
+
+                    .name {
+                        position: relative;
+                        bottom: unset;
+                        right: unset;
+                        width: 40vw;
+                        height: auto;
+                        padding:0; 
+                    }
+                }
+            }
+        }
+
+    }
+
+    section.ques p {
+        width: 100%;
+        text-align: left;
+        .title {
+            text-align: left;
+        }
+    }
+    .logo svg {
+        width: 50%;
     }
 }
