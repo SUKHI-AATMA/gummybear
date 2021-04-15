@@ -6451,7 +6451,7 @@ section.team .row>.name .btn::after {
         right: unset;
         padding: 0;
         width: 40vw;
-        height: 40vw;
+        /*height: 40vw;*/
         margin: 10px;
     }
 
@@ -6460,7 +6460,7 @@ section.team .row>.name .btn::after {
     }
 
     .banner.teamDetail {
-        height: unset;
+        height: unset !important;
     }
 
     section.ques p .title {
